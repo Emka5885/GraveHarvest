@@ -1,0 +1,1 @@
+- r00gL się melduje że wszystko działa B)
