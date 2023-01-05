@@ -1,1 +1,1 @@
-- r00gL się melduje że wszystko działa B)
+- r00gaL się melduje że wszystko działa B)
