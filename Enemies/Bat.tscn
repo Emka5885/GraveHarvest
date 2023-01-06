@@ -62,7 +62,7 @@ radius = 5.0
 
 [sub_resource type="Animation" id=15]
 resource_name = "Dead"
-length = 0.8
+length = 0.9
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -86,7 +86,7 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "_on_Animation_Dead_Finished"
+"method": "on_Animation_Dead_Finished"
 } ]
 }
 
@@ -124,7 +124,6 @@ tracks/0/keys = {
 }
 
 [node name="Bat" type="KinematicBody2D"]
-modulate = Color( 1, 1, 1, 0 )
 collision_layer = 16
 script = ExtResource( 4 )
 
@@ -132,7 +131,7 @@ script = ExtResource( 4 )
 material = SubResource( 14 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
+frame = 2
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -140,7 +139,6 @@ offset = Vector2( 0, -12 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 7 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 3 )]
