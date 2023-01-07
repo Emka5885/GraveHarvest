@@ -33,13 +33,13 @@ func _input(event):
 	if active and mouse_in:
 		if event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT and event.pressed:
-				if PlayerStats.fertilizer > 0:
+				if PlayerStats.fertilizer >= 1:
 					emit_signal("add_time")
-					label.text = "+"+str(PlayerStats.fertilizer)
+					label.text = "+"+str(1)
 					labelAnimation.play("TextAnim")
 					pumpkinAnimation.play("Bounce")
-					self.size += PlayerStats.fertilizer
-					PlayerStats.fertilizer = 0		
+					self.size += 1 
+					PlayerStats.add_fertilizer(-1)
 					PlayerStats.reset_fertilizerUI()
 
 
