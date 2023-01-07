@@ -17,9 +17,6 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
-var stats = PlayerStats
-
-var fertilizer = 3
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -30,7 +27,6 @@ onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 func _ready():
 	randomize()
-	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 

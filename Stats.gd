@@ -1,22 +1,19 @@
 extends Node
 
-export(int) var max_health = 1 setget set_max_health
-var health = max_health setget set_health
+export(int) var max_fertilizer = 3 setget set_max_fertilizer
+var fertilizer = max_fertilizer setget set_fertilizer
 
-signal no_health
-signal health_changed(value)
-signal max_health_changed(value)
+signal fertilizer_changed(value)
+signal max_fertilizer_changed(value)
 
-func set_max_health(value):
-	max_health = value
-	self.health = min(health, max_health)
-	emit_signal("max_health_changed", max_health)
+func set_max_fertilizer(value):
+	max_fertilizer = value
+	self.fertilizer = min(fertilizer, max_fertilizer)
+	emit_signal("max_fertilizer_changed", max_fertilizer)
 
-func set_health(value):
-	health = value
-	emit_signal("health_changed", health)
-	if health <= 0:
-		emit_signal("no_health")
+func set_fertilizer(value):
+	fertilizer = value
+	emit_signal("fertilizer_changed", fertilizer)
 
 func _ready():
-	self.health = max_health
+	self.fertilizer = max_fertilizer

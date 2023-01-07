@@ -19,7 +19,6 @@ var knockback = Vector2.ZERO
 var state = CHASE
 
 onready var sprite = $AnimatedSprite
-onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
 onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
