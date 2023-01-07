@@ -16,10 +16,16 @@ func _physics_process(delta):
 
 
 func _on_MainMenu_Button_button_up():
+	isPaused = false
+	set_visible(isPaused)
+	pause(isPaused)
 	get_tree().change_scene(mainMenuScene.resource_path)
 
 
 func _on_NewGame_Button_button_up():
+	isPaused = false
+	set_visible(isPaused)
+	pause(isPaused)
 	get_tree().change_scene(mainGameScene.resource_path)
 
 
