@@ -92,7 +92,21 @@ func attack_animation_finished():
 	state = MOVE
 
 func _on_Hurtbox_area_entered(area):
-	stats.health -= area.damage
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var my_random_number = rng.randf_range(-250, 250)
+	while my_random_number < 100 and my_random_number > -100:
+		my_random_number = rng.randf_range(-250, 250)
+	var knockback_X = my_random_number
+	var knockback_Y = my_random_number
+	
+	if area.position.x >= position.x:
+		knockback_X *= -1
+	if area.position.y >= position.y:
+		knockback_Y *= -1
+		
+	velocity.x += knockback_X
+	velocity.y += knockback_Y
 	hurtbox.start_invincibility(0.6)
 	hurtbox.create_hit_effect()
 	var playerHurtSound = PlayerHurtSound.instance()
