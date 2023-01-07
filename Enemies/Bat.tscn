@@ -130,7 +130,7 @@ script = ExtResource( 4 )
 material = SubResource( 14 )
 frames = SubResource( 6 )
 animation = "Fly"
-frame = 3
+frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -176,9 +176,13 @@ anims/Dead = SubResource( 15 )
 anims/Start = SubResource( 12 )
 anims/Stop = SubResource( 13 )
 
+[node name="PositionTimer" type="Timer" parent="."]
+wait_time = 0.3
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]
+[connection signal="timeout" from="PositionTimer" to="." method="_on_PositionTimer_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="PlayerDetectionZone"]

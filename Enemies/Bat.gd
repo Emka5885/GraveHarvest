@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
 var ghost = load("res://Enemies/Bat.tscn")
+var start_position
+onready var positionTimer = $PositionTimer
 
 export var ACCELERATION = 300
 export var MAX_SPEED = 50
@@ -29,6 +31,7 @@ onready var animationPlayer = $AnimationPlayer
 var health = 3
 
 func _ready():
+	positionTimer.start()
 	state = pick_random_state([IDLE, WANDER])
 
 func _physics_process(delta):
@@ -92,7 +95,10 @@ func _on_Hurtbox_area_entered(area):
 		hurtbox.start_invincibility(0.4)
 
 func on_Animation_Dead_Finished():
-	
+	var instance = ghost.instance()
+	instance.set_position(start_position)
+	var main = get_tree().current_scene
+	main.call_deferred("add_child", instance)
 	queue_free()
 
 func _on_Hurtbox_invincibility_started():
@@ -100,3 +106,7 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	animationPlayer.play("Stop")
+
+func _on_PositionTimer_timeout():
+	start_position = position
+	positionTimer.queue_free()
