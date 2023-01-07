@@ -31,6 +31,7 @@ func _input(event):
 				rotation = 0
 				PlayerStats.fertilizer += 1
 				$Timer.start()
+				done = true
 
 func _on_Timer_timeout():
 	rotation = 20
