@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Pumpkin/Pumpkin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/FertilizerUI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GhostNPC/GhostNPC.tscn" type="PackedScene" id=13]
+[ext_resource path="res://MainMenu/BackToMenu.tscn" type="PackedScene" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -533,6 +534,10 @@ remote_path = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
+
+[node name="BackToMenu" parent="YSort/Player" instance=ExtResource( 14 )]
+visible = false
+position = Vector2( -160, -88 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
