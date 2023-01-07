@@ -8,7 +8,7 @@ var seconds = 0
 func _ready():
 	$Timer.start()
 
-func _process(delta):
+func _process(_delta):
 	get_minutes_and_seconds()
 	label.text = "0" + String(minutes) + "."
 	if seconds < 10:
