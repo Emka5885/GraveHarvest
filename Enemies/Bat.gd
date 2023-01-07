@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
-var ghost = load("res://Enemies/Bat.tscn")
+
 var start_position
 onready var positionTimer = $PositionTimer
 
 export var ACCELERATION = 300
-export var MAX_SPEED = 50
+export var MAX_SPEED = 40
 export var FRICTION = 200
 export var WANDER_TARGET_RANGE = 4
 
@@ -29,6 +29,8 @@ onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
 
 var health = 3
+
+signal respawn_ghost
 
 func _ready():
 	positionTimer.start()
@@ -82,9 +84,7 @@ func pick_random_state(state_list):
 	return state_list.pop_front()
 
 func _on_Hurtbox_area_entered(area):
-	print(health)
 	health -= 1
-	print(health)
 	knockback = area.knockback_vector * 150
 	if health == 0:
 		animationPlayer.play("Dead")
@@ -95,10 +95,8 @@ func _on_Hurtbox_area_entered(area):
 		hurtbox.start_invincibility(0.4)
 
 func on_Animation_Dead_Finished():
-	var instance = ghost.instance()
-	instance.set_position(start_position)
-	var main = get_tree().current_scene
-	main.call_deferred("add_child", instance)
+	connect("respawn_ghost", get_parent(), "_on_Ghost_respawn")
+	emit_signal("respawn_ghost", start_position)
 	queue_free()
 
 func _on_Hurtbox_invincibility_started():
