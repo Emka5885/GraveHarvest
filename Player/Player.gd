@@ -4,7 +4,7 @@ class_name Player
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
-export var MAX_SPEED = 85
+export var MAX_SPEED = 80
 var MAKSIMAL_SPEED # speed without baggage
 export var FRICTION = 500
 
@@ -109,7 +109,7 @@ func _on_Hurtbox_invincibility_ended():
 func set_fertilizer(value):
 	if value == 0:
 		MAX_SPEED = MAKSIMAL_SPEED
-	elif MAX_SPEED > MAKSIMAL_SPEED-(4*5):
+	elif MAX_SPEED > MAKSIMAL_SPEED-25:
 		MAX_SPEED -= value*5
 	
 #simea hejka 123

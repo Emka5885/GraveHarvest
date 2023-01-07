@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NawózPusty.png-462eaabbcda91a30c0c499c580f2ed71.stex"
+path="res://.import/Nagrobek 2 zwiędłe.png-ce14dbbec52f2b7dad07c123b9113ee2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/NawózPusty.png"
-dest_files=[ "res://.import/NawózPusty.png-462eaabbcda91a30c0c499c580f2ed71.stex" ]
+source_file="res://World/Nagrobek 2 zwiędłe.png"
+dest_files=[ "res://.import/Nagrobek 2 zwiędłe.png-ce14dbbec52f2b7dad07c123b9113ee2.stex" ]
 
 [params]
 

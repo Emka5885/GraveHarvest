@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NawózPełny.png-e02538d1afccc3f2c3cd66a39e7e504c.stex"
+path="res://.import/Nagrobek 2 podlane.png-37de57a2862f326d51a6280c3b090f9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/NawózPełny.png"
-dest_files=[ "res://.import/NawózPełny.png-e02538d1afccc3f2c3cd66a39e7e504c.stex" ]
+source_file="res://World/Nagrobek 2 podlane.png"
+dest_files=[ "res://.import/Nagrobek 2 podlane.png-37de57a2862f326d51a6280c3b090f9f.stex" ]
 
 [params]
 
