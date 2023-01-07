@@ -13,7 +13,7 @@
 [ext_resource path="res://Pumpkin/Pumpkin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/FertilizerUI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://GhostNPC/GhostNPC.tscn" type="PackedScene" id=13]
-[ext_resource path="res://MainMenu/BackToMenu.tscn" type="PackedScene" id=14]
+[ext_resource path="res://MainMenu/Paused.tscn" type="PackedScene" id=14]
 [ext_resource path="res://UI/TimerUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Crypt.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Light/Light1.png" type="Texture" id=17]
@@ -522,7 +522,8 @@ margin_top = 6.0
 margin_right = 198.0
 margin_bottom = 38.0
 
-[node name="BackToMenu" parent="CanvasLayer" instance=ExtResource( 14 )]
+[node name="Paused" parent="CanvasLayer" instance=ExtResource( 14 )]
+pause_mode = 2
 visible = false
 
 [node name="Background" type="Sprite" parent="."]
