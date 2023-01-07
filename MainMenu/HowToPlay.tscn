@@ -24,6 +24,7 @@ bg_color = Color( 0, 0, 0, 0.509804 )
 bg_color = Color( 0, 0, 0, 0.196078 )
 
 [node name="HowToPlay" type="Node2D"]
+scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
