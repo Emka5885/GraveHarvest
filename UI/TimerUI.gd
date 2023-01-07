@@ -22,4 +22,11 @@ func get_minutes_and_seconds():
 	seconds = int(time_left) % 60
 
 func _on_Timer_timeout():
-	pass # Replace with function body.
+	get_tree().change_scene("res://WinScene.tscn")
+
+func _on_Pumpkin_add_time():
+	var bonus_time = round($Timer.get_wait_time()) + 30
+	if (bonus_time > 599):
+		bonus_time = 599
+	$Timer.set_wait_time(bonus_time)
+	$Timer.start()

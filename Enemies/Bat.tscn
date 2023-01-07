@@ -124,6 +124,7 @@ tracks/0/keys = {
 
 [node name="Bat" type="KinematicBody2D"]
 collision_layer = 16
+collision_mask = 80
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
