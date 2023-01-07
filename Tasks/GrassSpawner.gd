@@ -10,6 +10,7 @@ var xPos = 0
 var yPos = 0
 
 func generate_grass():
+# warning-ignore:unused_variable
 	for n in range(width*height):
 		var grass_scene = load("res://World/Grass.tscn")
 		Spawner.add_child(grass_scene.instance())

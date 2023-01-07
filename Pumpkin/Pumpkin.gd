@@ -9,6 +9,8 @@ onready var pumpkinAnimation = $PumpkinAnimation
 onready var labelAnimation = $LabelAnimation
 onready var label = $Label
 
+
+
 func _on_InteractionArea_body_entered(body):
 	if body is Player:
 		active = true
@@ -36,7 +38,9 @@ func _input(event):
 					labelAnimation.play("TextAnim")
 					pumpkinAnimation.play("Bounce")
 					self.size += PlayerStats.fertilizer
-					PlayerStats.fertilizer = 0
+					PlayerStats.fertilizer = 0		
+					PlayerStats.reset_fertilizerUI()
+
 
 func increase_size(new_size):
 	var fertilizer = new_size - size
@@ -44,3 +48,4 @@ func increase_size(new_size):
 	size = new_size
 	if size >= 10:
 		sprite.flip_v = true
+
