@@ -16,14 +16,20 @@ func set_max_fertilizer(value):
 	self.fertilizer = min(fertilizer, max_fertilizer)
 	emit_signal("max_fertilizer_changed", max_fertilizer)
 
-func set_fertilizer(value):
+func set_fertilizer(_value):
 	grass_collected += 1
 	#print("grass: ",value,max_grass_collected)
-	if grass_collected % max_grass_collected == 0:
+	if grass_collected % max_grass_collected == 0 and fertilizer <= 3:
 		fertilizer += 1
 		fertilizer = clamp(fertilizer, 0, max_fertilizer)
 		emit_signal("fertilizer_changed", fertilizer)
 		grass_collected = 0
+
+func reset_fertilizerUI():
+	fertilizer = 0
+	emit_signal("fertilizer_changed", fertilizer)
+	grass_collected = 0
+
 
 func _ready():
 	self.fertilizer = 0

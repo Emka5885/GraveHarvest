@@ -4,7 +4,8 @@ class_name Player
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
-export var MAX_SPEED = 80
+export var MAX_SPEED = 85
+var MAKSIMAL_SPEED # speed without baggage
 export var FRICTION = 500
 
 enum {
@@ -23,10 +24,14 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
+
 func _ready():
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
+	MAKSIMAL_SPEED = MAX_SPEED
+# warning-ignore:return_value_discarded
+	PlayerStats.connect("fertilizer_changed", self, "set_fertilizer")
 
 func _physics_process(delta):
 	match state:
@@ -99,4 +104,11 @@ func _on_Hurtbox_invincibility_started():
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
+func set_fertilizer(value):
+	if value == 0:
+		MAX_SPEED = MAKSIMAL_SPEED
+	elif MAX_SPEED > MAKSIMAL_SPEED-(4*5):
+		MAX_SPEED -= value*5
+	
 #simea hejka 123
+#no hej

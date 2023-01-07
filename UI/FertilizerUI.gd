@@ -1,6 +1,6 @@
 extends Control
 
-var fertilizer = 3 setget set_fertilizer
+var fertilizer = 0 setget set_fertilizer
 var max_fertilizer = 3 setget set_max_fertilizer
 
 onready var fertilizerFull = $FertilizerFull
@@ -17,10 +17,13 @@ func set_max_fertilizer(value):
 	if fertilizerEmpty != null:
 		fertilizerEmpty.rect_size.x = max_fertilizer * 15
 
+func reset_fertilizer():
+	set_fertilizer(PlayerStats.fertilizer)
+
 func _ready():
 	self.max_fertilizer = PlayerStats.max_fertilizer
 	self.fertilizer = PlayerStats.fertilizer
-	# warning-ignore:return_value_discarded
+# warning-ignore:return_value_discarded
 	PlayerStats.connect("fertilizer_changed", self, "set_fertilizer")
-	# warning-ignore:return_value_discarded
+# warning-ignore:return_value_discarded
 	PlayerStats.connect("max_fertilizer_changed", self, "set_max_fertilizer")
