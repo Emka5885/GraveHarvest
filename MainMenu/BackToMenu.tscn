@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://MainMenu/BackToMenu.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/PixelRPG.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://MainMenu/NewGame.png" type="Texture" id=4]
 [ext_resource path="res://MainMenu/Music.png" type="Texture" id=5]
 [ext_resource path="res://MainMenu/Laguna Smile.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://MainMenu/plank.jpg" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0, 0, 0, 1 )
@@ -14,12 +15,9 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.160784, 0.243137, 0.313726, 0.862745 )
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 110, 62 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.776471, 0.309804, 0.105882, 1 )
@@ -149,7 +147,7 @@ margin_left = 43.0
 margin_top = 25.0
 margin_right = 277.0
 margin_bottom = 155.0
-custom_styles/normal = SubResource( 12 )
+custom_styles/normal = SubResource( 22 )
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 108.0
