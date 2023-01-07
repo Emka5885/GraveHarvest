@@ -16,21 +16,21 @@ size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0.411765 )
+bg_color = Color( 0, 0, 0, 0.117647 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0, 0, 0, 0.588235 )
+bg_color = Color( 0, 0, 0, 0.294118 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0, 0, 0, 0.294118 )
+bg_color = Color( 0, 0, 0, 0 )
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -40,11 +40,6 @@ corner_radius_bottom_left = 5
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
-color = Color( 0.227451, 0.396078, 0.517647, 1 )
-
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 1280.0
 margin_bottom = 720.0
@@ -52,10 +47,9 @@ texture = ExtResource( 3 )
 expand = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 300.0
-margin_top = 25.0
-margin_right = 980.0
-margin_bottom = 151.0
+margin_left = 150.0
+margin_right = 730.0
+margin_bottom = 147.0
 custom_fonts/font = SubResource( 1 )
 text = "TITLE HERE"
 align = 1
@@ -94,6 +88,7 @@ margin_left = 700.0
 margin_top = 500.0
 margin_right = 900.0
 margin_bottom = 560.0
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
