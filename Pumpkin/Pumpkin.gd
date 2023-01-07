@@ -9,7 +9,7 @@ onready var pumpkinAnimation = $PumpkinAnimation
 onready var labelAnimation = $LabelAnimation
 onready var label = $Label
 
-
+signal add_time
 
 func _on_InteractionArea_body_entered(body):
 	if body is Player:
@@ -34,6 +34,7 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT and event.pressed:
 				if PlayerStats.fertilizer > 0:
+					emit_signal("add_time")
 					label.text = "+"+str(PlayerStats.fertilizer)
 					labelAnimation.play("TextAnim")
 					pumpkinAnimation.play("Bounce")

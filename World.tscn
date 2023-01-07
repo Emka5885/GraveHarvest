@@ -713,3 +713,5 @@ color = Color( 0, 0, 0, 1 )
 stream = ExtResource( 10 )
 volume_db = -40.0
 script = ExtResource( 8 )
+
+[connection signal="add_time" from="YSort/Pumpkin" to="CanvasLayer/TimerUI" method="_on_Pumpkin_add_time"]
