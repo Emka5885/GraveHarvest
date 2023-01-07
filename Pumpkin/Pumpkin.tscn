@@ -125,6 +125,7 @@ tracks/1/keys = {
 }
 
 [node name="Pumpkin" type="StaticBody2D"]
+scale = Vector2( 0.5, 0.5 )
 input_pickable = true
 script = ExtResource( 2 )
 
