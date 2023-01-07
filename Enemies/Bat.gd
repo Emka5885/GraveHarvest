@@ -6,7 +6,7 @@ var start_position
 onready var positionTimer = $PositionTimer
 
 export var ACCELERATION = 300
-export var MAX_SPEED = 50
+export var MAX_SPEED = 40
 export var FRICTION = 200
 export var WANDER_TARGET_RANGE = 4
 
