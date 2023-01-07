@@ -9,8 +9,8 @@ var fertilizer = 0 setget fertilizer_change
 
 
 
-func add_fertilizer():
-	fertilizer += 0.1
+func add_fertilizer(value):
+	fertilizer += value
 	fertilizer = clamp(fertilizer, 0, max_fertilizer)
 	emit_signal("fertilizer_changed", fertilizer)
 
