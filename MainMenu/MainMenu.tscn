@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://MainMenu/Laguna Smile.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/Menu.gd" type="Script" id=2]
 [ext_resource path="res://MainMenu/Background.jpg" type="Texture" id=3]
 
