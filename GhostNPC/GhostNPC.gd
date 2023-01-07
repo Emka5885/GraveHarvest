@@ -12,16 +12,22 @@ enum {
 
 var velocity = Vector2.ZERO
 var state = IDLE
+var audio_nr = 1
 
 onready var sprite = $Sprite
 onready var label = $Label
 onready var animationPlayer = $AnimationPlayer
 onready var wanderController = $WanderController
 onready var playerDetectionZone = $PlayerDetectionZone
-
+onready var audioStream = $AudioStreamPlayer
 func _on_PlayerDetectionZone_body_entered(body):
 	if body is Player:
 		label.visible = true
+		audioStream.stream = load("res://GhostNPC/ghost_cry"+str(audio_nr)+".wav")
+		audio_nr += 1
+		if audio_nr > 3:
+			audio_nr=1
+		audioStream.play()
 		animationPlayer.play("FadeIn")
 
 func _on_PlayerDetectionZone_body_exited(body):
