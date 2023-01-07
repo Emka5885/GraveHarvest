@@ -46,5 +46,11 @@ func increase_size(new_size):
 	scale = scale + Vector2(0.1*fertilizer, 0.1*fertilizer)
 	size = new_size
 	if size >= 10:
-		sprite.flip_v = true
-
+		sprite.texture = load("res://Pumpkin/Grzes2.png")
+		scale = Vector2(1,1)
+	if size >= 20:
+		sprite.texture = load("res://Pumpkin/Grzes3.png")
+		scale = Vector2(1,1)
+	if size >= 30:
+		sprite.texture = load("res://Pumpkin/Grzegorz.png")
+		scale = Vector2(1,1)
