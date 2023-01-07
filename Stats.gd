@@ -28,9 +28,7 @@ func fertilizer_change(_value):
 	emit_signal("fertilizer_changed", fertilizer)
 
 func reset_fertilizerUI():
-	fertilizer = 0
 	emit_signal("fertilizer_changed", fertilizer)
-	fertilizer = 0
 
 
 func _ready():
