@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Player
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
@@ -17,6 +18,8 @@ var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 var stats = PlayerStats
+
+var fertilizer = 3
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
