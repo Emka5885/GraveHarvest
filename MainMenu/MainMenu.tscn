@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://MainMenu/PixelRPG.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/Menu.gd" type="Script" id=2]
-[ext_resource path="res://World.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -39,7 +38,6 @@ corner_radius_bottom_left = 5
 [node name="MainMenu" type="Node2D"]
 scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 2 )
-mainGameScene = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1280.0
