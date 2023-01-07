@@ -24,7 +24,6 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
-
 func _ready():
 	randomize()
 	animationTree.active = true
