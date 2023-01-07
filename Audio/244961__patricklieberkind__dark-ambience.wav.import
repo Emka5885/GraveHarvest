@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/244961__patricklieberkind__dark-ambience.wav-ae3b60b833826b8fef03ddb4308ffceb.sample"
+
+[deps]
+
+source_file="res://Audio/244961__patricklieberkind__dark-ambience.wav"
+dest_files=[ "res://.import/244961__patricklieberkind__dark-ambience.wav-ae3b60b833826b8fef03ddb4308ffceb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
