@@ -1,6 +1,6 @@
 extends Node2D
 
-export var mainGameScene : PackedScene
+var mainGameScene = load("res://World.tscn")
 var madeByScene = load("res://MainMenu/MadeBy.tscn")
 var statsScene = load("res://MainMenu/Stats.tscn")
 var howToPlayScene = load("res://MainMenu/HowToPlay.tscn")
