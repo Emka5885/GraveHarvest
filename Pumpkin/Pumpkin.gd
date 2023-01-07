@@ -5,7 +5,7 @@ var active = false
 var mouse_in = false
 
 onready var sprite = $Sprite
-
+onready var animationPlayer = $AnimationPlayer
 func _on_InteractionArea_body_entered(body):
 	if body is Player:
 		active = true
@@ -29,6 +29,7 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT and event.pressed:
 				if PlayerStats.fertilizer > 0:
+					animationPlayer.play("bounce")
 					self.size += PlayerStats.fertilizer
 					PlayerStats.fertilizer = 0
 
