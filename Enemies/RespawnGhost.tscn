@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Enemies/RespawnGhost.gd" type="Script" id=1]
 
-[node name="RespawnGhost" type="Node2D"]
+[node name="RespawnGhost" type="YSort"]
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]

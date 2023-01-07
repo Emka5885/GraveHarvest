@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Player/Plater_walking.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -482,31 +482,6 @@ min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=28]
-animation = "RollLeft"
-
-[sub_resource type="AnimationNodeAnimation" id=29]
-animation = "RollDown"
-
-[sub_resource type="AnimationNodeAnimation" id=30]
-animation = "RollRight"
-
-[sub_resource type="AnimationNodeAnimation" id=31]
-animation = "RollUp"
-
-[sub_resource type="AnimationNodeBlendSpace2D" id=32]
-blend_point_0/node = SubResource( 28 )
-blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 29 )
-blend_point_1/pos = Vector2( 0, 1.1 )
-blend_point_2/node = SubResource( 30 )
-blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 31 )
-blend_point_3/pos = Vector2( 0, -1.1 )
-min_space = Vector2( -1, -1.1 )
-max_space = Vector2( 1, 1.1 )
-blend_mode = 1
-
 [sub_resource type="AnimationNodeAnimation" id=33]
 animation = "RunLeft"
 
@@ -540,20 +515,14 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=42]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=43]
-
 [sub_resource type="AnimationNodeStateMachine" id=44]
 states/Attack/node = SubResource( 22 )
 states/Attack/position = Vector2( 424, 248 )
 states/Idle/node = SubResource( 27 )
 states/Idle/position = Vector2( 424, 153 )
-states/Roll/node = SubResource( 32 )
-states/Roll/position = Vector2( 424, 32 )
 states/Run/node = SubResource( 37 )
 states/Run/position = Vector2( 619, 153 )
-transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ), "Idle", "Roll", SubResource( 42 ), "Roll", "Idle", SubResource( 43 ) ]
+transitions = [ "Idle", "Run", SubResource( 38 ), "Run", "Idle", SubResource( 39 ), "Idle", "Attack", SubResource( 40 ), "Attack", "Idle", SubResource( 41 ) ]
 start_node = "Idle"
 graph_offset = Vector2( -74, -45 )
 
@@ -599,6 +568,9 @@ tracks/0/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="CircleShape2D" id=52]
+radius = 16.0
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 2 )
@@ -640,7 +612,6 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 45 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
 parameters/Idle/blend_position = Vector2( 0, 1 )
-parameters/Roll/blend_position = Vector2( 0, 1 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
@@ -674,10 +645,20 @@ stream = ExtResource( 7 )
 anims/Start = SubResource( 48 )
 anims/Stop = SubResource( 49 )
 
+[node name="PathChecker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathChecker"]
+position = Vector2( 0, -4 )
+shape = SubResource( 52 )
+
 [connection signal="input_event" from="." to="." method="_on_Player_input_event"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]
 [connection signal="invincibility_started" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_started"]
+[connection signal="body_entered" from="PathChecker" to="." method="_on_PathChecker_body_entered"]
+[connection signal="body_exited" from="PathChecker" to="." method="_on_PathChecker_body_exited"]
 
 [editable path="HitboxPivot/SwordHitbox"]
 [editable path="Hurtbox"]

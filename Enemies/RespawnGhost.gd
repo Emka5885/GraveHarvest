@@ -1,6 +1,6 @@
 extends Node2D
 
-var ghost = load("res://Enemies/Bat.tscn")
+var ghost = load("res://Enemies/Ghost.tscn")
 
 onready var respawn_position
 

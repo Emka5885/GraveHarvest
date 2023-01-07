@@ -4,7 +4,7 @@ var active = false
 var mouse_in = false
 var done = false
 
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 
 func _on_InteractionArea_body_entered(body):
 	if body is Player:
@@ -28,11 +28,11 @@ func _input(event):
 	if !done and active and mouse_in:
 		if event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT and event.pressed:
-				rotation = 0
+				sprite.play("straight")
 				PlayerStats.fertilizer += 1
 				$Timer.start()
 				done = true
 
 func _on_Timer_timeout():
-	rotation = 20
+	sprite.play("crooked")
 	done = false

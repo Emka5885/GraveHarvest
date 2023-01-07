@@ -4,8 +4,8 @@ class_name Player
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
-export var MAX_SPEED = 80
-var MAKSIMAL_SPEED # speed without baggage
+export var speed = 80
+var speed_on_path = 35 # speed without baggage
 export var FRICTION = 500
 
 enum {
@@ -28,11 +28,11 @@ func _ready():
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
-	MAKSIMAL_SPEED = MAX_SPEED
 # warning-ignore:return_value_discarded
 	PlayerStats.connect("fertilizer_changed", self, "set_fertilizer")
 
 func _physics_process(delta):
+	print(speed)
 	match state:
 		MOVE:
 			move_state(delta)
@@ -54,7 +54,7 @@ func move_state(delta):
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationTree.set("parameters/Roll/blend_position", input_vector)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward(input_vector * speed, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -106,9 +106,12 @@ func _on_Hurtbox_invincibility_ended():
 
 func set_fertilizer(value):
 	if value == 0:
-		MAX_SPEED = MAKSIMAL_SPEED
-	elif MAX_SPEED > MAKSIMAL_SPEED-25:
-		MAX_SPEED -= value*5
-	
-#simea hejka 123
-#no hej
+		speed = 105
+	else:
+		speed = 80
+
+func _on_PathChecker_body_entered(_body):
+	speed += speed_on_path
+
+func _on_PathChecker_body_exited(_body):
+	speed -= speed_on_path
