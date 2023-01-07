@@ -499,6 +499,9 @@ margin_top = 3.0
 margin_right = 49.0
 margin_bottom = 14.0
 
+[node name="BackToMenu" parent="CanvasLayer" instance=ExtResource( 14 )]
+visible = false
+
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 144, 104 )
 texture = ExtResource( 3 )
@@ -534,10 +537,6 @@ remote_path = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
-
-[node name="BackToMenu" parent="YSort/Player" instance=ExtResource( 14 )]
-visible = false
-position = Vector2( -160, -88 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
