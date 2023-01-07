@@ -991,6 +991,8 @@ limit_bottom = 448
 texture = SubResource( 50 )
 texture_scale = 0.5
 color = Color( 1, 0.776471, 0.670588, 1 )
+energy = 1.1
+mode = 2
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
