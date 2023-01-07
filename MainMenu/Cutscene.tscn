@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://cutscene.webm" type="VideoStream" id=1]
 [ext_resource path="res://MainMenu/Cutscene.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="Animation" id=1]
-resource_name = "Scale"
+resource_name = "ScaleToBig"
 length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:scale")
@@ -32,9 +32,12 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "_on_Scale_Animation_finished"
+"method": "_on_ScaleToBig_Animation_finished"
 } ]
 }
+
+[sub_resource type="Animation" id=3]
+resource_name = "ScaleToSmall"
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -47,7 +50,7 @@ custom_styles/panel = SubResource( 2 )
 
 [node name="Cutscene" type="Node2D" parent="."]
 position = Vector2( 160, 88 )
-scale = Vector2( 0.05, 0.05 )
+scale = Vector2( 0.01, 0.01 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -66,7 +69,8 @@ expand = false
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
-anims/Scale = SubResource( 1 )
+anims/ScaleToBig = SubResource( 1 )
+anims/ScaleToSmall = SubResource( 3 )
 
 [connection signal="finished" from="Cutscene/VideoPlayer" to="Cutscene" method="_on_VideoPlayer_finished"]
 [connection signal="timeout" from="Cutscene/Timer" to="Cutscene" method="_on_Timer_timeout"]
