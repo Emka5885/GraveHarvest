@@ -551,7 +551,7 @@ position = Vector2( -112, 16 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 
-[node name="Grass" parent="YSort/Grass" instance=ExtResource( 6 )]
+[node name="Grass1" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 128, 0 )
 
 [node name="Grass2" parent="YSort/Grass" instance=ExtResource( 6 )]
@@ -575,6 +575,21 @@ position = Vector2( 96, 16 )
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 128, 32 )
 
+[node name="Grass13" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 144, 32 )
+
+[node name="Grass14" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 96, 48 )
+
+[node name="Grass15" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 112, 48 )
+
+[node name="Grass16" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 128, 48 )
+
+[node name="Grass17" parent="YSort/Grass" instance=ExtResource( 6 )]
+position = Vector2( 144, 48 )
+
 [node name="Grass10" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 112, 32 )
 
@@ -593,13 +608,13 @@ position = Vector2( 0, -120 )
 position = Vector2( 208, -120 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -64, 224 )
+position = Vector2( -72, -56 )
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -128, 224 )
+position = Vector2( -72, 16 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( -192, 224 )
+position = Vector2( -112, -56 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
