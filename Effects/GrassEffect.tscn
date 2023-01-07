@@ -5,23 +5,23 @@
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 64, 64 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 64, 0, 64, 64 )
+region = Rect2( 32, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 1 )
-region = Rect2( 128, 0, 64, 64 )
+region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 1 )
-region = Rect2( 192, 0, 64, 64 )
+region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 64, 64 )
+region = Rect2( 128, 0, 32, 32 )
 
 [sub_resource type="SpriteFrames" id=6]
 animations = [ {
@@ -32,6 +32,7 @@ animations = [ {
 } ]
 
 [node name="GrassEffect" type="AnimatedSprite"]
+position = Vector2( 8, 8 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
 animation = "Animate"
