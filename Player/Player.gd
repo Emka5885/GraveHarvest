@@ -5,12 +5,10 @@ const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 80
-export var ROLL_SPEED = 120
 export var FRICTION = 500
 
 enum {
 	MOVE,
-	ROLL,
 	ATTACK
 }
 
@@ -34,9 +32,6 @@ func _physics_process(delta):
 	match state:
 		MOVE:
 			move_state(delta)
-		
-		ROLL:
-			roll_state()
 		
 		ATTACK:
 			attack_state()
@@ -62,16 +57,8 @@ func move_state(delta):
 	
 	move()
 	
-	if Input.is_action_just_pressed("roll"):
-		state = ROLL
-	
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
-
-func roll_state():
-	velocity = roll_vector * ROLL_SPEED
-	animationState.travel("Roll")
-	move()
 
 func attack_state():
 	velocity = Vector2.ZERO
@@ -79,10 +66,6 @@ func attack_state():
 
 func move():
 	velocity = move_and_slide(velocity)
-
-func roll_animation_finished():
-	velocity = velocity * 0.8
-	state = MOVE
 
 func attack_animation_finished():
 	state = MOVE
@@ -115,6 +98,5 @@ func _on_Hurtbox_invincibility_started():
 
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
-
 
 #simea hejka 123
