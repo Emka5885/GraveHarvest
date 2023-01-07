@@ -2,7 +2,7 @@
 
 [ext_resource path="res://GhostNPC/Ghost.png" type="Texture" id=1]
 [ext_resource path="res://GhostNPC/GhostNPC.gd" type="Script" id=2]
-[ext_resource path="res://MainMenu/PixelRPG.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://GhostNPC/WavyTextShader.gdshader" type="Shader" id=4]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=6]
