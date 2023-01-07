@@ -10,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	get_minutes_and_seconds()
-	label.text = "0" + String(minutes) + ":"
+	label.text = "0" + String(minutes) + "."
 	if seconds < 10:
 		label.text += "0" + String(seconds)
 	else:
