@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://cutscene.webm" type="VideoStream" id=1]
 [ext_resource path="res://MainMenu/Cutscene.gd" type="Script" id=2]
-[ext_resource path="res://MainMenu/Cutscene.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
@@ -17,10 +16,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.9, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.01, 0.01 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.3, 0.3 ), Vector2( 0.4, 0.4 ), Vector2( 0.5, 0.5 ), Vector2( 0.6, 0.6 ), Vector2( 0.7, 0.7 ), Vector2( 0.8, 0.8 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -48,18 +47,13 @@ custom_styles/panel = SubResource( 2 )
 
 [node name="Cutscene" type="Node2D" parent="."]
 position = Vector2( 160, 88 )
+scale = Vector2( 0.05, 0.05 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Cutscene"]
-position = Vector2( 4.00001, 4 )
-scale = Vector2( 0.279855, 0.280061 )
-texture = ExtResource( 3 )
-
 [node name="VideoPlayer" type="VideoPlayer" parent="Cutscene"]
-visible = false
 margin_left = -112.0
 margin_top = -88.0
 margin_right = 528.0
@@ -69,8 +63,7 @@ stream = ExtResource( 1 )
 expand = false
 
 [node name="Timer" type="Timer" parent="Cutscene"]
-wait_time = 5.0
-autostart = true
+one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
 anims/Scale = SubResource( 1 )

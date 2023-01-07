@@ -5,15 +5,16 @@ onready var videoPlayer = $VideoPlayer
 onready var timer = $Timer
 
 func _ready():
+	videoPlayer.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	videoPlayer.paused = true
 	$AnimationPlayer.play("Scale")
 
-func _on_Timer_timeout():
-	get_tree().change_scene(mainGameScene.resource_path)
-
 func _on_Scale_Animation_finished():
-	videoPlayer.visible = true
-	$Sprite.queue_free()
-	videoPlayer.play()
+	videoPlayer.paused = false
 
 func _on_VideoPlayer_finished():
 	timer.start()
+
+func _on_Timer_timeout():
+	get_tree().change_scene(mainGameScene.resource_path)
