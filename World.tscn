@@ -522,6 +522,9 @@ tile_data = PoolIntArray( -393225, 0, 4, -393224, 0, 196609, -393223, 0, 196609,
 [node name="Pumpkin" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 48, 104 )
 
+[node name="GhostNPC" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 312, 104 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 160, 88 )
 
@@ -728,9 +731,6 @@ position = Vector2( -96, -120 )
 
 [node name="Bat6" parent="YSort/Ghosts" instance=ExtResource( 7 )]
 position = Vector2( -8, 256 )
-
-[node name="GhostNPC" parent="." instance=ExtResource( 13 )]
-position = Vector2( 312, 104 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
