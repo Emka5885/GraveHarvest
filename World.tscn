@@ -516,10 +516,10 @@ extents = Vector2( 336, 16 )
 [node name="TimerUI" parent="CanvasLayer" instance=ExtResource( 15 )]
 
 [node name="FertilizerUI" parent="CanvasLayer" instance=ExtResource( 12 )]
-margin_left = 8.0
-margin_top = 32.0
-margin_right = 53.0
-margin_bottom = 43.0
+margin_left = 68.0
+margin_top = 6.0
+margin_right = 198.0
+margin_bottom = 38.0
 
 [node name="BackToMenu" parent="CanvasLayer" instance=ExtResource( 14 )]
 visible = false

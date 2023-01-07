@@ -6,16 +6,17 @@ var max_fertilizer = 3 setget set_max_fertilizer
 onready var fertilizerFull = $FertilizerFull
 onready var fertilizerEmpty = $FertilizerEmpty
 
+
 func set_fertilizer(value):
 	fertilizer = clamp(value, 0, max_fertilizer)
 	if fertilizerFull != null:
-		fertilizerFull.rect_size.x = fertilizer * 15
+		fertilizerFull.rect_size.x = fertilizer * 32
 
 func set_max_fertilizer(value):
 	max_fertilizer = max(value, 1)
 	self.fertilizer = min(fertilizer, max_fertilizer)
 	if fertilizerEmpty != null:
-		fertilizerEmpty.rect_size.x = max_fertilizer * 15
+		fertilizerEmpty.rect_size.x = max_fertilizer * 32
 
 func reset_fertilizer():
 	set_fertilizer(PlayerStats.fertilizer)
