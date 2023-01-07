@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,14 @@
 [ext_resource path="res://Audio/01 - DavidKBD - Belmont Chronicles Pack.ogg" type="AudioStream" id=10]
 [ext_resource path="res://Pumpkin/Pumpkin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/FertilizerUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://TimerUI.gd" type="Script" id=13]
+
+[sub_resource type="StyleBoxFlat" id=50]
+bg_color = Color( 0.6, 0.6, 0.6, 0.25098 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -492,10 +500,31 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="FertilizerUI" parent="CanvasLayer" instance=ExtResource( 12 )]
-margin_left = 4.0
-margin_top = 3.0
-margin_right = 49.0
-margin_bottom = 14.0
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 53.0
+margin_bottom = 43.0
+
+[node name="TimerUI" type="Control" parent="CanvasLayer"]
+margin_right = 56.0
+margin_bottom = 24.0
+script = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer/TimerUI"]
+margin_right = 56.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 50 )
+
+[node name="Label" type="Label" parent="CanvasLayer/TimerUI"]
+margin_right = 56.0
+margin_bottom = 24.0
+text = "XX:XX"
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer/TimerUI"]
+wait_time = 550.0
+one_shot = true
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 144, 104 )
@@ -518,7 +547,6 @@ tile_data = PoolIntArray( -393224, 0, 4, -393223, 0, 196609, -393222, 0, 196609,
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Pumpkin" parent="YSort" instance=ExtResource( 11 )]
-position = Vector2( -1, -2 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 160, 88 )
@@ -620,3 +648,5 @@ position = Vector2( -112, -56 )
 stream = ExtResource( 10 )
 volume_db = -40.0
 script = ExtResource( 8 )
+
+[connection signal="timeout" from="CanvasLayer/TimerUI/Timer" to="CanvasLayer/TimerUI" method="_on_Timer_timeout"]
