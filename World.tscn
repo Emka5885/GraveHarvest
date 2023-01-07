@@ -1,4 +1,4 @@
-[gd_scene load_steps=121 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -16,10 +16,7 @@
 [ext_resource path="res://MainMenu/Paused.tscn" type="PackedScene" id=14]
 [ext_resource path="res://UI/TimerUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Crypt.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Light/Light1.png" type="Texture" id=17]
-[ext_resource path="res://Light/Light2.png" type="Texture" id=18]
-[ext_resource path="res://Light/Light3.png" type="Texture" id=19]
-[ext_resource path="res://Light/Light4.png" type="Texture" id=20]
+[ext_resource path="res://Light/LightDifuse.png" type="Texture" id=17]
 [ext_resource path="res://Tasks/GrassSpawner.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/RespawnGhost.tscn" type="PackedScene" id=22]
 
@@ -922,14 +919,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [sub_resource type="AnimatedTexture" id=50]
-frames = 4
 frame_0/texture = ExtResource( 17 )
-frame_1/texture = ExtResource( 18 )
-frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 19 )
-frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 20 )
-frame_3/delay_sec = 0.0
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 336, 16 )
@@ -982,7 +972,10 @@ position = Vector2( 64, 96 )
 position = Vector2( 267, -60 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 75, 26 )
+position = Vector2( -208, -152 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../Camera2D")
@@ -995,8 +988,9 @@ limit_right = 384
 limit_bottom = 448
 
 [node name="Light2D" type="Light2D" parent="YSort/Player"]
-visible = false
 texture = SubResource( 50 )
+texture_scale = 0.5
+color = Color( 1, 0.776471, 0.670588, 1 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -1153,7 +1147,7 @@ position = Vector2( -96, -120 )
 position = Vector2( 304, -136 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
-visible = false
+show_behind_parent = true
 color = Color( 0, 0, 0, 1 )
 
 [node name="BorderMap" type="StaticBody2D" parent="."]
