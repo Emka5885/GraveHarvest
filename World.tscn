@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,10 @@
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
+[ext_resource path="res://backgroundAudio.gd" type="Script" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Audio/01 - DavidKBD - Belmont Chronicles Pack.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Pumpkin/Pumpkin.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -491,6 +494,9 @@ texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( -963.524, -763.654, 1298.21, 1194.36 )
 
+[node name="Pumpkin" parent="Background" instance=ExtResource( 11 )]
+position = Vector2( -145, -106 )
+
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
@@ -557,9 +563,6 @@ position = Vector2( 96, 32 )
 [node name="Grass7" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 96, 16 )
 
-[node name="Grass8" parent="YSort/Grass" instance=ExtResource( 6 )]
-position = Vector2( 144, 32 )
-
 [node name="Grass9" parent="YSort/Grass" instance=ExtResource( 6 )]
 position = Vector2( 128, 32 )
 
@@ -588,3 +591,8 @@ position = Vector2( -128, 224 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( -192, 224 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -40.0
+script = ExtResource( 8 )
