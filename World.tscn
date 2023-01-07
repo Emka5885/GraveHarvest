@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,10 @@
 [ext_resource path="res://MainMenu/BackToMenu.tscn" type="PackedScene" id=14]
 [ext_resource path="res://UI/TimerUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Crypt.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Light/Light1.png" type="Texture" id=17]
+[ext_resource path="res://Light/Light2.png" type="Texture" id=18]
+[ext_resource path="res://Light/Light3.png" type="Texture" id=19]
+[ext_resource path="res://Light/Light4.png" type="Texture" id=20]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -491,6 +495,16 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="AnimatedTexture" id=50]
+frames = 4
+frame_0/texture = ExtResource( 17 )
+frame_1/texture = ExtResource( 18 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 19 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 20 )
+frame_3/delay_sec = 0.0
+
 [node name="World" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -541,6 +555,9 @@ remote_path = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
+
+[node name="Light2D" type="Light2D" parent="YSort/Player"]
+texture = SubResource( 50 )
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
@@ -738,6 +755,9 @@ position = Vector2( -8, 256 )
 
 [node name="Crypt" parent="YSort/Crypts" instance=ExtResource( 16 )]
 position = Vector2( 304, -136 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
+color = Color( 0, 0, 0, 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
