@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://MainMenu/Laguna Smile.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/TimerUI.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=50]
@@ -28,7 +28,7 @@ custom_styles/panel = SubResource( 50 )
 margin_right = 64.0
 margin_bottom = 24.0
 custom_fonts/font = SubResource( 51 )
-text = "00:00"
+text = "00.00"
 align = 1
 valign = 1
 
