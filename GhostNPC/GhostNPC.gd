@@ -13,6 +13,9 @@ enum {
 var velocity = Vector2.ZERO
 var state = IDLE
 var audio_nr = 1
+var dialogue_index = 0
+var dialogue = ["This place is cursed! Especially for poor pumpkins...", "looong time ago, terrible things happened in this place", "a lot of people died in the name of the pumpkins", "This is exactly where the Pumpkin Festival took place. Every year people from each corner of the world came here to celebrate", "During the last celebration, everything went wrong", "The man who hated  pumpkins the most, slaughtered all the festival participants with cold blood", "No matter that they were children or elderly people", "After everything, he became the thing he hated the most...", "Love kills... especially the one with pumpkins."
+]
 
 onready var sprite = $Sprite
 onready var label = $Label
@@ -23,7 +26,10 @@ onready var audioStream = $AudioStreamPlayer
 
 func _on_PlayerDetectionZone_body_entered(body):
 	if body is Player:
-		label.visible = true
+		label.text = dialogue[dialogue_index]
+		dialogue_index += 1
+		if dialogue_index > dialogue.size()-1:
+			dialogue_index = 0
 		audioStream.stream = load("res://GhostNPC/ghost_cry"+str(audio_nr)+".wav")
 		audio_nr += 1
 		if audio_nr > 3:
@@ -35,7 +41,6 @@ func _on_PlayerDetectionZone_body_exited(body):
 	if body is Player:
 		animationPlayer.play("FadeOut")
 		yield(get_tree().create_timer(1), "timeout")
-		label.visible = false
 
 func _physics_process(delta):	
 	match state:
