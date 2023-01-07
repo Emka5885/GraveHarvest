@@ -1,12 +1,12 @@
 extends Node2D
 
-var mainGameScene = load("res://World.tscn")
 var madeByScene = load("res://MainMenu/MadeBy.tscn")
 var statsScene = load("res://MainMenu/Stats.tscn")
 var howToPlayScene = load("res://MainMenu/HowToPlay.tscn")
+var cutscene = load("res://MainMenu/Cutscene.tscn")
 
 func _on_Start_Button_button_up():
-	get_tree().change_scene(mainGameScene.resource_path)
+	get_tree().change_scene(cutscene.resource_path)
 
 func _on_HowToPlay_Button_button_up():
 	get_tree().change_scene(howToPlayScene.resource_path)
