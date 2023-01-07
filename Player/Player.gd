@@ -111,7 +111,9 @@ func set_fertilizer(value):
 		speed = 80
 
 func _on_PathChecker_body_entered(_body):
+	print("na ścieżce")
 	speed += speed_on_path
 
 func _on_PathChecker_body_exited(_body):
+	print("już nie")
 	speed -= speed_on_path
