@@ -76,7 +76,7 @@ func attack_animation_finished():
 	state = MOVE
 
 func _on_Hurtbox_area_entered(area):
-#	PlayerStats.fertilizer -= 1
+	PlayerStats.fertilizer -= 1
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(-250, 250)
