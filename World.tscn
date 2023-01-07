@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Pumpkin/Pumpkin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/FertilizerUI.tscn" type="PackedScene" id=12]
 [ext_resource path="res://TimerUI.gd" type="Script" id=13]
+[ext_resource path="res://MainMenu/PixelRPG.ttf" type="DynamicFontData" id=14]
 
 [sub_resource type="StyleBoxFlat" id=50]
 bg_color = Color( 0.6, 0.6, 0.6, 0.25098 )
@@ -20,6 +21,10 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=51]
+size = 13
+font_data = ExtResource( 14 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -518,7 +523,8 @@ custom_styles/panel = SubResource( 50 )
 [node name="Label" type="Label" parent="CanvasLayer/TimerUI"]
 margin_right = 56.0
 margin_bottom = 24.0
-text = "XX:XX"
+custom_fonts/font = SubResource( 51 )
+text = "00:00"
 align = 1
 valign = 1
 

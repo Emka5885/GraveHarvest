@@ -91,10 +91,12 @@ func _on_Hurtbox_area_entered(area):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(-250, 250)
-	while my_random_number < 100 and my_random_number > -100:
+	var my_random_number2 = rng.randf_range(-250, 250)
+	while (my_random_number < 100 and my_random_number > -100) or (my_random_number2 < 100 and my_random_number2 > -100):
 		my_random_number = rng.randf_range(-250, 250)
+		my_random_number2 = rng.randf_range(-250, 250)
 	var knockback_X = my_random_number
-	var knockback_Y = my_random_number
+	var knockback_Y = my_random_number2
 	
 	if area.position.x >= position.x:
 		knockback_X *= -1
