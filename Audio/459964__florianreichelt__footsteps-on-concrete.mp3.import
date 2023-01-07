@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/459964__florianreichelt__footsteps-on-concrete.mp3-baeb18b3191508663a06142c914ffdfb.mp3str"
+
+[deps]
+
+source_file="res://Audio/459964__florianreichelt__footsteps-on-concrete.mp3"
+dest_files=[ "res://.import/459964__florianreichelt__footsteps-on-concrete.mp3-baeb18b3191508663a06142c914ffdfb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
