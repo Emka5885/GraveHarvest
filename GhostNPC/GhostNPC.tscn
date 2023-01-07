@@ -96,6 +96,7 @@ anims/FadeOut = SubResource( 9 )
 anims/RESET = SubResource( 8 )
 
 [node name="WanderController" parent="." instance=ExtResource( 5 )]
+wander_range = 100
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource( 6 )]
 
