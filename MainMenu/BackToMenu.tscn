@@ -3,8 +3,7 @@
 [ext_resource path="res://MainMenu/BackToMenu.gd" type="Script" id=1]
 [ext_resource path="res://MainMenu/PixelRPG.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://MainMenu/MainMenu.png" type="Texture" id=3]
-[ext_resource path="res://MainMenu/NewGame.png" type="Texture" id=4]
-[ext_resource path="res://MainMenu/Music.png" type="Texture" id=5]
+[ext_resource path="res://MainMenu/Nute.png" type="Texture" id=5]
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://MainMenu/plank.jpg" type="Texture" id=7]
 
@@ -125,10 +124,13 @@ region_rect = Rect2( 0, 0, 65, 65 )
 
 [sub_resource type="StyleBoxTexture" id=21]
 texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 74, 74 )
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="StreamTexture" id=23]
+load_path = "res://.import/NewGame.png-2f93affc373e658c8b726429f3a5c0b3.stex"
 
 [sub_resource type="StyleBoxTexture" id=20]
-texture = ExtResource( 4 )
+texture = SubResource( 23 )
 region_rect = Rect2( 0, 0, 65, 65 )
 
 [node name="BackToMenu" type="Node2D"]
