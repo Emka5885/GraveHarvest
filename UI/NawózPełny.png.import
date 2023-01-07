@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NawózPusty.png-462eaabbcda91a30c0c499c580f2ed71.stex"
+path="res://.import/NawózPełny.png-d78db287f12891728b2e4b0d07272b7b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/NawózPusty.png"
-dest_files=[ "res://.import/NawózPusty.png-462eaabbcda91a30c0c499c580f2ed71.stex" ]
+source_file="res://UI/NawózPełny.png"
+dest_files=[ "res://.import/NawózPełny.png-d78db287f12891728b2e4b0d07272b7b.stex" ]
 
 [params]
 
