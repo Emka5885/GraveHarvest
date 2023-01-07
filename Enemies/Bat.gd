@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
+const Ghost = preload("res://Enemies/Bat.tscn")
 
 export var ACCELERATION = 300
 export var MAX_SPEED = 50
@@ -91,6 +92,7 @@ func _on_Hurtbox_area_entered(area):
 		hurtbox.start_invincibility(0.4)
 
 func on_Animation_Dead_Finished():
+	
 	queue_free()
 
 func _on_Hurtbox_invincibility_started():
