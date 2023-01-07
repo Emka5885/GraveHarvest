@@ -3,10 +3,13 @@ extends Node2D
 var mainGameScene = load("res://World.tscn")
 onready var videoPlayer = $VideoPlayer
 onready var timer = $Timer
+onready var sprite = $Sprite
 
 func _ready():
+	sprite.visible = true
 	videoPlayer.play()
 	yield(get_tree().create_timer(0.5), "timeout")
+	sprite.visible = false
 	videoPlayer.paused = true
 	$AnimationPlayer.play("ScaleToBig")
 
