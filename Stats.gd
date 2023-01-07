@@ -12,7 +12,7 @@ func set_max_fertilizer(value):
 	emit_signal("max_fertilizer_changed", max_fertilizer)
 
 func set_fertilizer(value):
-	fertilizer = value
+	fertilizer = clamp(value, 0, max_fertilizer)
 	emit_signal("fertilizer_changed", fertilizer)
 
 func _ready():

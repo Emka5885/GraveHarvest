@@ -8,5 +8,6 @@ func create_grass_effect():
 	grassEffect.global_position = global_position
 
 func _on_Hurtbox_area_entered(_area):
+	PlayerStats.fertilizer += 1
 	create_grass_effect()
 	queue_free()
