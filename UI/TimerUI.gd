@@ -1,6 +1,6 @@
 extends Control
 
-onready var label = $Label
+onready var label = $Panel/Label
 var time_left = 0
 var minutes = 0
 var seconds = 0
