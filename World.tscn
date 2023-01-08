@@ -1168,25 +1168,34 @@ position = Vector2( 328, 80 )
 [node name="RespawnGhost" parent="YSort/Ghosts" instance=ExtResource( 22 )]
 
 [node name="Position1" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( 0, -168 )
+position = Vector2( -90, -152 )
 
 [node name="Position2" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( -88, -40 )
+position = Vector2( -152, 232 )
 
 [node name="Position3" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( -184, 216 )
+position = Vector2( 328, 104 )
 
 [node name="Position4" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( 176, 208 )
+position = Vector2( 32, 128 )
 
 [node name="Position5" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( 48, 368 )
+position = Vector2( 304, 336 )
 
 [node name="Position6" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( 328, 112 )
+position = Vector2( -16, 217 )
 
 [node name="Position7" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( 304, -80 )
+position = Vector2( -80, 392 )
+
+[node name="Position8" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
+position = Vector2( 140, -155 )
+
+[node name="Position9" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
+position = Vector2( -80, 148 )
+
+[node name="Position10" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
+position = Vector2( -80, -40 )
 
 [node name="Ghost" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
 position = Vector2( -224, 368 )
