@@ -1,5 +1,13 @@
 extends Control
 
-func _process(delta):
-	if Input.is_action_just_pressed("ui_select"):
-		get_tree().change_scene("res://World.tscn")
+var statsScene = load("res://MainMenu/Stats.tscn")
+var cutscene = load("res://MainMenu/Cutscene.tscn")
+
+func _on_Start_Button_button_up():
+	get_tree().change_scene(cutscene.resource_path)
+
+func _on_Stats_Button_button_up():
+	get_tree().change_scene(statsScene.resource_path)
+
+func _on_Quitt_Button_button_up():
+	get_tree().quit()

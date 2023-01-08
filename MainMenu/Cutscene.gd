@@ -9,9 +9,9 @@ func _ready():
 	sprite.visible = true
 	videoPlayer.play()
 	yield(get_tree().create_timer(0.5), "timeout")
-	sprite.visible = false
 	videoPlayer.paused = true
 	$AnimationPlayer.play("ScaleToBig")
+	sprite.visible = false
 
 func _on_ScaleToBig_Animation_finished():
 	videoPlayer.paused = false
@@ -20,6 +20,7 @@ func _on_VideoPlayer_finished():
 	timer.start()
 
 func _on_Timer_timeout():
+	print("1")
 	$AnimationPlayer.play("ScaleToSmall")
 
 func _on_ScaleToSmall_Animation_finished():
