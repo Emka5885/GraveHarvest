@@ -1274,7 +1274,6 @@ position = Vector2( 151, -53 )
 position = Vector2( -105, 282 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
-visible = false
 show_behind_parent = true
 color = Color( 0, 0, 0, 1 )
 
