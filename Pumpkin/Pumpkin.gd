@@ -15,10 +15,8 @@ func _physics_process(_delta):
 	if overlap.size() > 0 && overlap[0] is Player:
 		# Get the Physics2DDirectSpaceState object
 		var space = get_world_2d().direct_space_state
-		# Get the mouse's position
-		var mousePos = get_global_mouse_position()
 		# Check if there is a collision at the mouse position
-		var collision = space.intersect_point(mousePos, 1);
+		var collision = space.intersect_point(get_global_mouse_position(), 1);
 		if collision && collision[0].collider == self:
 			sprite.material.set_shader_param("on", true)
 		else:

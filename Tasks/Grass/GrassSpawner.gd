@@ -27,8 +27,6 @@ func generate_grass():
 	yPos = 0
 
 func _ready():
-#	width += 1
-#	height += 1
 	generate_grass()
 
 func _on_Timer_timeout():

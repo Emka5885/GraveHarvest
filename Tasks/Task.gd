@@ -14,7 +14,7 @@ func _ready():
 	$Timer.set_wait_time(50)
 
 func _on_Timer_timeout():
-	sprite.play("deadFlowers")
+	sprite.play("not done")
 	done = false
 
 func _physics_process(_delta):
@@ -33,7 +33,7 @@ func _input(event):
 	var active = sprite.material.get_shader_param("on")
 	if !done && active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
-			sprite.play("flowers")
+			sprite.play("done")
 			PlayerStats.fertilizer += 1
 			$Timer.start()
 			done = true

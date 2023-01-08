@@ -6,6 +6,7 @@
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=99]
+resource_local_to_scene = true
 shader = ExtResource( 4 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -56,8 +57,4 @@ shape = SubResource( 102 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
 
-[connection signal="mouse_entered" from="." to="." method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="InteractionArea" to="." method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="InteractionArea" to="." method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
