@@ -27,6 +27,7 @@ onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
+onready var textAnimation = $TextAnimation
 
 var health = 3
 
@@ -42,6 +43,7 @@ func _physics_process(delta):
 	
 	match state:
 		IDLE:
+			hide_text()
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			seek_player()
 			if wanderController.get_time_left() == 0:
@@ -58,6 +60,7 @@ func _physics_process(delta):
 		CHASE:
 			var player = playerDetectionZone.player
 			if player != null:
+				show_text()
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = IDLE
@@ -82,6 +85,15 @@ func update_wander():
 func pick_random_state(state_list):
 	state_list.shuffle()
 	return state_list.pop_front()
+
+func show_text():
+	if !$Label.visible:
+		$Label.visible = true
+		textAnimation.play("FadeIn")
+
+func hide_text():
+	if $Label.visible:
+		textAnimation.play("FadeOut")
 
 func _on_Hurtbox_area_entered(area):
 	health -= 1
