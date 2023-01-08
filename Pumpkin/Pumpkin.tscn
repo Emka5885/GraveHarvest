@@ -24,7 +24,7 @@ radius = 16.0
 height = 5.72205e-05
 
 [sub_resource type="CircleShape2D" id=4]
-radius = 32.0
+radius = 60.0
 
 [sub_resource type="Animation" id=6]
 resource_name = "Bounce"
@@ -150,7 +150,6 @@ rotation = 1.5708
 shape = SubResource( 5 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource( 4 )
@@ -176,8 +175,3 @@ texture = ExtResource( 5 )
 texture_scale = 0.02
 color = Color( 1, 0.745098, 0.619608, 1 )
 mode = 2
-
-[connection signal="mouse_entered" from="." to="." method="_on_Pumpkin_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Pumpkin_mouse_exited"]
-[connection signal="body_entered" from="InteractionArea" to="." method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="InteractionArea" to="." method="_on_InteractionArea_body_exited"]

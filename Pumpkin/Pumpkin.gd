@@ -1,45 +1,42 @@
 extends StaticBody2D
 
 var size = 0 setget increase_size
-var active = false
-var mouse_in = false
 
 onready var sprite = $Sprite
 onready var pumpkinAnimation = $PumpkinAnimation
 onready var labelAnimation = $LabelAnimation
 onready var label = $Label
+onready var interactionArea = $InteractionArea
 
 signal add_time
 
-func _on_InteractionArea_body_entered(body):
-	if body is Player:
-		active = true
-
-func _on_InteractionArea_body_exited(body):
-	if body is Player:
-		active = false
-
-func _on_Pumpkin_mouse_entered():
-	if active:
-		sprite.material.set_shader_param("on", true)
-		mouse_in = true
-
-func _on_Pumpkin_mouse_exited():
-	if active:
+func _physics_process(_delta):
+	var overlap = interactionArea.get_overlapping_bodies()
+	if overlap.size() > 0 && overlap[0] is Player:
+		# Get the Physics2DDirectSpaceState object
+		var space = get_world_2d().direct_space_state
+		# Get the mouse's position
+		var mousePos = get_global_mouse_position()
+		# Check if there is a collision at the mouse position
+		var collision = space.intersect_point(mousePos, 1);
+		if collision && collision[0].collider == self:
+			sprite.material.set_shader_param("on", true)
+		else:
+			sprite.material.set_shader_param("on", false)
+	else:
 		sprite.material.set_shader_param("on", false)
-		mouse_in = false
 
 func _input(event):
-	if active and mouse_in:
-		if event is InputEventMouseButton:
-			if event.button_index == BUTTON_LEFT and event.pressed:
-				if PlayerStats.fertilizer >= 1:
-					emit_signal("add_time")
-					label.text = "+"+str(int(PlayerStats.fertilizer))
-					labelAnimation.play("TextAnim")
-					pumpkinAnimation.play("Bounce")
-					self.size += int(PlayerStats.fertilizer)
-					PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
+	var active = sprite.material.get_shader_param("on")
+	if active && event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
+			if PlayerStats.fertilizer >= 1:
+				emit_signal("add_time")
+				label.text = "+"+str(int(PlayerStats.fertilizer))
+				labelAnimation.play("TextAnim")
+				pumpkinAnimation.play("Bounce")
+				self.size += int(PlayerStats.fertilizer)
+				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
 
 func increase_size(new_size):
 	var fertilizer = new_size - size
