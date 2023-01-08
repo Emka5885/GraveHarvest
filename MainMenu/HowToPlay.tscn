@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/HowToPlay.gd" type="Script" id=2]
 [ext_resource path="res://MainMenu/Background.jpg" type="Texture" id=3]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
@@ -103,5 +104,8 @@ margin_bottom = 137.0
 custom_fonts/font = SubResource( 7 )
 text = "ble bla bla - cos tam"
 align = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
