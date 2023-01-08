@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=126 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -17,9 +17,12 @@
 [ext_resource path="res://UI/TimerUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Crypt.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=17]
-[ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Tasks/GraveFlowers/Grave.gd" type="Script" id=18]
+[ext_resource path="res://World/grave3.png" type="Texture" id=19]
+[ext_resource path="res://World/grave4.png" type="Texture" id=20]
 [ext_resource path="res://Tasks/Grass/GrassSpawner.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/RespawnGhost.tscn" type="PackedScene" id=22]
+[ext_resource path="res://OutlineShader.gdshader" type="Shader" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -919,6 +922,43 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="ShaderMaterial" id=99]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=100]
+animations = [ {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "deadFlowers",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "flowers",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=101]
+extents = Vector2( 10, 18.5 )
+
+[sub_resource type="CapsuleShape2D" id=102]
+radius = 27.0
+
+[sub_resource type="ShaderMaterial" id=103]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 336, 16 )
 
@@ -1124,17 +1164,65 @@ position = Vector2( 304, -136 )
 
 [node name="GravesFlowers" type="YSort" parent="YSort"]
 
-[node name="Grave" parent="YSort/GravesFlowers" instance=ExtResource( 18 )]
+[node name="Grave" type="StaticBody2D" parent="YSort/GravesFlowers"]
 position = Vector2( -96, -168 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Grave2" parent="YSort/GravesFlowers" instance=ExtResource( 18 )]
-position = Vector2( -56, -168 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave"]
+material = SubResource( 99 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Grave3" parent="YSort/GravesFlowers" instance=ExtResource( 18 )]
-position = Vector2( -16, -168 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave"]
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
 
-[node name="Grave4" parent="YSort/GravesFlowers" instance=ExtResource( 18 )]
-position = Vector2( 24, -168 )
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave"]
+wait_time = 30.0
+
+[node name="Grave2" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( -48, -168 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave2"]
+material = SubResource( 103 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave2"]
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave2"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave2/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave2"]
+wait_time = 30.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
 visible = false
@@ -1170,3 +1258,13 @@ volume_db = -40.0
 script = ExtResource( 8 )
 
 [connection signal="add_time" from="YSort/Pumpkin" to="CanvasLayer/TimerUI" method="_on_Pumpkin_add_time"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave" to="YSort/GravesFlowers/Grave" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave" to="YSort/GravesFlowers/Grave" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave/InteractionArea" to="YSort/GravesFlowers/Grave" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave/InteractionArea" to="YSort/GravesFlowers/Grave" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave/Timer" to="YSort/GravesFlowers/Grave" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave2" to="YSort/GravesFlowers/Grave2" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave2" to="YSort/GravesFlowers/Grave2" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave2/Timer" to="YSort/GravesFlowers/Grave2" method="_on_Timer_timeout"]
