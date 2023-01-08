@@ -19,13 +19,25 @@ var dialog10 = "RIP Arvi - placeholder."
 var dialogs = [dialog1, dialog2, dialog3, dialog4, dialog5, dialog6, dialog7, dialog8, dialog9, dialog10]
 
 var done = false
+var player_in = false
 
 func _ready():
 	$Panel/Label.text = dialogs[dialog_number]
 
 func _physics_process(_delta):
 	var overlap = interactionArea.get_overlapping_bodies()
-	if overlap.size() > 0 && overlap[1] is Player:
+	
+	if overlap:
+		for o in overlap:
+			if o is Player:
+				player_in = true
+				break 
+			else:
+				player_in = false
+	else:
+		player_in = false
+		
+	if player_in:
 		var space = get_world_2d().direct_space_state
 		var collision = space.intersect_point(get_global_mouse_position(), 1);
 		if collision && collision[0].collider == self:
