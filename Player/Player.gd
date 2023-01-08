@@ -5,7 +5,8 @@ const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
 export var MAX_SPEED = 80
-var MAKSIMAL_SPEED # speed without baggage
+var SPEED_no_baggage  # speed without baggage
+var fertilizer = 0
 var speed_on_path = 20
 export var FRICTION = 500
 
@@ -29,7 +30,7 @@ func _ready():
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
-	MAKSIMAL_SPEED = MAX_SPEED
+	SPEED_no_baggage = MAX_SPEED
 # warning-ignore:return_value_discarded
 	PlayerStats.connect("fertilizer_changed", self, "set_fertilizer")
 
@@ -106,15 +107,12 @@ func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
 func set_fertilizer(value):
-	if value == 0:
-		MAX_SPEED = MAKSIMAL_SPEED
-	elif MAX_SPEED > MAKSIMAL_SPEED-25:
-		MAX_SPEED -= value*5
+	var slowdown = value*15
+	MAX_SPEED = SPEED_no_baggage - slowdown
+
 
 func _on_PathChecker_body_entered(_body):
-	print("na ścieżce")
 	MAX_SPEED += speed_on_path
 
 func _on_PathChecker_body_exited(_body):
-	print("już nie")
 	MAX_SPEED -= speed_on_path
