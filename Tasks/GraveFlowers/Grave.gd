@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 # BARDZO W CHUJ WAŻNE XDDDD Tak to jest jak się dokumentacji o myszce nie czyta
+## TAK TO JEST JAK SIĘ NIE KOMENTUJE KODU I INNI SIĘ MUSZA DOMYŚLAĆ JAK TO POWTÓRZYĆ
 # W STATIC BODY 2D W ZAKŁADCE CollosionObject2D>Input>Pickable = true
 
 var active = false
