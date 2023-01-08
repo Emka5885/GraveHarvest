@@ -27,7 +27,6 @@ func _on_Timer_timeout():
 func _on_Pumpkin_add_time():
 	var bonus_time := 0
 	var actual_time = round($Timer.get_time_left())
-	print(actual_time)
 	bonus_time = actual_time + 5
 	if (bonus_time >= 240):
 		bonus_time = 240

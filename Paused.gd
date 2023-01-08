@@ -5,6 +5,8 @@ var mainGameScene = load("res://World.tscn")
 
 var isPaused = false
 
+onready var select = $AudioStreamPlayer
+
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("back_to_menu"):
 		isPaused = !isPaused
@@ -19,6 +21,8 @@ func pause(value):
 
 
 func _on_MainMenu_Button_button_up():
+	select.play()
+	yield(select, "finished")
 	isPaused = false
 	set_visible(isPaused)
 	pause(isPaused)
@@ -26,6 +30,8 @@ func _on_MainMenu_Button_button_up():
 
 
 func _on_NewGame_Button_button_up():
+	select.play()
+	yield(select, "finished")
 	isPaused = false
 	set_visible(isPaused)
 	pause(isPaused)
@@ -33,6 +39,8 @@ func _on_NewGame_Button_button_up():
 
 
 func _on_Resume_Button_button_up():
+	select.play()
+	yield(select, "finished")
 	isPaused = !isPaused
 	set_visible(isPaused)
 	pause(isPaused)
