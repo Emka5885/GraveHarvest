@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://MainMenu/test_cutscene.webm" type="VideoStream" id=1]
+[ext_resource path="res://MainMenu/Intro.webm" type="VideoStream" id=1]
 [ext_resource path="res://MainMenu/Cutscene.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=2]
@@ -98,11 +98,11 @@ __meta__ = {
 }
 
 [node name="VideoPlayer" type="VideoPlayer" parent="Cutscene"]
-margin_left = -112.0
+margin_left = -160.0
 margin_top = -88.0
-margin_right = 528.0
-margin_bottom = 416.0
-rect_scale = Vector2( 0.36, 0.36 )
+margin_right = 1760.0
+margin_bottom = 992.0
+rect_scale = Vector2( 0.167, 0.167 )
 stream = ExtResource( 1 )
 expand = false
 
