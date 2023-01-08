@@ -959,7 +959,7 @@ visible = false
 position = Vector2( 144, 104 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( -963.524, -763.654, 1298.21, 1194.36 )
+region_rect = Rect2( -32.4885, -118.289, 866.207, 683.044 )
 
 [node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -1196,6 +1196,9 @@ position = Vector2( -80, 148 )
 
 [node name="Position10" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
 position = Vector2( -80, -40 )
+
+[node name="Position11" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
+position = Vector2( 48, -152 )
 
 [node name="Ghost" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
 position = Vector2( -224, 368 )
