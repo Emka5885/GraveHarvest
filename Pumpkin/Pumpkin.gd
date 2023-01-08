@@ -39,6 +39,9 @@ func _input(event):
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
 				self.size += int(PlayerStats.fertilizer)
+				
+				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
+				
 				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
 
 func increase_size(new_size):
