@@ -49,11 +49,13 @@ radius = 5.0
 collision_layer = 0
 collision_mask = 128
 script = ExtResource( 2 )
+WANDER_TARGET_RANGE = 10
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 6 )
 frames = SubResource( 7 )
 animation = "Fly"
+frame = 3
 playing = true
 offset = Vector2( 0, -12 )
 

@@ -10,14 +10,13 @@ export var WANDER_TARGET_RANGE = 4
 
 enum {
 	IDLE,
-	WANDER,
-	CHASE
+	WANDER
 }
 
 var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 
-var state = CHASE
+var state = IDLE
 
 onready var sprite = $AnimatedSprite
 onready var softCollision = $SoftCollision
