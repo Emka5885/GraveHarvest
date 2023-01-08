@@ -45,10 +45,12 @@ frames = SubResource( 100 )
 animation = "deadFlowers"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 10.5 )
 shape = SubResource( 101 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]

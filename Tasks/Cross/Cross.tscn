@@ -45,10 +45,12 @@ frames = SubResource( 120 )
 animation = "not done"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 1, 5 )
 shape = SubResource( 121 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 1, 11 )
