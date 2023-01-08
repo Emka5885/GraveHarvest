@@ -78,6 +78,7 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	PlayerStats.fertilizer -= 1
+	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(-250, 250)
@@ -87,14 +88,13 @@ func _on_Hurtbox_area_entered(area):
 		my_random_number2 = rng.randf_range(-250, 250)
 	var knockback_X = my_random_number
 	var knockback_Y = my_random_number2
-	
 	if area.position.x >= position.x:
 		knockback_X *= -1
 	if area.position.y >= position.y:
 		knockback_Y *= -1
-		
 	velocity.x += knockback_X
 	velocity.y += knockback_Y
+	
 	hurtbox.start_invincibility(0.6)
 	hurtbox.create_hit_effect()
 	var playerHurtSound = PlayerHurtSound.instance()
@@ -109,7 +109,6 @@ func _on_Hurtbox_invincibility_ended():
 func set_fertilizer(value):
 	var slowdown = value*15
 	MAX_SPEED = SPEED_no_baggage - slowdown
-
 
 func _on_PathChecker_body_entered(_body):
 	MAX_SPEED += speed_on_path
