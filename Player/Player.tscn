@@ -10,7 +10,6 @@
 [ext_resource path="res://Audio/randomized_pitch.gd" type="Script" id=8]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
 
-
 [sub_resource type="ShaderMaterial" id=50]
 shader = ExtResource( 9 )
 shader_param/active = false
@@ -579,7 +578,8 @@ collision_mask = 257
 script = ExtResource( 2 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
-position = Vector2( 0, 1 )
+position = Vector2( -7.15256e-07, 1 )
+scale = Vector2( 1.5, 1.4 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]

@@ -69,7 +69,7 @@ text = "Stats"
 align = 1
 valign = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label1" type="Label" parent="."]
 margin_left = 400.0
 margin_top = 100.0
 margin_right = 880.0
@@ -78,31 +78,72 @@ custom_styles/normal = SubResource( 6 )
 align = 1
 valign = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Label2"]
-margin_right = 480.0
-margin_bottom = 480.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Label1"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 460.0
+margin_bottom = 460.0
 
-[node name="Label3" type="Label" parent="Label2/VBoxContainer"]
-margin_right = 480.0
+[node name="Label2" type="Label" parent="Label1/VBoxContainer"]
+margin_right = 440.0
 margin_bottom = 43.0
 custom_fonts/font = SubResource( 7 )
-text = "Player - 1000"
 align = 1
 
-[node name="Label2" type="Label" parent="Label2/VBoxContainer"]
+[node name="Label3" type="Label" parent="Label1/VBoxContainer"]
 margin_top = 47.0
-margin_right = 480.0
+margin_right = 440.0
 margin_bottom = 90.0
 custom_fonts/font = SubResource( 7 )
-text = "Player - 500"
 align = 1
 
-[node name="Label4" type="Label" parent="Label2/VBoxContainer"]
+[node name="Label4" type="Label" parent="Label1/VBoxContainer"]
 margin_top = 94.0
-margin_right = 480.0
+margin_right = 440.0
 margin_bottom = 137.0
 custom_fonts/font = SubResource( 7 )
-text = "Player - 200"
+align = 1
+
+[node name="Label5" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 141.0
+margin_right = 440.0
+margin_bottom = 184.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+
+[node name="Label6" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 188.0
+margin_right = 440.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+
+[node name="Label7" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 235.0
+margin_right = 440.0
+margin_bottom = 278.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+
+[node name="Label8" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 282.0
+margin_right = 440.0
+margin_bottom = 325.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+
+[node name="Label9" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 329.0
+margin_right = 440.0
+margin_bottom = 372.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+
+[node name="Label10" type="Label" parent="Label1/VBoxContainer"]
+margin_top = 376.0
+margin_right = 440.0
+margin_bottom = 419.0
+custom_fonts/font = SubResource( 7 )
 align = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
