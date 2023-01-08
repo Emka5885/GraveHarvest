@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grabarz_walk.png-aa22c5171f4113ede71603a6dda172d9.stex"
+path="res://.import/Grabarz walk.png-bb58ee9d2ac0613a7be617bbdafd12de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Player/Grabarz_walk.png"
-dest_files=[ "res://.import/Grabarz_walk.png-aa22c5171f4113ede71603a6dda172d9.stex" ]
+source_file="res://Player/Grabarz walk.png"
+dest_files=[ "res://.import/Grabarz walk.png-bb58ee9d2ac0613a7be617bbdafd12de.stex" ]
 
 [params]
 
