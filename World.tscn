@@ -1,4 +1,4 @@
-[gd_scene load_steps=153 format=2]
+[gd_scene load_steps=147 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -28,9 +28,6 @@
 [ext_resource path="res://World/grave1.png" type="Texture" id=26]
 [ext_resource path="res://Light/LightDifuse.png" type="Texture" id=27]
 [ext_resource path="res://World/CliffFillTileset.png" type="Texture" id=28]
-[ext_resource path="res://World/Krzyż krzywy.png" type="Texture" id=29]
-[ext_resource path="res://World/Krzyż prosty.png" type="Texture" id=30]
-[ext_resource path="res://Tasks/Cross/Cross.gd" type="Script" id=31]
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1099,27 +1096,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="SpriteFrames" id=120]
-animations = [ {
-"frames": [ ExtResource( 29 ) ],
-"loop": true,
-"name": "crooked",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 30 ) ],
-"loop": true,
-"name": "straight",
-"speed": 1.0
-} ]
-
-[sub_resource type="CapsuleShape2D" id=121]
-radius = 5.32135
-height = 31.7122
-
-[sub_resource type="CircleShape2D" id=122]
-radius = 41.1096
-
-[sub_resource type="ShaderMaterial" id=123]
+[sub_resource type="ShaderMaterial" id=120]
 shader = ExtResource( 23 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -1128,7 +1105,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="ShaderMaterial" id=124]
+[sub_resource type="ShaderMaterial" id=121]
 shader = ExtResource( 23 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -1805,93 +1782,37 @@ wait_time = 30.0
 [node name="Cross" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -80, -64 )
 
-[node name="Cross2" type="StaticBody2D" parent="YSort/Crosses"]
-position = Vector2( 144, -40 )
-input_pickable = true
-script = ExtResource( 31 )
+[node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
+position = Vector2( 240, 284 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Crosses/Cross2"]
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross2" index="0"]
 material = SubResource( 119 )
-frames = SubResource( 120 )
-animation = "crooked"
-flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross2"]
-visible = false
-position = Vector2( 2.82253, 10.6786 )
-shape = SubResource( 121 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/Crosses/Cross2"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross2/InteractionArea"]
-position = Vector2( 2.13504, -2.90545 )
-shape = SubResource( 122 )
-
-[node name="Timer" type="Timer" parent="YSort/Crosses/Cross2"]
-wait_time = 30.0
-
-[node name="Cross3" type="StaticBody2D" parent="YSort/Crosses"]
-position = Vector2( 240, 304 )
-input_pickable = true
-script = ExtResource( 31 )
+[node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
+position = Vector2( 153, -45 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Crosses/Cross3"]
-material = SubResource( 123 )
-frames = SubResource( 120 )
-animation = "crooked"
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross3" index="0"]
+material = SubResource( 120 )
+flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross3"]
-visible = false
-position = Vector2( 2.82253, 10.6786 )
-shape = SubResource( 121 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/Crosses/Cross3"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross3/InteractionArea"]
-position = Vector2( 2.13504, -2.90545 )
-shape = SubResource( 122 )
-
-[node name="Timer" type="Timer" parent="YSort/Crosses/Cross3"]
-wait_time = 30.0
-
-[node name="Cross4" type="StaticBody2D" parent="YSort/Crosses"]
-position = Vector2( -112, 288 )
-input_pickable = true
-script = ExtResource( 31 )
+[node name="Cross4" parent="YSort/Crosses" instance=ExtResource( 6 )]
+position = Vector2( -105, 282 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/Crosses/Cross4"]
-material = SubResource( 124 )
-frames = SubResource( 120 )
-animation = "crooked"
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross4" index="0"]
+material = SubResource( 121 )
 flip_h = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross4"]
-visible = false
-position = Vector2( 2.82253, 10.6786 )
-shape = SubResource( 121 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/Crosses/Cross4"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Crosses/Cross4/InteractionArea"]
-position = Vector2( 2.13504, -2.90545 )
-shape = SubResource( 122 )
-
-[node name="Timer" type="Timer" parent="YSort/Crosses/Cross4"]
-wait_time = 30.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
+visible = false
 show_behind_parent = true
 color = Color( 0, 0, 0, 1 )
 
@@ -1984,18 +1905,7 @@ script = ExtResource( 8 )
 [connection signal="body_entered" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_entered"]
 [connection signal="body_exited" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle6/Timer" to="YSort/GravesCandles/GraveCandle6" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/Crosses/Cross2" to="YSort/Crosses/Cross2" method="_on_Cross_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/Crosses/Cross2" to="YSort/Crosses/Cross2" method="_on_Cross_mouse_exited"]
-[connection signal="body_entered" from="YSort/Crosses/Cross2/InteractionArea" to="YSort/Crosses/Cross2" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/Crosses/Cross2/InteractionArea" to="YSort/Crosses/Cross2" method="_on_InteractionArea_body_exited"]
-[connection signal="timeout" from="YSort/Crosses/Cross2/Timer" to="YSort/Crosses/Cross2" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/Crosses/Cross3" to="YSort/Crosses/Cross3" method="_on_Cross_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/Crosses/Cross3" to="YSort/Crosses/Cross3" method="_on_Cross_mouse_exited"]
-[connection signal="body_entered" from="YSort/Crosses/Cross3/InteractionArea" to="YSort/Crosses/Cross3" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/Crosses/Cross3/InteractionArea" to="YSort/Crosses/Cross3" method="_on_InteractionArea_body_exited"]
-[connection signal="timeout" from="YSort/Crosses/Cross3/Timer" to="YSort/Crosses/Cross3" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/Crosses/Cross4" to="YSort/Crosses/Cross4" method="_on_Cross_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/Crosses/Cross4" to="YSort/Crosses/Cross4" method="_on_Cross_mouse_exited"]
-[connection signal="body_entered" from="YSort/Crosses/Cross4/InteractionArea" to="YSort/Crosses/Cross4" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/Crosses/Cross4/InteractionArea" to="YSort/Crosses/Cross4" method="_on_InteractionArea_body_exited"]
-[connection signal="timeout" from="YSort/Crosses/Cross4/Timer" to="YSort/Crosses/Cross4" method="_on_Timer_timeout"]
+
+[editable path="YSort/Crosses/Cross2"]
+[editable path="YSort/Crosses/Cross3"]
+[editable path="YSort/Crosses/Cross4"]

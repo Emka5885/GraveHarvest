@@ -28,11 +28,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=121]
-radius = 5.32135
-height = 31.7122
+radius = 8.17747
+height = 39.6451
 
 [sub_resource type="CircleShape2D" id=122]
-radius = 41.1096
+radius = 59.0339
 
 [node name="Cross" type="StaticBody2D"]
 input_pickable = true
@@ -44,22 +44,16 @@ frames = SubResource( 120 )
 animation = "crooked"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 2.82253, 10.6786 )
+position = Vector2( 1, 5 )
 shape = SubResource( 121 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2( 2.13504, -2.90545 )
+position = Vector2( 1, 11 )
 shape = SubResource( 122 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
 
-[connection signal="mouse_entered" from="." to="." method="_on_Cross_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_Cross_mouse_exited"]
-[connection signal="body_entered" from="InteractionArea" to="." method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="InteractionArea" to="." method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
