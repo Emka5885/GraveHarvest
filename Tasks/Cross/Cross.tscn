@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://World/Krzyż krzywy.png" type="Texture" id=1]
-[ext_resource path="res://Tasks/Cross/Cross.gd" type="Script" id=2]
+[ext_resource path="res://Tasks/Task.gd" type="Script" id=2]
 [ext_resource path="res://World/Krzyż prosty.png" type="Texture" id=3]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=4]
 
@@ -17,14 +17,14 @@ shader_param/on = false
 
 [sub_resource type="SpriteFrames" id=120]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "crooked",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "straight",
+"name": "done",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "not done",
 "speed": 1.0
 } ]
 
@@ -42,7 +42,7 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 7 )
 frames = SubResource( 120 )
-animation = "crooked"
+animation = "not done"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 5 )
