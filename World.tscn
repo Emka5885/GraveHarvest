@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -17,17 +17,11 @@
 [ext_resource path="res://UI/TimerUI.tscn" type="PackedScene" id=15]
 [ext_resource path="res://World/Crypt.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=17]
-[ext_resource path="res://Tasks/GraveFlowers/Grave.gd" type="Script" id=18]
-[ext_resource path="res://World/grave3.png" type="Texture" id=19]
-[ext_resource path="res://World/grave4.png" type="Texture" id=20]
+[ext_resource path="res://Tasks/GraveCandle/GraveCandle.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Tasks/Grass/GrassSpawner.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Enemies/RespawnGhost.tscn" type="PackedScene" id=22]
-[ext_resource path="res://OutlineShader.gdshader" type="Shader" id=23]
-[ext_resource path="res://Tasks/GraveCandle/GraveCandle.gd" type="Script" id=24]
-[ext_resource path="res://World/grave2.png" type="Texture" id=25]
-[ext_resource path="res://World/grave1.png" type="Texture" id=26]
-[ext_resource path="res://Light/LightDifuse.png" type="Texture" id=27]
 [ext_resource path="res://World/CliffFillTileset.png" type="Texture" id=28]
+[ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -941,179 +935,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="ShaderMaterial" id=99]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="SpriteFrames" id=100]
-animations = [ {
-"frames": [ ExtResource( 19 ) ],
-"loop": true,
-"name": "deadFlowers",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "flowers",
-"speed": 1.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=101]
-extents = Vector2( 10, 18.5 )
-
-[sub_resource type="CapsuleShape2D" id=102]
-radius = 27.0
-
-[sub_resource type="ShaderMaterial" id=103]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=109]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=113]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=117]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=115]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=104]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="SpriteFrames" id=105]
-animations = [ {
-"frames": [ ExtResource( 26 ) ],
-"loop": true,
-"name": "candle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ) ],
-"loop": true,
-"name": "noCandle",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=106]
-extents = Vector2( 10, 16 )
-
-[sub_resource type="CapsuleShape2D" id=107]
-radius = 27.0
-
-[sub_resource type="ShaderMaterial" id=108]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=110]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=114]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=116]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=118]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=119]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=120]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="ShaderMaterial" id=121]
-shader = ExtResource( 23 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 336, 16 )
 
@@ -1397,426 +1218,46 @@ position = Vector2( 304, -136 )
 
 [node name="GravesFlowers" type="YSort" parent="YSort"]
 
-[node name="Grave" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( -96, -168 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Grave1" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( -90, -166 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave"]
-material = SubResource( 99 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Grave2" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( -1, -167 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
+[node name="Grave3" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( 97, -168 )
 
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave"]
-visible = false
-collision_mask = 3
+[node name="Grave4" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( -224, 217 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave/InteractionArea"]
-shape = SubResource( 102 )
+[node name="Grave5" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( -148, 216 )
 
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave"]
-wait_time = 30.0
-
-[node name="Grave2" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( 0, -168 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave2"]
-material = SubResource( 103 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave2"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave2"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave2/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave2"]
-wait_time = 30.0
-
-[node name="Grave3" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( 96, -168 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave3"]
-material = SubResource( 109 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave3"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave3"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave3/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave3"]
-wait_time = 30.0
-
-[node name="Grave4" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( -224, 216 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave4"]
-material = SubResource( 113 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave4"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave4"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave4/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave4"]
-wait_time = 30.0
-
-[node name="Grave5" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( 24, 216 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave5"]
-material = SubResource( 117 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave5"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave5"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave5/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave5"]
-wait_time = 30.0
-
-[node name="Grave6" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( -144, 216 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave6"]
-material = SubResource( 115 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave6"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave6"]
-wait_time = 30.0
+[node name="Grave6" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
+position = Vector2( 23, 218 )
 
 [node name="GravesCandles" type="YSort" parent="YSort"]
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="GraveCandle" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( -48, -168 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="GraveCandle" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( -48, -166 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle"]
-material = SubResource( 104 )
-frames = SubResource( 105 )
-animation = "noCandle"
+[node name="GraveCandle4" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( -189, 219 )
 
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
+[node name="GraveCandle5" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( 68, 219 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
+[node name="GraveCandle6" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( -16, 219 )
 
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle"]
-visible = false
-collision_mask = 3
+[node name="GraveCandle2" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( 47, -166 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle"]
-wait_time = 30.0
-
-[node name="GraveCandle2" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( 48, -168 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true,
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle2"]
-material = SubResource( 108 )
-frames = SubResource( 105 )
-animation = "noCandle"
-__meta__ = {
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle2"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle2"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle2"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle2/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle2"]
-wait_time = 30.0
-
-[node name="GraveCandle3" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( 144, -168 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true,
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle3"]
-material = SubResource( 110 )
-frames = SubResource( 105 )
-animation = "noCandle"
-__meta__ = {
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle3"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle3"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle3"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle3/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle3"]
-wait_time = 30.0
-
-[node name="GraveCandle4" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( -184, 216 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true,
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle4"]
-material = SubResource( 114 )
-frames = SubResource( 105 )
-animation = "noCandle"
-__meta__ = {
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle4"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle4"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle4"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle4/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle4"]
-wait_time = 30.0
-
-[node name="GraveCandle5" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( -16, 216 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true,
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle5"]
-material = SubResource( 116 )
-frames = SubResource( 105 )
-animation = "noCandle"
-__meta__ = {
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle5"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle5"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle5"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle5/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle5"]
-wait_time = 30.0
-
-[node name="GraveCandle6" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( 64, 216 )
-input_pickable = true
-script = ExtResource( 24 )
-__meta__ = {
-"_edit_group_": true,
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle6"]
-material = SubResource( 118 )
-frames = SubResource( 105 )
-animation = "noCandle"
-__meta__ = {
-"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
-}
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle6"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 27 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle6"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 106 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle6"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle6/InteractionArea"]
-shape = SubResource( 107 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle6"]
-wait_time = 30.0
+[node name="GraveCandle3" parent="YSort/GravesCandles" instance=ExtResource( 18 )]
+position = Vector2( 140, -167 )
 
 [node name="Crosses" type="YSort" parent="YSort"]
 
@@ -1825,32 +1266,12 @@ position = Vector2( -80, -64 )
 
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( 240, 284 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" parent="YSort/Crosses/Cross2" index="0"]
-material = SubResource( 119 )
 
 [node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( 153, -45 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" parent="YSort/Crosses/Cross3" index="0"]
-material = SubResource( 120 )
-flip_h = true
+position = Vector2( 151, -53 )
 
 [node name="Cross4" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -105, 282 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" parent="YSort/Crosses/Cross4" index="0"]
-material = SubResource( 121 )
-flip_h = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
 visible = false
@@ -1886,19 +1307,3 @@ volume_db = -40.0
 script = ExtResource( 8 )
 
 [connection signal="add_time" from="YSort/Pumpkin" to="CanvasLayer/TimerUI" method="_on_Pumpkin_add_time"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave/Timer" to="YSort/GravesFlowers/Grave" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave2/Timer" to="YSort/GravesFlowers/Grave2" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave3/Timer" to="YSort/GravesFlowers/Grave3" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave4/Timer" to="YSort/GravesFlowers/Grave4" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave5/Timer" to="YSort/GravesFlowers/Grave5" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave6/Timer" to="YSort/GravesFlowers/Grave6" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle/Timer" to="YSort/GravesCandles/GraveCandle" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle2/Timer" to="YSort/GravesCandles/GraveCandle2" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle3/Timer" to="YSort/GravesCandles/GraveCandle3" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle4/Timer" to="YSort/GravesCandles/GraveCandle4" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle5/Timer" to="YSort/GravesCandles/GraveCandle5" method="_on_Timer_timeout"]
-[connection signal="timeout" from="YSort/GravesCandles/GraveCandle6/Timer" to="YSort/GravesCandles/GraveCandle6" method="_on_Timer_timeout"]
-
-[editable path="YSort/Crosses/Cross2"]
-[editable path="YSort/Crosses/Cross3"]
-[editable path="YSort/Crosses/Cross4"]
