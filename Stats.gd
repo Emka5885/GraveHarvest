@@ -1,6 +1,5 @@
 extends Node
 
-var result = []
 var PlayerPoints = 0 setget points_change
 
 #sack of fertilize
@@ -24,5 +23,7 @@ func reset_fertilizerUI():
 	emit_signal("fertilizer_changed", fertilizer)
 	
 func points_change(value):
+	print(PlayerPoints, " -> [points changed] new: ", value)
 	PlayerPoints += value
+	print(PlayerPoints, " -> [points changed] new: ", value)
 	emit_signal("points_changed", value)

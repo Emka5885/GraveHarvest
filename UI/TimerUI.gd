@@ -22,7 +22,6 @@ func get_minutes_and_seconds():
 	seconds = int(time_left) % 60
 
 func _on_Timer_timeout():
-	PlayerStats.result.append(PlayerStats.PlayerPoints)
 	get_tree().change_scene("res://WinScene.tscn")
 
 func _on_Pumpkin_add_time():
