@@ -52,10 +52,12 @@ texture = ExtResource( 3 )
 texture_scale = 0.02
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 12 )
 shape = SubResource( 106 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]

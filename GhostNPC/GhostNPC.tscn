@@ -12,7 +12,7 @@
 [sub_resource type="CapsuleShape2D" id=11]
 height = 10.0
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=12]
 shader = ExtResource( 4 )
 shader_param/height = 1.0
 shader_param/frequency = 20.0
@@ -81,7 +81,7 @@ shape = SubResource( 11 )
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 4 )
+material = SubResource( 12 )
 margin_left = -61.0
 margin_top = -49.0
 margin_right = 61.0

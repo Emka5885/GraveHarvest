@@ -6,7 +6,7 @@
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Enemies/Bat.gd" type="Script" id=7]
+[ext_resource path="res://Enemies/Ghost.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Ghost.png" type="Texture" id=8]
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://GhostNPC/WavyTextShader.gdshader" type="Shader" id=10]
@@ -162,10 +162,10 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="ShaderMaterial" id=24]
+[sub_resource type="ShaderMaterial" id=26]
 shader = ExtResource( 10 )
 shader_param/height = 1.0
-shader_param/frequency = 20.0
+shader_param/frequency = 17.0
 shader_param/speed = 3.0
 
 [sub_resource type="DynamicFont" id=25]
@@ -185,6 +185,7 @@ position = Vector2( -1, -10 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 20 )
 animation = "walk"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -245,11 +246,11 @@ anims/RESET = SubResource( 23 )
 [node name="Label" type="Label" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
-material = SubResource( 24 )
+material = SubResource( 26 )
 margin_left = -61.0
-margin_top = -49.0
+margin_top = -40.0
 margin_right = 61.0
-margin_bottom = -40.0
+margin_bottom = -31.0
 custom_fonts/font = SubResource( 25 )
 text = "Zjem cie!"
 align = 1
