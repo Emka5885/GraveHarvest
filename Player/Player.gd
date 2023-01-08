@@ -78,7 +78,7 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	PlayerStats.fertilizer -= 1
-	
+	get_node_or_null("Camera2D").shake(50, 0.5)
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(-250, 250)

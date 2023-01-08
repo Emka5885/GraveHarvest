@@ -32,3 +32,4 @@ func _input(event):
 			PlayerStats.fertilizer += 1
 			$Timer.start()
 			done = true
+			print(get_tree().current_scene.get_node_or_null("YSort/Player/Camera2D"))
