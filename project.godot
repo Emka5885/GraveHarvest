@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Game Jam"
 run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+config/icon="res://Pumpkin/Grzes2.png"
 
 [autoload]
 
