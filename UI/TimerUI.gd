@@ -25,8 +25,8 @@ func _on_Timer_timeout():
 	get_tree().change_scene("res://WinScene.tscn")
 
 func _on_Pumpkin_add_time():
-	var bonus_time = round($Timer.get_wait_time()) + 10
-	if (bonus_time > 599):
-		bonus_time = 599
+	var bonus_time = round($Timer.get_wait_time()) + 5
+	if (bonus_time > 240):
+		bonus_time = 240
 	$Timer.set_wait_time(bonus_time)
 	$Timer.start()
