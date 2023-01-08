@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var size = 0 setget increase_size
-
+var player_in = false
 onready var sprite = $Sprite
 onready var pumpkinAnimation = $PumpkinAnimation
 onready var labelAnimation = $LabelAnimation
@@ -12,7 +12,12 @@ signal add_time
 
 func _physics_process(_delta):
 	var overlap = interactionArea.get_overlapping_bodies()
-	if overlap.size() > 0 && overlap[0] is Player:
+	if overlap:
+		for o in overlap:
+			player_in = true if o is Player else false
+	else:
+		player_in = false
+	if player_in:
 		# Get the Physics2DDirectSpaceState object
 		var space = get_world_2d().direct_space_state
 		# Check if there is a collision at the mouse position
