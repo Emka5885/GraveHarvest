@@ -996,7 +996,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="ShaderMaterial" id=115]
+[sub_resource type="ShaderMaterial" id=117]
 shader = ExtResource( 23 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -1005,7 +1005,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="ShaderMaterial" id=117]
+[sub_resource type="ShaderMaterial" id=115]
 shader = ExtResource( 23 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/width = 1.0
@@ -1484,38 +1484,6 @@ shape = SubResource( 102 )
 [node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave4"]
 wait_time = 30.0
 
-[node name="Grave6" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( -144, 216 )
-collision_mask = 3
-input_pickable = true
-script = ExtResource( 18 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave6"]
-material = SubResource( 115 )
-frames = SubResource( 100 )
-animation = "deadFlowers"
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6"]
-visible = false
-position = Vector2( 0, 10.5 )
-shape = SubResource( 101 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave6"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6/InteractionArea"]
-shape = SubResource( 102 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave6"]
-wait_time = 30.0
-
 [node name="Grave5" type="StaticBody2D" parent="YSort/GravesFlowers"]
 position = Vector2( 24, 216 )
 collision_mask = 3
@@ -1546,6 +1514,38 @@ collision_mask = 3
 shape = SubResource( 102 )
 
 [node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave5"]
+wait_time = 30.0
+
+[node name="Grave6" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( -144, 216 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave6"]
+material = SubResource( 115 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6"]
+visible = false
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave6"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave6"]
 wait_time = 30.0
 
 [node name="GravesCandles" type="YSort" parent="YSort"]
@@ -1845,65 +1845,17 @@ volume_db = -40.0
 script = ExtResource( 8 )
 
 [connection signal="add_time" from="YSort/Pumpkin" to="CanvasLayer/TimerUI" method="_on_Pumpkin_add_time"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave" to="YSort/GravesFlowers/Grave" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave" to="YSort/GravesFlowers/Grave" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave/InteractionArea" to="YSort/GravesFlowers/Grave" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave/InteractionArea" to="YSort/GravesFlowers/Grave" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave/Timer" to="YSort/GravesFlowers/Grave" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave2" to="YSort/GravesFlowers/Grave2" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave2" to="YSort/GravesFlowers/Grave2" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave2/Timer" to="YSort/GravesFlowers/Grave2" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave3" to="YSort/GravesFlowers/Grave3" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave3" to="YSort/GravesFlowers/Grave3" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave3/InteractionArea" to="YSort/GravesFlowers/Grave3" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave3/InteractionArea" to="YSort/GravesFlowers/Grave3" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave3/Timer" to="YSort/GravesFlowers/Grave3" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave4" to="YSort/GravesFlowers/Grave4" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave4" to="YSort/GravesFlowers/Grave4" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave4/InteractionArea" to="YSort/GravesFlowers/Grave4" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave4/InteractionArea" to="YSort/GravesFlowers/Grave4" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave4/Timer" to="YSort/GravesFlowers/Grave4" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave6" to="YSort/GravesFlowers/Grave6" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave6" to="YSort/GravesFlowers/Grave6" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave6/InteractionArea" to="YSort/GravesFlowers/Grave6" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave6/InteractionArea" to="YSort/GravesFlowers/Grave6" method="_on_InteractionArea_body_exited"]
-[connection signal="timeout" from="YSort/GravesFlowers/Grave6/Timer" to="YSort/GravesFlowers/Grave6" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave5" to="YSort/GravesFlowers/Grave5" method="_on_Grave_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave5" to="YSort/GravesFlowers/Grave5" method="_on_Grave_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesFlowers/Grave5/InteractionArea" to="YSort/GravesFlowers/Grave5" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesFlowers/Grave5/InteractionArea" to="YSort/GravesFlowers/Grave5" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave5/Timer" to="YSort/GravesFlowers/Grave5" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle" to="YSort/GravesCandles/GraveCandle" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle" to="YSort/GravesCandles/GraveCandle" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle/InteractionArea" to="YSort/GravesCandles/GraveCandle" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle/InteractionArea" to="YSort/GravesCandles/GraveCandle" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave6/Timer" to="YSort/GravesFlowers/Grave6" method="_on_Timer_timeout"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle/Timer" to="YSort/GravesCandles/GraveCandle" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle2" to="YSort/GravesCandles/GraveCandle2" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle2" to="YSort/GravesCandles/GraveCandle2" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle2/InteractionArea" to="YSort/GravesCandles/GraveCandle2" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle2/InteractionArea" to="YSort/GravesCandles/GraveCandle2" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle2/Timer" to="YSort/GravesCandles/GraveCandle2" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle3" to="YSort/GravesCandles/GraveCandle3" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle3" to="YSort/GravesCandles/GraveCandle3" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle3/InteractionArea" to="YSort/GravesCandles/GraveCandle3" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle3/InteractionArea" to="YSort/GravesCandles/GraveCandle3" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle3/Timer" to="YSort/GravesCandles/GraveCandle3" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle4" to="YSort/GravesCandles/GraveCandle4" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle4" to="YSort/GravesCandles/GraveCandle4" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle4/InteractionArea" to="YSort/GravesCandles/GraveCandle4" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle4/InteractionArea" to="YSort/GravesCandles/GraveCandle4" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle4/Timer" to="YSort/GravesCandles/GraveCandle4" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle5" to="YSort/GravesCandles/GraveCandle5" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle5" to="YSort/GravesCandles/GraveCandle5" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle5/InteractionArea" to="YSort/GravesCandles/GraveCandle5" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle5/InteractionArea" to="YSort/GravesCandles/GraveCandle5" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle5/Timer" to="YSort/GravesCandles/GraveCandle5" method="_on_Timer_timeout"]
-[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle6" to="YSort/GravesCandles/GraveCandle6" method="_on_GraveCandle_mouse_entered"]
-[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle6" to="YSort/GravesCandles/GraveCandle6" method="_on_GraveCandle_mouse_exited"]
-[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_entered"]
-[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle6/Timer" to="YSort/GravesCandles/GraveCandle6" method="_on_Timer_timeout"]
 
 [editable path="YSort/Crosses/Cross2"]
