@@ -32,5 +32,7 @@ func _ready():
 	generate_grass()
 
 func _on_Timer_timeout():
+	var random_time = int(rand_range(30,100))
+	$Timer.wait_time = random_time
 	if Spawner.get_child_count() <= 1:
 		generate_grass()
