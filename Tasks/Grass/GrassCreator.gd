@@ -1,6 +1,6 @@
 extends Node2D
 
-func set_timer():
+func set_timer():	
 	var random_time = rand_range(0.1,6)
 	$Timer.wait_time = random_time
 	$Timer.one_shot = true
