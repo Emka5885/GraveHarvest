@@ -42,7 +42,7 @@ func _input(event):
 				label.text = "+"+str(int(PlayerStats.fertilizer))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
-				get_parent().get_node_or_null("Player/Camera2D").shake(5, 0.1*int(PlayerStats.fertilizer))
+#				get_parent().get_node_or_null("Player/Camera2D").shake(5, 0.1*int(PlayerStats.fertilizer))
 				self.size += int(PlayerStats.fertilizer)
 				
 				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
