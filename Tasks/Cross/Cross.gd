@@ -5,6 +5,9 @@ var done = false
 onready var sprite = $AnimatedSprite
 onready var interactionArea = $InteractionArea
 
+func _ready():
+	$Timer.set_wait_time(50)
+
 func _on_Timer_timeout():
 	sprite.play("crooked")
 	done = false

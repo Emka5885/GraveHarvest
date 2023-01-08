@@ -9,6 +9,9 @@ var done = false
 
 onready var sprite = $AnimatedSprite
 
+func _ready():
+	$Timer.set_wait_time(50)
+	
 func _on_InteractionArea_body_entered(body):
 	if body is Player:
 		active = true
