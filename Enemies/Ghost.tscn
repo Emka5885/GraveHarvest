@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=1]
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=2]
@@ -8,7 +8,9 @@
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Ghost.png" type="Texture" id=8]
-[ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=9]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://GhostNPC/WavyTextShader.gdshader" type="Shader" id=10]
+[ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=11]
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 8 )
@@ -89,6 +91,87 @@ loop = true
 resource_name = "Stop"
 length = 0.1
 
+[sub_resource type="Animation" id=21]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "FadeOut"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = ExtResource( 10 )
+shader_param/height = 1.0
+shader_param/frequency = 20.0
+shader_param/speed = 3.0
+
+[sub_resource type="DynamicFont" id=25]
+size = 6
+font_data = ExtResource( 9 )
+
 [node name="Ghost" type="KinematicBody2D"]
 collision_layer = 16
 collision_mask = 80
@@ -150,10 +233,29 @@ wait_time = 0.3
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, -9 )
-texture = ExtResource( 9 )
+texture = ExtResource( 11 )
 texture_scale = 0.02
 color = Color( 0.631373, 0.870588, 1, 1 )
 mode = 2
+
+[node name="TextAnimation" type="AnimationPlayer" parent="."]
+anims/FadeIn = SubResource( 21 )
+anims/FadeOut = SubResource( 22 )
+anims/RESET = SubResource( 23 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 24 )
+margin_left = -61.0
+margin_top = -49.0
+margin_right = 61.0
+margin_bottom = -40.0
+custom_fonts/font = SubResource( 25 )
+text = "Zjem cie!"
+align = 1
+valign = 1
+autowrap = true
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]

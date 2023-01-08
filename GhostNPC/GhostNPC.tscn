@@ -87,6 +87,7 @@ margin_bottom = -40.0
 custom_fonts/font = SubResource( 5 )
 text = "Zjem cie!"
 align = 1
+valign = 1
 autowrap = true
 
 [node name="Sprite" type="Sprite" parent="."]
