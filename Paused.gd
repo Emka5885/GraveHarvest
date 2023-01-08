@@ -5,7 +5,7 @@ var mainGameScene = load("res://World.tscn")
 
 var isPaused = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if Input.is_action_just_pressed("back_to_menu"):
 		isPaused = !isPaused
 		set_visible(isPaused)
