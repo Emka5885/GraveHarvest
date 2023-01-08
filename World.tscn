@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=143 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -963,6 +963,42 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
+[sub_resource type="ShaderMaterial" id=109]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=113]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=115]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=117]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
 [sub_resource type="ShaderMaterial" id=104]
 shader = ExtResource( 23 )
 shader_param/color = Color( 1, 1, 1, 1 )
@@ -990,6 +1026,51 @@ extents = Vector2( 10, 16 )
 
 [sub_resource type="CapsuleShape2D" id=107]
 radius = 27.0
+
+[sub_resource type="ShaderMaterial" id=108]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=110]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=114]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=116]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=118]
+shader = ExtResource( 23 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 336, 16 )
@@ -1029,7 +1110,7 @@ tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -393225, 0, 4, -393224, 0, 196609, -393223, 0, 196609, -393222, 0, 196609, -393221, 0, 8, -393220, 0, 196609, -393219, 0, 196609, -393218, 0, 196609, -393217, 0, 196609, -458752, 0, 196609, -458751, 0, 196609, -458750, 0, 196609, -458749, 0, 196609, -458748, 0, 196609, -458747, 0, 196609, -458746, 0, 196609, -458745, 0, 196609, -458744, 0, 196609, -458743, 0, 196609, -458742, 0, 196609, -458741, 0, 7, -327689, 0, 65539, -327685, 0, 65539, -393205, 0, 65539, -262153, 0, 65539, -262149, 0, 131075, -327669, 0, 65539, -196617, 0, 65539, -262133, 0, 65539, -131081, 0, 65539, -131077, 0, 196608, -131076, 0, 196609, -131075, 0, 196609, -131074, 0, 196609, -131073, 0, 196609, -196608, 0, 196609, -196607, 0, 196609, -196606, 0, 196609, -196605, 0, 7, -196597, 0, 65539, -65545, 0, 65539, -131069, 0, 65539, -131061, 0, 65539, -9, 0, 65539, -65533, 0, 65539, -65525, 0, 65539, 65527, 0, 65539, 3, 0, 131075, 11, 0, 65539, 131063, 0, 65539, 131067, 0, 3, 131071, 0, 3, 65544, 0, 196608, 65545, 0, 196609, 65546, 0, 196609, 65547, 0, 262151, 196599, 0, 65539, 196603, 0, 65539, 196607, 0, 65539, 131083, 0, 65539, 262135, 0, 65539, 262139, 0, 65539, 262143, 0, 65539, 196619, 0, 65539, 327671, 0, 65539, 327675, 0, 65539, 327679, 0, 65539, 262155, 0, 65539, 393207, 0, 262148, 393208, 0, 196609, 393209, 0, 196609, 393210, 0, 196609, 393211, 0, 196615, 393215, 0, 196612, 327680, 0, 196609, 327681, 0, 196609, 327682, 0, 196609, 327683, 0, 7, 327687, 0, 4, 327688, 0, 196609, 327689, 0, 196609, 327690, 0, 196609, 327691, 0, 262151, 458743, 0, 65539, 393219, 0, 65539, 393223, 0, 65539, 393227, 0, 65539, 524279, 0, 65539, 458755, 0, 65539, 458759, 0, 65539, 458763, 0, 65539, 589815, 0, 65539, 524291, 0, 65539, 524295, 0, 131075, 524299, 0, 65539, 655351, 0, 262148, 655352, 0, 196609, 655353, 0, 196609, 655354, 0, 196609, 655355, 0, 196610, 655359, 0, 196608, 589824, 0, 196609, 589825, 0, 196609, 589826, 0, 196609, 589827, 0, 196615, 589835, 0, 65539, 720887, 0, 65539, 655371, 0, 65539, 786423, 0, 65539, 720907, 0, 65539, 851959, 0, 65539, 786443, 0, 65539, 917495, 0, 196612, 917496, 0, 196609, 917497, 0, 196609, 917498, 0, 196609, 917499, 0, 196609, 917500, 0, 196609, 917501, 0, 196609, 917502, 0, 196609, 917503, 0, 196609, 851968, 0, 196609, 851969, 0, 196609, 851970, 0, 196609, 851971, 0, 196609, 851972, 0, 196609, 851973, 0, 196609, 851974, 0, 196609, 851975, 0, 196609, 851976, 0, 196609, 851977, 0, 196609, 851978, 0, 196609, 851979, 0, 196615 )
+tile_data = PoolIntArray( -393225, 0, 4, -393224, 0, 196609, -393223, 0, 196609, -393222, 0, 196609, -393221, 0, 8, -393220, 0, 196609, -393219, 0, 196609, -393218, 0, 196609, -393217, 0, 196609, -458752, 0, 196609, -458751, 0, 196609, -458750, 0, 196609, -458749, 0, 196609, -458748, 0, 196609, -458747, 0, 196609, -458746, 0, 196609, -458745, 0, 196609, -458744, 0, 196609, -458743, 0, 196609, -458742, 0, 196609, -458741, 0, 7, -327689, 0, 65539, -327685, 0, 65539, -393205, 0, 65539, -262153, 0, 65539, -262149, 0, 65539, -327669, 0, 65539, -196617, 0, 65539, -196613, 0, 65539, -262133, 0, 65539, -131081, 0, 65539, -131077, 0, 196612, -131076, 0, 196609, -131075, 0, 196609, -131074, 0, 196609, -131073, 0, 196609, -196608, 0, 196609, -196607, 0, 196609, -196606, 0, 196609, -196605, 0, 7, -196597, 0, 65539, -65545, 0, 65539, -131069, 0, 65539, -131061, 0, 65539, -9, 0, 65539, -65533, 0, 65539, -65525, 0, 65539, 65527, 0, 65539, 3, 0, 131075, 11, 0, 65539, 131063, 0, 65539, 131067, 0, 3, 131071, 0, 3, 65544, 0, 196608, 65545, 0, 196609, 65546, 0, 196609, 65547, 0, 262151, 196599, 0, 65539, 196603, 0, 65539, 196607, 0, 65539, 131083, 0, 65539, 262135, 0, 65539, 262139, 0, 65539, 262143, 0, 65539, 196619, 0, 65539, 327671, 0, 65539, 327675, 0, 65539, 327679, 0, 65539, 262155, 0, 65539, 393207, 0, 262148, 393208, 0, 196609, 393209, 0, 196609, 393210, 0, 196609, 393211, 0, 196615, 393215, 0, 196612, 327680, 0, 196609, 327681, 0, 196609, 327682, 0, 196609, 327683, 0, 7, 327687, 0, 4, 327688, 0, 196609, 327689, 0, 196609, 327690, 0, 196609, 327691, 0, 262151, 458743, 0, 65539, 393219, 0, 65539, 393223, 0, 65539, 393227, 0, 65539, 524279, 0, 65539, 458755, 0, 65539, 458759, 0, 65539, 458763, 0, 65539, 589815, 0, 65539, 524291, 0, 65539, 524295, 0, 131075, 524299, 0, 65539, 655351, 0, 262148, 655352, 0, 196609, 655353, 0, 196609, 655354, 0, 196609, 655355, 0, 196610, 655359, 0, 196608, 589824, 0, 196609, 589825, 0, 196609, 589826, 0, 196609, 589827, 0, 196615, 589835, 0, 65539, 720887, 0, 65539, 655371, 0, 65539, 786423, 0, 65539, 720907, 0, 65539, 851959, 0, 65539, 786443, 0, 65539, 917495, 0, 196612, 917496, 0, 196609, 917497, 0, 196609, 917498, 0, 196609, 917499, 0, 196609, 917500, 0, 196609, 917501, 0, 196609, 917502, 0, 196609, 917503, 0, 196609, 851968, 0, 196609, 851969, 0, 196609, 851970, 0, 196609, 851971, 0, 196609, 851972, 0, 196609, 851973, 0, 196609, 851974, 0, 196609, 851975, 0, 196609, 851976, 0, 196609, 851977, 0, 196609, 851978, 0, 196609, 851979, 0, 196615 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -1067,19 +1148,82 @@ mode = 2
 [node name="Bushes" type="YSort" parent="YSort"]
 
 [node name="Bush2" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -80, -80 )
+position = Vector2( 240, -80 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -24, -88 )
+position = Vector2( 8, -48 )
+
+[node name="Bush6" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 136, 56 )
+
+[node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 216, 56 )
+
+[node name="Bush9" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 152, 216 )
+
+[node name="Bush15" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 152, 184 )
+
+[node name="Bush16" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 200, 184 )
+
+[node name="Bush17" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -104, 48 )
+
+[node name="Bush18" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -104, 80 )
+
+[node name="Bush19" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -104, 112 )
+
+[node name="Bush20" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -104, 144 )
+
+[node name="Bush23" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -104, 176 )
+
+[node name="Bush24" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -56, 48 )
+
+[node name="Bush25" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -56, 80 )
+
+[node name="Bush26" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -56, 112 )
+
+[node name="Bush27" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -56, 144 )
+
+[node name="Bush28" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -56, 176 )
+
+[node name="Bush10" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 152, 248 )
+
+[node name="Bush11" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 152, 280 )
+
+[node name="Bush12" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 200, 216 )
+
+[node name="Bush13" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 200, 248 )
+
+[node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( 200, 280 )
+
+[node name="Bush5" parent="YSort/Bushes" instance=ExtResource( 1 )]
+position = Vector2( -32, -48 )
 
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 16, -88 )
+position = Vector2( 240, -176 )
 
 [node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 72, -80 )
+position = Vector2( 240, -112 )
 
 [node name="Bush22" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 112, -64 )
+position = Vector2( 240, -144 )
 
 [node name="Grass" type="YSort" parent="YSort"]
 position = Vector2( 176, 208 )
@@ -1123,7 +1267,19 @@ height = 2
 position = Vector2( -224, 136 )
 
 [node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -192, 136 )
+position = Vector2( -184, 136 )
+
+[node name="Tree5" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 72, -32 )
+
+[node name="Tree6" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 328, 376 )
+
+[node name="Tree7" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 296, 400 )
+
+[node name="Tree8" parent="YSort/Trees" instance=ExtResource( 9 )]
+position = Vector2( 328, 80 )
 
 [node name="Ghosts" type="YSort" parent="YSort"]
 
@@ -1133,25 +1289,25 @@ position = Vector2( -192, 136 )
 position = Vector2( -224, 368 )
 
 [node name="Ghost2" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( -176, 64 )
+position = Vector2( 96, -152 )
 
 [node name="Ghost3" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( -208, 96 )
+position = Vector2( -200, 104 )
 
 [node name="Ghost4" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( -192, 256 )
+position = Vector2( -224, 232 )
 
 [node name="Ghost5" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( 32, 256 )
+position = Vector2( 24, 232 )
 
 [node name="Ghost6" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( 320, 112 )
+position = Vector2( 312, 112 )
 
 [node name="Ghost7" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( 304, 224 )
+position = Vector2( 304, 240 )
 
 [node name="Ghost8" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( 24, 144 )
+position = Vector2( -48, -152 )
 
 [node name="Crypts" type="YSort" parent="YSort"]
 
@@ -1193,7 +1349,7 @@ shape = SubResource( 102 )
 wait_time = 30.0
 
 [node name="Grave2" type="StaticBody2D" parent="YSort/GravesFlowers"]
-position = Vector2( -48, -168 )
+position = Vector2( 0, -168 )
 collision_mask = 3
 input_pickable = true
 script = ExtResource( 18 )
@@ -1224,10 +1380,141 @@ shape = SubResource( 102 )
 [node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave2"]
 wait_time = 30.0
 
+[node name="Grave3" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( 96, -168 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave3"]
+material = SubResource( 109 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave3"]
+visible = false
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave3"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave3/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave3"]
+wait_time = 30.0
+
+[node name="Grave4" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( -224, 216 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave4"]
+material = SubResource( 113 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave4"]
+visible = false
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave4"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave4/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave4"]
+wait_time = 30.0
+
+[node name="Grave6" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( -144, 216 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave6"]
+material = SubResource( 115 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6"]
+visible = false
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave6"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave6/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave6"]
+wait_time = 30.0
+
+[node name="Grave5" type="StaticBody2D" parent="YSort/GravesFlowers"]
+position = Vector2( 24, 216 )
+collision_mask = 3
+input_pickable = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesFlowers/Grave5"]
+material = SubResource( 117 )
+frames = SubResource( 100 )
+animation = "deadFlowers"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave5"]
+visible = false
+position = Vector2( 0, 10.5 )
+shape = SubResource( 101 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesFlowers/Grave5"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesFlowers/Grave5/InteractionArea"]
+shape = SubResource( 102 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesFlowers/Grave5"]
+wait_time = 30.0
+
 [node name="GravesCandles" type="YSort" parent="YSort"]
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="GraveCandle" type="StaticBody2D" parent="YSort/GravesCandles"]
-position = Vector2( 0, -168 )
+position = Vector2( -48, -168 )
 input_pickable = true
 script = ExtResource( 24 )
 __meta__ = {
@@ -1260,8 +1547,197 @@ shape = SubResource( 107 )
 [node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle"]
 wait_time = 30.0
 
-[node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
+[node name="GraveCandle2" type="StaticBody2D" parent="YSort/GravesCandles"]
+position = Vector2( 48, -168 )
+input_pickable = true
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle2"]
+material = SubResource( 108 )
+frames = SubResource( 105 )
+animation = "noCandle"
+__meta__ = {
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle2"]
+position = Vector2( 0, 14 )
+enabled = false
+texture = ExtResource( 27 )
+texture_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle2"]
 visible = false
+position = Vector2( 0, 12 )
+shape = SubResource( 106 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle2"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle2/InteractionArea"]
+shape = SubResource( 107 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle2"]
+wait_time = 30.0
+
+[node name="GraveCandle3" type="StaticBody2D" parent="YSort/GravesCandles"]
+position = Vector2( 144, -168 )
+input_pickable = true
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle3"]
+material = SubResource( 110 )
+frames = SubResource( 105 )
+animation = "noCandle"
+__meta__ = {
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle3"]
+position = Vector2( 0, 14 )
+enabled = false
+texture = ExtResource( 27 )
+texture_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle3"]
+visible = false
+position = Vector2( 0, 12 )
+shape = SubResource( 106 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle3"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle3/InteractionArea"]
+shape = SubResource( 107 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle3"]
+wait_time = 30.0
+
+[node name="GraveCandle4" type="StaticBody2D" parent="YSort/GravesCandles"]
+position = Vector2( -184, 216 )
+input_pickable = true
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle4"]
+material = SubResource( 114 )
+frames = SubResource( 105 )
+animation = "noCandle"
+__meta__ = {
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle4"]
+position = Vector2( 0, 14 )
+enabled = false
+texture = ExtResource( 27 )
+texture_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle4"]
+visible = false
+position = Vector2( 0, 12 )
+shape = SubResource( 106 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle4"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle4/InteractionArea"]
+shape = SubResource( 107 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle4"]
+wait_time = 30.0
+
+[node name="GraveCandle5" type="StaticBody2D" parent="YSort/GravesCandles"]
+position = Vector2( -16, 216 )
+input_pickable = true
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle5"]
+material = SubResource( 116 )
+frames = SubResource( 105 )
+animation = "noCandle"
+__meta__ = {
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle5"]
+position = Vector2( 0, 14 )
+enabled = false
+texture = ExtResource( 27 )
+texture_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle5"]
+visible = false
+position = Vector2( 0, 12 )
+shape = SubResource( 106 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle5"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle5/InteractionArea"]
+shape = SubResource( 107 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle5"]
+wait_time = 30.0
+
+[node name="GraveCandle6" type="StaticBody2D" parent="YSort/GravesCandles"]
+position = Vector2( 64, 216 )
+input_pickable = true
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesCandles/GraveCandle6"]
+material = SubResource( 118 )
+frames = SubResource( 105 )
+animation = "noCandle"
+__meta__ = {
+"_editor_description_": "ZMIENIĆ SHADER NA UNIKALNY!!!"
+}
+
+[node name="Light2D" type="Light2D" parent="YSort/GravesCandles/GraveCandle6"]
+position = Vector2( 0, 14 )
+enabled = false
+texture = ExtResource( 27 )
+texture_scale = 0.02
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle6"]
+visible = false
+position = Vector2( 0, 12 )
+shape = SubResource( 106 )
+
+[node name="InteractionArea" type="Area2D" parent="YSort/GravesCandles/GraveCandle6"]
+visible = false
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesCandles/GraveCandle6/InteractionArea"]
+shape = SubResource( 107 )
+
+[node name="Timer" type="Timer" parent="YSort/GravesCandles/GraveCandle6"]
+wait_time = 30.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
 show_behind_parent = true
 color = Color( 0, 0, 0, 1 )
 
@@ -1304,8 +1780,53 @@ script = ExtResource( 8 )
 [connection signal="body_entered" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_entered"]
 [connection signal="body_exited" from="YSort/GravesFlowers/Grave2/InteractionArea" to="YSort/GravesFlowers/Grave2" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesFlowers/Grave2/Timer" to="YSort/GravesFlowers/Grave2" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave3" to="YSort/GravesFlowers/Grave3" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave3" to="YSort/GravesFlowers/Grave3" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave3/InteractionArea" to="YSort/GravesFlowers/Grave3" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave3/InteractionArea" to="YSort/GravesFlowers/Grave3" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave3/Timer" to="YSort/GravesFlowers/Grave3" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave4" to="YSort/GravesFlowers/Grave4" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave4" to="YSort/GravesFlowers/Grave4" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave4/InteractionArea" to="YSort/GravesFlowers/Grave4" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave4/InteractionArea" to="YSort/GravesFlowers/Grave4" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave4/Timer" to="YSort/GravesFlowers/Grave4" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave6" to="YSort/GravesFlowers/Grave6" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave6" to="YSort/GravesFlowers/Grave6" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave6/InteractionArea" to="YSort/GravesFlowers/Grave6" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave6/InteractionArea" to="YSort/GravesFlowers/Grave6" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave6/Timer" to="YSort/GravesFlowers/Grave6" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesFlowers/Grave5" to="YSort/GravesFlowers/Grave5" method="_on_Grave_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesFlowers/Grave5" to="YSort/GravesFlowers/Grave5" method="_on_Grave_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesFlowers/Grave5/InteractionArea" to="YSort/GravesFlowers/Grave5" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesFlowers/Grave5/InteractionArea" to="YSort/GravesFlowers/Grave5" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesFlowers/Grave5/Timer" to="YSort/GravesFlowers/Grave5" method="_on_Timer_timeout"]
 [connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle" to="YSort/GravesCandles/GraveCandle" method="_on_GraveCandle_mouse_entered"]
 [connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle" to="YSort/GravesCandles/GraveCandle" method="_on_GraveCandle_mouse_exited"]
 [connection signal="body_entered" from="YSort/GravesCandles/GraveCandle/InteractionArea" to="YSort/GravesCandles/GraveCandle" method="_on_InteractionArea_body_entered"]
 [connection signal="body_exited" from="YSort/GravesCandles/GraveCandle/InteractionArea" to="YSort/GravesCandles/GraveCandle" method="_on_InteractionArea_body_exited"]
 [connection signal="timeout" from="YSort/GravesCandles/GraveCandle/Timer" to="YSort/GravesCandles/GraveCandle" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle2" to="YSort/GravesCandles/GraveCandle2" method="_on_GraveCandle_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle2" to="YSort/GravesCandles/GraveCandle2" method="_on_GraveCandle_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle2/InteractionArea" to="YSort/GravesCandles/GraveCandle2" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle2/InteractionArea" to="YSort/GravesCandles/GraveCandle2" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesCandles/GraveCandle2/Timer" to="YSort/GravesCandles/GraveCandle2" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle3" to="YSort/GravesCandles/GraveCandle3" method="_on_GraveCandle_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle3" to="YSort/GravesCandles/GraveCandle3" method="_on_GraveCandle_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle3/InteractionArea" to="YSort/GravesCandles/GraveCandle3" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle3/InteractionArea" to="YSort/GravesCandles/GraveCandle3" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesCandles/GraveCandle3/Timer" to="YSort/GravesCandles/GraveCandle3" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle4" to="YSort/GravesCandles/GraveCandle4" method="_on_GraveCandle_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle4" to="YSort/GravesCandles/GraveCandle4" method="_on_GraveCandle_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle4/InteractionArea" to="YSort/GravesCandles/GraveCandle4" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle4/InteractionArea" to="YSort/GravesCandles/GraveCandle4" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesCandles/GraveCandle4/Timer" to="YSort/GravesCandles/GraveCandle4" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle5" to="YSort/GravesCandles/GraveCandle5" method="_on_GraveCandle_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle5" to="YSort/GravesCandles/GraveCandle5" method="_on_GraveCandle_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle5/InteractionArea" to="YSort/GravesCandles/GraveCandle5" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle5/InteractionArea" to="YSort/GravesCandles/GraveCandle5" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesCandles/GraveCandle5/Timer" to="YSort/GravesCandles/GraveCandle5" method="_on_Timer_timeout"]
+[connection signal="mouse_entered" from="YSort/GravesCandles/GraveCandle6" to="YSort/GravesCandles/GraveCandle6" method="_on_GraveCandle_mouse_entered"]
+[connection signal="mouse_exited" from="YSort/GravesCandles/GraveCandle6" to="YSort/GravesCandles/GraveCandle6" method="_on_GraveCandle_mouse_exited"]
+[connection signal="body_entered" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_entered"]
+[connection signal="body_exited" from="YSort/GravesCandles/GraveCandle6/InteractionArea" to="YSort/GravesCandles/GraveCandle6" method="_on_InteractionArea_body_exited"]
+[connection signal="timeout" from="YSort/GravesCandles/GraveCandle6/Timer" to="YSort/GravesCandles/GraveCandle6" method="_on_Timer_timeout"]
