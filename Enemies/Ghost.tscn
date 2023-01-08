@@ -8,7 +8,7 @@
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Ghost.png" type="Texture" id=8]
-[ext_resource path="res://Light/light.png" type="Texture" id=9]
+[ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 8 )
@@ -150,9 +150,8 @@ wait_time = 0.3
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, -9 )
 texture = ExtResource( 9 )
-texture_scale = 0.05
+texture_scale = 0.02
 color = Color( 0.631373, 0.870588, 1, 1 )
-energy = 0.9
 mode = 2
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
