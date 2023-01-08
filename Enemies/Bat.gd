@@ -27,9 +27,13 @@ onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
+onready var label = $Label
 onready var textAnimation = $TextAnimation
 
 var health = 3
+
+var dialogue = ["better call the ghost-catchers", "You really think that you can win?", "It will never end...", "Remember to clean our houses...", "i know what you have done", "Do you really think you can get away with it?", "can you remind me how ice creams taste?", "I haven't felt alive in years!", "Whats the diffrence between pessimist and optimist? - Pessimist see here only the crosses. Optimist sees the pluses", "NOW you are going back there!", "Taking take care of the pumpkin? What about me?", "Soon you will be in this grave", "Did you forget about something?", "pumpkin? i am going to pump you  there where you belong!", "Your pumpkin isn't safe...."]
+var dialogue_index = 0
 
 signal respawn_ghost
 
@@ -87,12 +91,15 @@ func pick_random_state(state_list):
 	return state_list.pop_front()
 
 func show_text():
-	if !$Label.visible:
-		$Label.visible = true
+	if !label.visible:
+		randomize()
+		dialogue_index = rand_range(0, dialogue.size()-1)
+		label.text = dialogue[dialogue_index]
+		label.visible = true
 		textAnimation.play("FadeIn")
 
 func hide_text():
-	if $Label.visible:
+	if label.visible:
 		textAnimation.play("FadeOut")
 
 func _on_Hurtbox_area_entered(area):
