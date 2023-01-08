@@ -126,6 +126,8 @@ tracks/1/keys = {
 
 [node name="Pumpkin" type="StaticBody2D"]
 scale = Vector2( 0.5, 0.5 )
+collision_layer = 256
+collision_mask = 2
 input_pickable = true
 script = ExtResource( 2 )
 
