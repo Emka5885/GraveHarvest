@@ -8,13 +8,6 @@ onready var respawn_position
 onready var spawn_position
 
 func _ready():
-	print(positions[0])
-	print(positions[1])
-	print(positions[2])
-	print(positions[3])
-	print(positions[4])
-	print(positions[5])
-	print(positions[6])
 	$Timer2.start()
 
 func _on_Ghost_respawn(start_position):

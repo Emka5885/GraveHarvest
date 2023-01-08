@@ -1171,7 +1171,7 @@ position = Vector2( 328, 80 )
 position = Vector2( 0, -168 )
 
 [node name="Position2" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
-position = Vector2( -80, -40 )
+position = Vector2( -88, -40 )
 
 [node name="Position3" type="Node2D" parent="YSort/Ghosts/RespawnGhost"]
 position = Vector2( -184, 216 )
@@ -1232,10 +1232,10 @@ position = Vector2( 97, -168 )
 position = Vector2( -224, 217 )
 
 [node name="Grave5" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
-position = Vector2( -148, 216 )
+position = Vector2( -152, 216 )
 
 [node name="Grave6" parent="YSort/GravesFlowers" instance=ExtResource( 29 )]
-position = Vector2( 23, 218 )
+position = Vector2( 24, 216 )
 
 [node name="GravesCandles" type="YSort" parent="YSort"]
 __meta__ = {
@@ -1263,16 +1263,16 @@ position = Vector2( 140, -167 )
 [node name="Crosses" type="YSort" parent="YSort"]
 
 [node name="Cross" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -80, -64 )
+position = Vector2( -88, -64 )
 
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( 240, 284 )
+position = Vector2( 240, 304 )
 
 [node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( 151, -53 )
+position = Vector2( 152, -40 )
 
 [node name="Cross4" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -105, 282 )
+position = Vector2( -112, 288 )
 
 [node name="Bats" type="YSort" parent="YSort"]
 
