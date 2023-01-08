@@ -16,6 +16,7 @@ func _ready():
 func _on_Timer_timeout():
 	sprite.play("not done")
 	done = false
+	change_light(false)
 
 func _physics_process(_delta):
 	var overlap = interactionArea.get_overlapping_bodies()
@@ -37,3 +38,9 @@ func _input(event):
 			PlayerStats.fertilizer += 1
 			$Timer.start()
 			done = true
+			change_light(true)
+
+func change_light(is_on):
+	var light = get_node_or_null("Light2D")
+	if light:
+		light.enabled = is_on
