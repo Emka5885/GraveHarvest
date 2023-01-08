@@ -6,9 +6,10 @@
 [ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=4]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=6]
-[ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=7]
-[ext_resource path="res://Music and Sounds/randomized_pitch.gd" type="Script" id=8]
+[ext_resource path="res://Audio/Swipe.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/randomized_pitch.gd" type="Script" id=8]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=9]
+
 
 [sub_resource type="ShaderMaterial" id=50]
 shader = ExtResource( 9 )
