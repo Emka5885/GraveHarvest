@@ -54,7 +54,6 @@ script = ExtResource( 2 )
 material = SubResource( 6 )
 frames = SubResource( 7 )
 animation = "Fly"
-frame = 3
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -74,5 +73,7 @@ visible = false
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
 visible = false
 shape = SubResource( 9 )
+
+[connection signal="timeout" from="PositionTimer" to="." method="_on_PositionTimer_timeout"]
 
 [editable path="SoftCollision"]

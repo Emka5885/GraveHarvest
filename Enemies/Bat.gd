@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
-
 var start_position
 onready var positionTimer = $PositionTimer
 
@@ -23,9 +21,7 @@ var state = CHASE
 
 onready var sprite = $AnimatedSprite
 onready var softCollision = $SoftCollision
-onready var wanderController = $WanderController
-
-signal respawn_ghost
+onready var wanderController = $WanderController 
 
 func _ready():
 	positionTimer.start()
