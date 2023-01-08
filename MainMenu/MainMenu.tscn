@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/Menu.gd" type="Script" id=2]
 [ext_resource path="res://MainMenu/Background.jpg" type="Texture" id=3]
+[ext_resource path="res://Music and Sounds/Menu Select.wav" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -125,6 +126,9 @@ custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
 text = "QUITT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="button_up" from="Start_Button" to="." method="_on_Start_Button_button_up"]
 [connection signal="button_up" from="HowToPlay_Button" to="." method="_on_HowToPlay_Button_button_up"]
