@@ -14,7 +14,7 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=120]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -27,11 +27,11 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=121]
 radius = 5.32135
 height = 31.7122
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=122]
 radius = 41.1096
 
 [node name="Cross" type="StaticBody2D"]
@@ -40,18 +40,20 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 7 )
-frames = SubResource( 6 )
+frames = SubResource( 120 )
 animation = "crooked"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 2.82253, 10.6786 )
-shape = SubResource( 5 )
+shape = SubResource( 121 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 2.13504, -2.90545 )
-shape = SubResource( 4 )
+shape = SubResource( 122 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0

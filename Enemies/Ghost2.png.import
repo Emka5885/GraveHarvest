@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CliffTileset.png-beb1369a7815e4e7ee0afe974b2636cf.stex"
+path="res://.import/Ghost2.png-dbe32e3dc3041f60af8722358e45b9cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/CliffTileset.png"
-dest_files=[ "res://.import/CliffTileset.png-beb1369a7815e4e7ee0afe974b2636cf.stex" ]
+source_file="res://Enemies/Ghost2.png"
+dest_files=[ "res://.import/Ghost2.png-dbe32e3dc3041f60af8722358e45b9cb.stex" ]
 
 [params]
 
