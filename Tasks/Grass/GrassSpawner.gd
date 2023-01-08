@@ -10,15 +10,19 @@ var xPos = 0
 var yPos = 0
 
 func generate_grass():
-# warning-ignore:unused_variable
-	for n in range(width*height):
-		var grass_scene = load("res://World/Grass.tscn")
-		Spawner.add_child(grass_scene.instance())
 	for child in Spawner.get_children():
 		var randomSpawner = int(rand_range(0,2))
 		if randomSpawner:
-			child.position.x = xPos
-			child.position.y = yPos
+			child.set_timer()
+	
+func set_grass_creator():
+	for n in range(width*height):
+		var grass_creator_scene = load("res://Tasks/Grass/GrassCreator.tscn")
+		Spawner.add_child(grass_creator_scene.instance())
+
+	for child in Spawner.get_children():
+		child.position.x = xPos
+		child.position.y = yPos
 		xPos += 20
 		if xPos % (width*20) == 0: #multiply by the distance between the pumpkins
 			yPos += 20
@@ -27,6 +31,7 @@ func generate_grass():
 	yPos = 0
 
 func _ready():
+	set_grass_creator()
 	generate_grass()
 
 func _on_Timer_timeout():
