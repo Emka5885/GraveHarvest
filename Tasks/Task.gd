@@ -52,13 +52,13 @@ func _input(event):
 	if !done && active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			sprite.play("done")
-			PlayerStats.fertilizer += 1
+			PlayerStats.fertilizer +=  0.5
 			$Timer.start()
 			done = true
 			change_light(true)
 	elif !done && active && Input.is_action_just_pressed("select"):
 		sprite.play("done")
-		PlayerStats.fertilizer += 1
+		PlayerStats.fertilizer += 0.5
 		$Timer.start()
 		done = true
 		change_light(true)

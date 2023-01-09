@@ -2,19 +2,47 @@ extends Node2D
 
 var mainMenuScene = load("res://MainMenu/MainMenu.tscn")
 var specialThanksScene = load("res://MainMenu/SpecialThanks.tscn")
-var madeByJoystickScene = load("res://MainMenu/MadeBy_Joystick.tscn")
 
 onready var select = $AudioStreamPlayer
 
-var isJoystick = false
+func _ready():
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() != 0:
+		$Back2.visible = true
+		$Back1.visible = true
+		$ST1.visible = true
+		$ST2.visible = false
+		$Button.visible = false
+		$SpecialThanks_Button.visible = false
 
 func _physics_process(_delta):
-	if !isJoystick:
-		var joysticks = Input.get_connected_joypads()
-		if joysticks.size() != 0:
-			isJoystick = true
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() != 0:
+		$Back1.visible = true
+		$ST1.visible = true
+		$Button.visible = false
+		$SpecialThanks_Button.visible = false
+		
+		if Input.is_action_just_pressed("change_selection"):
+			if $Back2.visible:
+				$Back2.visible = false
+				$ST2.visible = true
+			elif $ST2.visible:
+				$Back2.visible = true
+				$ST2.visible = false
+		
+		if Input.is_action_just_pressed("select"):
+			if $Back2.visible:
+				_on_Button_button_up()
+			elif $ST2.visible:
+				_on_SpecialThanks_Button_button_up()
 	else:
-		get_tree().change_scene(madeByJoystickScene.resource_path)
+		$Back2.visible = false
+		$Back1.visible = false
+		$ST1.visible = false
+		$ST2.visible = false
+		$Button.visible = true
+		$SpecialThanks_Button.visible = true
 
 func _on_Button_button_up():
 	select.play()

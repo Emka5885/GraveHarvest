@@ -17,7 +17,7 @@ var dialogue_index = 0
 var dialogue = ["This place is cursed! Especially for poor pumpkins...", "looong time ago, terrible things happened in this place", "a lot of people died in the name of the pumpkins", "This is exactly where the Pumpkin Festival took place. Every year people from each corner of the world came here to celebrate", "During the last celebration, everything went wrong", "The man who hated  pumpkins the most, slaughtered all the festival participants with cold blood", "No matter that they were children or elderly people", "After everything, he became the thing he hated the most...", "Love kills... especially the one with pumpkins."
 ]
 
-onready var sprite = $Sprite
+onready var sprite = $AnimatedSprite
 onready var label = $Label
 onready var animationPlayer = $AnimationPlayer
 onready var wanderController = $WanderController

@@ -5,6 +5,20 @@ var StatLine = load("res://MainMenu/ResultLine.tscn")
 
 onready var select = $AudioStreamPlayer
 
+func _physics_process(_delta):
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() != 0:
+		$Back2.visible = true
+		$Back1.visible = true
+		$Button.visible = false
+		if Input.is_action_just_pressed("select"):
+			_on_Button_button_up()
+	else:
+		$Back2.visible = false
+		$Back1.visible = false
+		$Button.visible = true
+		
+
 func _on_Button_button_up():
 	select.play()
 	yield(select, "finished")
@@ -16,7 +30,7 @@ func _ready():
 	var x = 1
 	for points in PlayerStats.result:
 		updateStats(points, x)
-		x += 1
+		x += 1	
 		if x > 10:
 			break
 
