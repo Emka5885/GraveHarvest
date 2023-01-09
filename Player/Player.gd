@@ -27,6 +27,7 @@ onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
 
 func _ready():
+	blinkAnimationPlayer.play("Stop")
 	randomize()
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
@@ -34,7 +35,7 @@ func _ready():
 # warning-ignore:return_value_discarded
 	PlayerStats.connect("fertilizer_changed", self, "set_fertilizer")
 
-func _physics_process(delta):
+func _process(delta):
 	match state:
 		MOVE:
 			move_state(delta)
@@ -78,7 +79,9 @@ func attack_animation_finished():
 
 func _on_Hurtbox_area_entered(area):
 	PlayerStats.fertilizer -= 1
+	
 	get_tree().get_nodes_in_group("camera")[0].shake(50, 0.5)
+	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	var my_random_number = rng.randf_range(-250, 250)

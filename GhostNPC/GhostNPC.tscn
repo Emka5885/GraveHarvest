@@ -109,7 +109,7 @@ radius = 64.0
 
 [node name="GhostNPC" type="KinematicBody2D"]
 collision_layer = 16
-collision_mask = 2
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -133,7 +133,7 @@ autowrap = true
 modulate = Color( 0.521569, 1, 0.666667, 1 )
 position = Vector2( 0, 8 )
 frames = SubResource( 17 )
-frame = 1
+frame = 6
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1824,6 +1824,7 @@ position = Vector2( 64, 128 )
 
 [node name="GhostNPC" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 357, -78 )
+collision_mask = 64
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -272, -192 )
