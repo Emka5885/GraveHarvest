@@ -35,21 +35,43 @@ func _physics_process(_delta):
 				player_in = false
 	else:
 		player_in = false
-		
-	if player_in:
-		var space = get_world_2d().direct_space_state
-		var collision = space.intersect_point(get_global_mouse_position(), 1);
-		if collision && collision[0].collider == self:
+	
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() == 0:
+		if player_in:
+			var space = get_world_2d().direct_space_state
+			var collision = space.intersect_point(get_global_mouse_position(), 1);
+			if collision && collision[0].collider == self:
+				sprite.material.set_shader_param("on", true)
+			else:
+				sprite.material.set_shader_param("on", false)
+		else:
+			sprite.material.set_shader_param("on", false)
+			
+	else:
+		if player_in:
 			sprite.material.set_shader_param("on", true)
 		else:
 			sprite.material.set_shader_param("on", false)
-	else:
-		sprite.material.set_shader_param("on", false)
 
 func _input(event):
 	var active = sprite.material.get_shader_param("on")
-	if !done && active && event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT and event.pressed:
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() == 0:
+		if !done && active && event is InputEventMouseButton:
+			if event.button_index == BUTTON_LEFT and event.pressed:
+				sprite.play("done")
+				PlayerStats.fertilizer += 1
+				
+				emit_signal("show_dialog", dialogs[dialog_number])
+				
+				done = true
+				change_light(true)
+		elif done && active && event is InputEventMouseButton:
+			if event.button_index == BUTTON_LEFT and event.pressed:
+				emit_signal("show_dialog", dialogs[dialog_number])
+	else:
+		if !done && active && Input.is_action_just_pressed("select"):
 			sprite.play("done")
 			PlayerStats.fertilizer += 1
 			
@@ -57,8 +79,7 @@ func _input(event):
 			
 			done = true
 			change_light(true)
-	elif done && active && event is InputEventMouseButton:
-		if event.button_index == BUTTON_LEFT and event.pressed:
+		elif done && active && Input.is_action_just_pressed("select"):
 			emit_signal("show_dialog", dialogs[dialog_number])
 
 func change_light(is_on):
