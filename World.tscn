@@ -1,4 +1,4 @@
-[gd_scene load_steps=238 format=2]
+[gd_scene load_steps=239 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -1490,6 +1490,16 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
+[sub_resource type="ShaderMaterial" id=175]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
 [sub_resource type="ShaderMaterial" id=151]
 resource_local_to_scene = true
 shader = ExtResource( 32 )
@@ -1858,7 +1868,7 @@ mode = 2
 position = Vector2( 169, 315 )
 
 [node name="Bush4" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -224, 62 )
+position = Vector2( -224, 82 )
 
 [node name="Bush8" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 408, -192 )
@@ -1876,10 +1886,10 @@ position = Vector2( 416, 368 )
 position = Vector2( -152, 208 )
 
 [node name="Bush23" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -313, 48 )
+position = Vector2( -309, 32 )
 
 [node name="Bush24" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -72, 87 )
+position = Vector2( -41, 35 )
 
 [node name="Bush25" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 80, -32 )
@@ -1957,10 +1967,10 @@ position = Vector2( 408, -128 )
 position = Vector2( 280, -128 )
 
 [node name="Tree5" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -148, 140 )
+position = Vector2( -147, 104 )
 
 [node name="Tree16" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -69, 152 )
+position = Vector2( -70, 135 )
 
 [node name="Tree17" parent="YSort/Trees" instance=ExtResource( 9 )]
 position = Vector2( -78, 208 )
@@ -1987,7 +1997,7 @@ position = Vector2( -64, 384 )
 position = Vector2( 257, 231 )
 
 [node name="Tree11" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -151, 61 )
+position = Vector2( -168, 32 )
 
 [node name="Tree12" parent="YSort/Trees" instance=ExtResource( 9 )]
 position = Vector2( 280, -192 )
@@ -2108,14 +2118,22 @@ __meta__ = {
 material = SubResource( 150 )
 flip_h = true
 
+[node name="Cross5" parent="YSort/Crosses" instance=ExtResource( 6 )]
+position = Vector2( 362, 263 )
+
+[node name="Cross6" parent="YSort/Crosses" instance=ExtResource( 6 )]
+position = Vector2( -115, 484 )
+
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross6" index="1"]
+material = SubResource( 175 )
+
+[node name="CollisionShape2D" parent="YSort/Crosses/Cross6" index="2"]
+visible = true
+position = Vector2( 2, 23 )
+rotation = 1.5708
+
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -315, -148 )
-
-[node name="Cross" parent="YSort/Crosses/Cross2" instance=ExtResource( 6 )]
-position = Vector2( 677, 411 )
-
-[node name="Cross2" parent="YSort/Crosses/Cross2" instance=ExtResource( 6 )]
-position = Vector2( 202, 627 )
 
 [node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -317, 80 )
@@ -2145,13 +2163,13 @@ position = Vector2( -144, 424 )
 position = Vector2( 248, 440 )
 
 [node name="Bat5" parent="YSort/Bats" instance=ExtResource( 19 )]
-position = Vector2( 16, 80 )
+position = Vector2( 10, 59 )
 
 [node name="Bat6" parent="YSort/Bats" instance=ExtResource( 19 )]
 position = Vector2( 328, 8 )
 
 [node name="Bat7" parent="YSort/Bats" instance=ExtResource( 19 )]
-position = Vector2( -288, 128 )
+position = Vector2( -301, 160 )
 WANDER_TARGET_RANGE = 1
 
 [node name="GravesNames" type="YSort" parent="YSort"]
@@ -2327,6 +2345,9 @@ color = Color( 0, 0, 0, 1 )
 [node name="Tablet" parent="." instance=ExtResource( 65 )]
 position = Vector2( -272, -248 )
 
+[node name="Bat" parent="Tablet" instance=ExtResource( 19 )]
+position = Vector2( 282, 57 )
+
 [node name="BorderMap" type="StaticBody2D" parent="."]
 visible = false
 collision_layer = 64
@@ -2374,6 +2395,7 @@ script = ExtResource( 8 )
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName10" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 
 [editable path="YSort/Crosses/Cross"]
+[editable path="YSort/Crosses/Cross6"]
 [editable path="YSort/Crosses/Cross4"]
 [editable path="YSort/GravesNames/GraveName"]
 [editable path="YSort/GravesNames/GraveName2"]
