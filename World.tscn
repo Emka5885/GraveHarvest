@@ -1887,7 +1887,7 @@ position = Vector2( -160, 448 )
 position = Vector2( 408, 432 )
 
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 214, -194 )
+position = Vector2( 222, -158 )
 
 [node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 335, 31 )
@@ -1902,38 +1902,82 @@ position = Vector2( 168, 454 )
 position = Vector2( 208, 152 )
 
 [node name="GrassSpawner" parent="YSort/Grass" instance=ExtResource( 21 )]
-position = Vector2( 96, -64 )
-width = 5
+position = Vector2( 87, -70 )
+width = 2
 height = 5
 
 [node name="GrassSpawner2" parent="YSort/Grass" instance=ExtResource( 21 )]
 position = Vector2( 104, 96 )
-width = 5
-height = 5
+width = 2
+
+[node name="GrassSpawner14" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( 22, 222 )
+width = 2
+
+[node name="GrassSpawner15" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -68, 32 )
+width = 2
+height = 1
+
+[node name="GrassSpawner16" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( 66, 23 )
+width = 2
+height = 1
+
+[node name="GrassSpawner17" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -161, 34 )
+width = 2
+height = 1
+
+[node name="GrassSpawner4" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( 179, 94 )
+width = 2
 
 [node name="GrassSpawner3" parent="YSort/Grass" instance=ExtResource( 21 )]
-position = Vector2( 152, -208 )
+position = Vector2( 149, -230 )
 width = 3
 
 [node name="GrassSpawner5" parent="YSort/Grass" instance=ExtResource( 21 )]
-position = Vector2( -536, 360 )
-width = 20
+position = Vector2( -540, 360 )
+width = 35
 height = 1
 
 [node name="GrassSpawner6" parent="YSort/Grass" instance=ExtResource( 21 )]
 position = Vector2( -32, -384 )
 scale = Vector2( 1, 1.00805 )
-width = 3
+height = 3
 
 [node name="GrassSpawner7" parent="YSort/Grass" instance=ExtResource( 21 )]
-position = Vector2( -536, -384 )
-width = 5
+position = Vector2( -540, -386 )
+width = 2
+height = 6
+
+[node name="GrassSpawner9" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -464, -379 )
+width = 2
 height = 6
 
 [node name="GrassSpawner8" parent="YSort/Grass" instance=ExtResource( 21 )]
-position = Vector2( -416, -224 )
-width = 10
+position = Vector2( -444, -224 )
+width = 5
 height = 2
+
+[node name="GrassSpawner12" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -190, -229 )
+height = 2
+
+[node name="GrassSpawner13" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -269, -145 )
+width = 3
+height = 2
+
+[node name="GrassSpawner10" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -57, -256 )
+width = 2
+
+[node name="GrassSpawner11" parent="YSort/Grass" instance=ExtResource( 21 )]
+position = Vector2( -57, -153 )
+width = 2
 
 [node name="Trees" type="YSort" parent="YSort"]
 
@@ -2088,7 +2132,7 @@ position = Vector2( 160, -200 )
 [node name="Crosses" type="YSort" parent="YSort"]
 
 [node name="Cross" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -1, -74 )
+position = Vector2( 11, -77 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2098,7 +2142,7 @@ material = SubResource( 150 )
 flip_h = true
 
 [node name="Cross5" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( 362, 263 )
+position = Vector2( 360, 266 )
 
 [node name="Cross6" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -115, 484 )
@@ -2358,7 +2402,7 @@ shape = SubResource( 51 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -35.0
+volume_db = 1.0
 autoplay = true
 script = ExtResource( 8 )
 
