@@ -1,6 +1,6 @@
 extends Node
 
-var PlayerPoints = 0 setget points_change
+var PlayerPoints = 0
 var result = []
 
 var level = 1
@@ -39,6 +39,8 @@ func fertilizer_change(value):
 func reset_fertilizerUI():
 	emit_signal("fertilizer_changed", fertilizer)
 	
-func points_change(value):
+func add_points(value):
 	PlayerPoints += value
 	emit_signal("points_changed", value)
+
+	

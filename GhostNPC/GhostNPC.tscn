@@ -108,10 +108,11 @@ tracks/0/keys = {
 radius = 64.0
 
 [node name="GhostNPC" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0, 7 )
 shape = SubResource( 11 )
 
