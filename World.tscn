@@ -1024,6 +1024,7 @@ pause_mode = 2
 visible = false
 
 [node name="Paused_Joystick" parent="CanvasLayer" instance=ExtResource( 30 )]
+visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 visible = false
