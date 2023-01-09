@@ -3,7 +3,7 @@
 [ext_resource path="res://World/Tablet.png" type="Texture" id=1]
 [ext_resource path="res://World/Tablet.gd" type="Script" id=2]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=3]
-[ext_resource path="res://MainMenu/OpenSans-VariableFont_wdth,wght.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13, 27.5 )
@@ -103,10 +103,12 @@ margin_left = 8.0
 margin_right = 120.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 4 )
-text = "Do tasks and grow the largest pumpkin possible to win the contest! You can mow the grass, water the flowers on the graves and light the candles. Watch out for ghosts!
+text = "Do tasks and grow the largest pumpkin possible to win the contest 
+You can mow the grass, water the flowers on the graves and light the candles. Watch out for ghosts
 Movement -> WSAD
 Tasks -> mouse click
 Mow the grass and attack the ghosts -> SPACE"
+align = 1
 valign = 1
 autowrap = true
 

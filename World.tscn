@@ -1836,7 +1836,7 @@ position = Vector2( 64, 128 )
 position = Vector2( 344, -104 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -272, -176 )
+position = Vector2( -272, -192 )
 scale = Vector2( 0.999208, 1.00341 )
 __meta__ = {
 "_edit_group_": true
@@ -2364,14 +2364,14 @@ position = Vector2( -450, 267.143 )
 [node name="Crypt" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 344, -168 )
 
-[node name="Tablet" parent="YSort" instance=ExtResource( 65 )]
-position = Vector2( -272, -248 )
-
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
 visible = false
 show_behind_parent = true
 position = Vector2( -80, 816 )
 color = Color( 0, 0, 0, 1 )
+
+[node name="Tablet" parent="." instance=ExtResource( 65 )]
+position = Vector2( -272, -248 )
 
 [node name="BorderMap" type="StaticBody2D" parent="."]
 visible = false
