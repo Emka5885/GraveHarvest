@@ -38,6 +38,7 @@ margin_bottom = 16.0
 rect_min_size = Vector2( 40, 16 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
+align = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 8, 8 )
