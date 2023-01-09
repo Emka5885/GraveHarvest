@@ -2174,6 +2174,9 @@ position = Vector2( 328, 8 )
 position = Vector2( -301, 160 )
 WANDER_TARGET_RANGE = 1
 
+[node name="Bat8" parent="YSort/Bats" instance=ExtResource( 19 )]
+position = Vector2( 10, -191 )
+
 [node name="GravesNames" type="YSort" parent="YSort"]
 
 [node name="GraveName" parent="YSort/GravesNames" instance=ExtResource( 20 )]
@@ -2282,9 +2285,6 @@ dialog_number = 4
 material = SubResource( 173 )
 frames = SubResource( 174 )
 
-[node name="Crypt" parent="YSort" instance=ExtResource( 16 )]
-position = Vector2( 344, -168 )
-
 [node name="Lamps" type="YSort" parent="YSort"]
 
 [node name="Lamp" parent="YSort/Lamps" instance=ExtResource( 26 )]
@@ -2338,12 +2338,6 @@ flip_h = true
 [node name="Light2D" parent="YSort/Lamps/Lamp8" index="3"]
 position = Vector2( -22, -27 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
-visible = false
-show_behind_parent = true
-position = Vector2( -80, 816 )
-color = Color( 0, 0, 0, 1 )
-
 [node name="Flowers" type="YSort" parent="YSort"]
 scale = Vector2( 0.7, 0.7 )
 
@@ -2371,11 +2365,17 @@ position = Vector2( 38.5714, 507.143 )
 [node name="Flower3" parent="YSort/Flowers" instance=ExtResource( 69 )]
 position = Vector2( -450, 267.143 )
 
-[node name="Tablet" parent="." instance=ExtResource( 65 )]
+[node name="Crypt" parent="YSort" instance=ExtResource( 16 )]
+position = Vector2( 344, -168 )
+
+[node name="Tablet" parent="YSort" instance=ExtResource( 65 )]
 position = Vector2( -272, -248 )
 
-[node name="Bat" parent="Tablet" instance=ExtResource( 19 )]
-position = Vector2( 282, 57 )
+[node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
+visible = false
+show_behind_parent = true
+position = Vector2( -80, 816 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="BorderMap" type="StaticBody2D" parent="."]
 visible = false
