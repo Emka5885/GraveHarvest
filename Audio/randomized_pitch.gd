@@ -5,9 +5,6 @@ var last_pitch = 1.0
 export var bottom_range = 0.4
 export var top_range = 1.0
 
-func _ready():
-	connect("finished", self, "queue_free")
-
 func play(from_position=0.0):
 	randomize()
 	
