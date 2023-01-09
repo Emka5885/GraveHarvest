@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tasks/Task.gd" type="Script" id=1]
 [ext_resource path="res://World/grave3.png" type="Texture" id=2]
 [ext_resource path="res://World/grave4.png" type="Texture" id=3]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=4]
+[ext_resource path="res://Audio/randomized_pitch.gd" type="Script" id=5]
+[ext_resource path="res://Audio/Watering.wav" type="AudioStream" id=6]
 
 [sub_resource type="ShaderMaterial" id=99]
 resource_local_to_scene = true
@@ -60,5 +62,12 @@ shape = SubResource( 102 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+script = ExtResource( 5 )
+bottom_range = 0.7
+top_range = 1.3
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

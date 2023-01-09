@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GrowPumpkin.mp3-11b9bebf71ec254e839313e8c69ca18a.mp3str"
+
+[deps]
+
+source_file="res://Audio/GrowPumpkin.mp3"
+dest_files=[ "res://.import/GrowPumpkin.mp3-11b9bebf71ec254e839313e8c69ca18a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

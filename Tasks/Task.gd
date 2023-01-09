@@ -53,6 +53,7 @@ func _input(event):
 	var active = sprite.material.get_shader_param("on")
 	if !done && active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
+			$AudioStreamPlayer.play()
 			sprite.play("done")
 			PlayerStats.fertilizer +=  0.5
 			$Timer.start()

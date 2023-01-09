@@ -1,4 +1,4 @@
-extends AudioStreamPlayer
+extends "res://Audio/randomized_pitch.gd"
 
 func _ready():
 	# warning-ignore:return_value_discarded

@@ -7,6 +7,7 @@ var isPaused = false
 var isJoystick = false
 var mute = false
 onready var select = $AudioStreamPlayer
+onready var old_style_box = $Music3.get_stylebox("normal").duplicate()
 
 func _ready():
 	var joysticks = Input.get_connected_joypads()
@@ -56,3 +57,9 @@ func _on_Resume_Button_button_up():
 func _on_Music_Button_pressed():
 	mute = !mute
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), mute)
+	if !mute:
+		$Music3.add_stylebox_override("normal", old_style_box)
+	else:
+		var new_style_box= $Music3.get_stylebox("normal").duplicate() 
+		new_style_box.texture = load("res://MainMenu/Nute-mute.png")
+		$Music3.add_stylebox_override("normal", new_style_box)
