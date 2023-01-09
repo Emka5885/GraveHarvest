@@ -3,6 +3,8 @@ extends Node
 var PlayerPoints = 0 setget points_change
 var result = []
 
+var level = 1
+
 #sack of fertilize
 export(int) var max_fertilizer = 3 setget set_max_fertilizer
 var fertilizer = 0 setget fertilizer_change
