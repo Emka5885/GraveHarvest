@@ -2036,7 +2036,7 @@ position = Vector2( -112, -64 )
 position = Vector2( 40, -192 )
 
 [node name="Ghost" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( -312, 464 )
+position = Vector2( -312, 453 )
 
 [node name="Ghost2" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
 position = Vector2( 96, -184 )
@@ -2154,7 +2154,7 @@ WANDER_TARGET_RANGE = 1
 [node name="GravesNames" type="YSort" parent="YSort"]
 
 [node name="GraveName" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( -312, 440 )
+position = Vector2( -312, 434 )
 dialog_number = 5
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName" index="0"]
@@ -2163,7 +2163,7 @@ frames = SubResource( 160 )
 playing = true
 
 [node name="GraveName2" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( -272, 440 )
+position = Vector2( -272, 434 )
 dialog_number = 2
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName2" index="0"]
@@ -2172,7 +2172,7 @@ frames = SubResource( 162 )
 playing = true
 
 [node name="GraveName3" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( -232, 440 )
+position = Vector2( -232, 434 )
 dialog_number = 1
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName3" index="0"]
@@ -2180,7 +2180,7 @@ material = SubResource( 157 )
 frames = SubResource( 158 )
 
 [node name="GraveName4" type="StaticBody2D" parent="YSort/GravesNames"]
-position = Vector2( -192, 440 )
+position = Vector2( -192, 434 )
 script = ExtResource( 33 )
 dialog_number = 8
 
@@ -2213,7 +2213,7 @@ shape = SubResource( 155 )
 wait_time = 5.0
 
 [node name="GraveName5" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( -32, 440 )
+position = Vector2( -32, 435 )
 dialog_number = 6
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName5" index="0"]
@@ -2221,14 +2221,14 @@ material = SubResource( 163 )
 frames = SubResource( 164 )
 
 [node name="GraveName6" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( 8, 440 )
+position = Vector2( 8, 435 )
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName6" index="0"]
 material = SubResource( 165 )
 frames = SubResource( 166 )
 
 [node name="GraveName7" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( 48, 440 )
+position = Vector2( 48, 435 )
 dialog_number = 7
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName7" index="0"]
@@ -2236,7 +2236,7 @@ material = SubResource( 167 )
 frames = SubResource( 168 )
 
 [node name="GraveName8" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( 88, 440 )
+position = Vector2( 88, 435 )
 dialog_number = 3
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName8" index="0"]
@@ -2244,7 +2244,7 @@ material = SubResource( 169 )
 frames = SubResource( 170 )
 
 [node name="GraveName9" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( 128, 440 )
+position = Vector2( 128, 435 )
 dialog_number = 9
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName9" index="0"]
@@ -2252,7 +2252,7 @@ material = SubResource( 171 )
 frames = SubResource( 172 )
 
 [node name="GraveName10" parent="YSort/GravesNames" instance=ExtResource( 20 )]
-position = Vector2( 304, 440 )
+position = Vector2( 288, 432 )
 dialog_number = 4
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName10" index="0"]
