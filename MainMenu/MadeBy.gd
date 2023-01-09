@@ -30,7 +30,6 @@ func _physics_process(_delta):
 				_on_SpecialThanks_Button_button_up()
 	else:
 		$Back2.visible = false
-		$Back1.visible = false
 
 func _on_Button_button_up():
 	select.play()
