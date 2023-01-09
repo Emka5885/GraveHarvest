@@ -42,4 +42,3 @@ func reset_fertilizerUI():
 func points_change(value):
 	PlayerPoints += value
 	emit_signal("points_changed", value)
-	value = 0
