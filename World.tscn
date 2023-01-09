@@ -1863,20 +1863,26 @@ position = Vector2( 144, -200 )
 [node name="Crosses" type="YSort" parent="YSort"]
 
 [node name="Cross" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -240, 80 )
+position = Vector2( -232, 72 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" parent="YSort/Crosses/Cross" index="1"]
 material = SubResource( 150 )
 flip_h = true
 
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -304, 80 )
+position = Vector2( -312, 72 )
 
 [node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -304, 144 )
+position = Vector2( -312, 160 )
 
 [node name="Cross4" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -240, 144 )
+position = Vector2( -232, 160 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" parent="YSort/Crosses/Cross4" index="1"]
 material = SubResource( 151 )
