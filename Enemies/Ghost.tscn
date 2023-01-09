@@ -4,7 +4,7 @@
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemies/PlayerDetectionZone.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Overlap/Hitbox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Overlap/Hitbox.gd" type="Script" id=5]
 [ext_resource path="res://Overlap/Hurtbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Ghost.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Ghost.png" type="Texture" id=8]
@@ -185,7 +185,7 @@ position = Vector2( -1, -10 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 20 )
 animation = "walk"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -207,11 +207,13 @@ visible = false
 modulate = Color( 1, 1, 1, 0.454902 )
 shape = SubResource( 9 )
 
-[node name="Hitbox" parent="." instance=ExtResource( 5 )]
+[node name="Hitbox" type="Area2D" parent="."]
 visible = false
+collision_layer = 0
 collision_mask = 4
+script = ExtResource( 5 )
 
-[node name="CollisionShape2D" parent="Hitbox" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2( 0, -14 )
 shape = SubResource( 10 )
 
@@ -264,5 +266,4 @@ autowrap = true
 
 [editable path="Hurtbox"]
 [editable path="PlayerDetectionZone"]
-[editable path="Hitbox"]
 [editable path="SoftCollision"]

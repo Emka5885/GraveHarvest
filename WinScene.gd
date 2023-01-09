@@ -11,3 +11,13 @@ func _on_Stats_Button_button_up():
 
 func _on_Quitt_Button_button_up():
 	get_tree().quit()
+
+func _ready():
+	$Container/Label3.text = str(PlayerStats.PlayerPoints)
+	match PlayerStats.level:
+		2:
+			$Container/Two.modulate = "ffffff"
+		3:
+			$Container/Three.modulate = "ffffff"
+		4:
+			$Container/Four.modulate = "ffffff"

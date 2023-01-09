@@ -33,7 +33,7 @@ align = 1
 valign = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 240.0
+wait_time = 10.0
 one_shot = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
