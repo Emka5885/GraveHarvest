@@ -173,7 +173,7 @@ text = "QUITT"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = 20.0
+volume_db = 15.0
 script = ExtResource( 5 )
 bottom_range = 0.7
 top_range = 1.3

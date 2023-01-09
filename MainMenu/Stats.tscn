@@ -92,5 +92,6 @@ margin_bottom = 460.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = 15.0
 
 [connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
