@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/MadeBy.gd" type="Script" id=2]
@@ -7,10 +7,6 @@
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0, 0, 0, 0.392157 )
-
-[sub_resource type="DynamicFont" id=14]
-size = 38
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 40
@@ -24,10 +20,6 @@ bg_color = Color( 0, 0, 0, 0.294118 )
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0 )
-
-[sub_resource type="DynamicFont" id=15]
-size = 22
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 22
@@ -79,15 +71,6 @@ margin_right = 1175.0
 margin_bottom = 113.0
 custom_styles/normal = SubResource( 13 )
 
-[node name="Back1" type="Label" parent="."]
-visible = false
-margin_left = 1040.0
-margin_top = 44.0
-margin_right = 1215.0
-margin_bottom = 144.0
-custom_fonts/font = SubResource( 14 )
-text = "BACK"
-
 [node name="Button" type="Button" parent="."]
 margin_left = 1000.0
 margin_top = 13.0
@@ -107,16 +90,6 @@ margin_top = 140.0
 margin_right = 1170.0
 margin_bottom = 240.0
 custom_styles/normal = SubResource( 13 )
-
-[node name="ST1" type="Label" parent="."]
-visible = false
-margin_left = 992.0
-margin_top = 180.0
-margin_right = 1202.0
-margin_bottom = 280.0
-custom_fonts/font = SubResource( 15 )
-text = "Special Thanks
-"
 
 [node name="SpecialThanks_Button" type="Button" parent="."]
 margin_left = 990.0

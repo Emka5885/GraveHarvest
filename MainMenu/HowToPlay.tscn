@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/HowToPlay.gd" type="Script" id=2]
@@ -7,10 +7,6 @@
 
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0, 0, 0, 0.392157 )
-
-[sub_resource type="DynamicFont" id=10]
-size = 38
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
@@ -67,15 +63,6 @@ margin_top = 13.0
 margin_right = 1175.0
 margin_bottom = 113.0
 custom_styles/normal = SubResource( 9 )
-
-[node name="Back1" type="Label" parent="."]
-visible = false
-margin_left = 1040.0
-margin_top = 44.0
-margin_right = 1136.0
-margin_bottom = 84.0
-custom_fonts/font = SubResource( 10 )
-text = "BACK"
 
 [node name="Button" type="Button" parent="."]
 margin_left = 1000.0
