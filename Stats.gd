@@ -5,6 +5,7 @@ var result = []
 
 var level = 1
 
+var end_scene_label = "You won"
 #sack of fertilize
 export(int) var max_fertilizer = 3 setget set_max_fertilizer
 var fertilizer = 0 setget fertilizer_change

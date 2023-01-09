@@ -123,7 +123,7 @@ margin_top = 55.0
 margin_right = 212.0
 margin_bottom = 80.0
 custom_fonts/font = SubResource( 2 )
-text = "Time is up"
+text = "XXX"
 align = 1
 valign = 1
 

@@ -21,6 +21,7 @@ func _on_Quitt_Button_button_up():
 	get_tree().quit()
 
 func _ready():
+	$Label.text = PlayerStats.end_scene_label
 	print(PlayerStats.level)
 	$Container/Label3.text = str(PlayerStats.PlayerPoints)
 	match PlayerStats.level:
