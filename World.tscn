@@ -1,4 +1,4 @@
-[gd_scene load_steps=236 format=2]
+[gd_scene load_steps=237 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -1579,6 +1579,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="ShaderMaterial" id=177]
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
 [sub_resource type="SpriteFrames" id=158]
 animations = [ {
 "frames": [ ExtResource( 55 ), ExtResource( 37 ) ],
@@ -2231,7 +2240,7 @@ position = Vector2( -193, 434 )
 dialog_number = 8
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName4" index="0"]
-material = SubResource( 157 )
+material = SubResource( 177 )
 frames = SubResource( 158 )
 
 [node name="GraveName5" parent="YSort/GravesNames" instance=ExtResource( 20 )]
@@ -2402,7 +2411,7 @@ shape = SubResource( 51 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 script = ExtResource( 8 )
 
