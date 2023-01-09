@@ -692,7 +692,7 @@ shape = SubResource( 47 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -20.0
+volume_db = -5.0
 script = ExtResource( 8 )
 
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]

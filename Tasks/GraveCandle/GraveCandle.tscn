@@ -71,7 +71,7 @@ wait_time = 30.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
-volume_db = -20.0
+volume_db = 5.0
 script = ExtResource( 6 )
 bottom_range = 0.7
 top_range = 1.4
