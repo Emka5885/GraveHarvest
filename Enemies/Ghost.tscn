@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=1]
 [ext_resource path="res://Overlap/SoftCollision.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://GhostNPC/WavyTextShader.gdshader" type="Shader" id=10]
 [ext_resource path="res://Light/LightDifuse2.png" type="Texture" id=11]
+[ext_resource path="res://Audio/randomized_pitch.gd" type="Script" id=12]
+[ext_resource path="res://Audio/Ghost.wav" type="AudioStream" id=13]
 
 [sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 8 )
@@ -185,7 +187,7 @@ position = Vector2( -1, -10 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 20 )
 animation = "walk"
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -258,6 +260,12 @@ text = "Zjem cie!"
 align = 1
 valign = 1
 autowrap = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -15.0
+script = ExtResource( 12 )
+top_range = 0.8
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]

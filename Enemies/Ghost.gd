@@ -92,6 +92,7 @@ func pick_random_state(state_list):
 
 func show_text():
 	if !label.visible:
+		$AudioStreamPlayer.play()
 		randomize()
 		dialogue_index = rand_range(0, dialogue.size()-1)
 		label.text = dialogue[dialogue_index]
