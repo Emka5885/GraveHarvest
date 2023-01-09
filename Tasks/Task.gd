@@ -60,6 +60,7 @@ func _input(event):
 			done = true
 			change_light(true)
 	elif !done && active && Input.is_action_just_pressed("select"):
+		$AudioStreamPlayer.play()
 		sprite.play("done")
 		PlayerStats.fertilizer += 0.5
 		$Timer.start()

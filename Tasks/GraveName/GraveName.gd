@@ -74,6 +74,7 @@ func _input(event):
 				emit_signal("show_dialog", dialogs[dialog_number])
 	else:
 		if !done && active && Input.is_action_just_pressed("select"):
+			$AudioStreamPlayer.play()
 			sprite.play("done")
 			PlayerStats.fertilizer += 1
 			
