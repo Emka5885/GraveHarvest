@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=2]
+[gd_scene load_steps=195 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -33,9 +33,11 @@
 [ext_resource path="res://World/Ground tileset.png" type="Texture" id=31]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=32]
 [ext_resource path="res://Tasks/GraveName/GraveName.gd" type="Script" id=33]
-[ext_resource path="res://World/grave_name1.png" type="Texture" id=34]
+[ext_resource path="res://World/Nagrobek Iskra zapalony 2.png" type="Texture" id=34]
 [ext_resource path="res://Light/LightDifuse.png" type="Texture" id=35]
-[ext_resource path="res://World/grave_name2.png" type="Texture" id=36]
+[ext_resource path="res://World/Nagrobek Nartyna.png" type="Texture" id=36]
+[ext_resource path="res://World/Nagrobek Nartyna zapalony 2.png" type="Texture" id=37]
+[ext_resource path="res://World/Nagrobek Iskra.png" type="Texture" id=38]
 
 [sub_resource type="StyleBoxFlat" id=99]
 bg_color = Color( 0.490196, 0.490196, 0.490196, 0.188235 )
@@ -1471,6 +1473,29 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
+[sub_resource type="ShaderMaterial" id=157]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=158]
+animations = [ {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
 [sub_resource type="ShaderMaterial" id=152]
 resource_local_to_scene = true
 shader = ExtResource( 32 )
@@ -1481,12 +1506,12 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="SpriteFrames" id=153]
+[sub_resource type="SpriteFrames" id=156]
 animations = [ {
-"frames": [ ExtResource( 34 ) ],
+"frames": [ ExtResource( 37 ) ],
 "loop": true,
 "name": "done",
-"speed": 5.0
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 36 ) ],
 "loop": true,
@@ -1926,6 +1951,10 @@ dialog_number = 2
 position = Vector2( -232, 440 )
 dialog_number = 1
 
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName3" index="0"]
+material = SubResource( 157 )
+frames = SubResource( 158 )
+
 [node name="GraveName4" type="StaticBody2D" parent="YSort/GravesNames"]
 position = Vector2( -192, 440 )
 script = ExtResource( 33 )
@@ -1933,7 +1962,7 @@ dialog_number = 8
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesNames/GraveName4"]
 material = SubResource( 152 )
-frames = SubResource( 153 )
+frames = SubResource( 156 )
 animation = "not done"
 
 [node name="Light2D" type="Light2D" parent="YSort/GravesNames/GraveName4"]
@@ -2091,6 +2120,7 @@ script = ExtResource( 8 )
 
 [editable path="YSort/Crosses/Cross"]
 [editable path="YSort/Crosses/Cross4"]
+[editable path="YSort/GravesNames/GraveName3"]
 [editable path="YSort/Lamps/Lamp6"]
 [editable path="YSort/Lamps/Lamp7"]
 [editable path="YSort/Lamps/Lamp8"]
