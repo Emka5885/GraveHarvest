@@ -1,4 +1,5 @@
 extends Control
 
-func initialize(result_value):
-	self.text = ("Player- "+str(result_value))
+func initialize(result_value, number):
+	self.text = (str(number)+". Player- "+str(result_value))
+

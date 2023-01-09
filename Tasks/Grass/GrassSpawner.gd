@@ -16,6 +16,7 @@ func generate_grass():
 			child.set_timer()
 	
 func set_grass_creator():
+# warning-ignore:unused_variable
 	for n in range(width*height):
 		var grass_creator_scene = load("res://Tasks/Grass/GrassCreator.tscn")
 		Spawner.add_child(grass_creator_scene.instance())
