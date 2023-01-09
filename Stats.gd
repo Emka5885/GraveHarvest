@@ -11,6 +11,22 @@ signal fertilizer_changed(value)
 signal max_fertilizer_changed(value)
 signal points_changed(value)
 
+func sortingPlayerStats():
+	
+	PlayerPoints = 0
+	fertilizer = 0
+	
+	result.sort()
+	var newArray = []
+	for x in range(len(result)):
+		newArray.append(result[len(result) -1 - x])
+	result = newArray
+		
+
+func _ready():
+	PlayerPoints = 0
+
+
 func set_max_fertilizer(value):
 	max_fertilizer = value
 	self.fertilizer = min(fertilizer, max_fertilizer)

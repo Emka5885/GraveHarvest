@@ -61,7 +61,7 @@ func _input(event):
 				pumpkinAnimation.play("Bounce")
 				self.size += int(PlayerStats.fertilizer)
 				
-				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)*100
+				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
 				
 				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
 

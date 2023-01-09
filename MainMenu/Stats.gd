@@ -8,14 +8,19 @@ onready var select = $AudioStreamPlayer
 func _on_Button_button_up():
 	select.play()
 	yield(select, "finished")
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(mainMenuScene.resource_path)
 	
 	
 func _ready():
+	var x = 1
 	for points in PlayerStats.result:
-		updateStats(points)
+		updateStats(points, x)
+		x += 1
+		if x > 10:
+			break
 
-func updateStats(result_value):
+func updateStats(result_value, number):
 	var line_stat = StatLine.instance()
-	line_stat.initialize(result_value)
+	line_stat.initialize(result_value, number)
 	$Label1/ScoreContainer.add_child(line_stat)	
