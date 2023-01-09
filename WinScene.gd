@@ -16,8 +16,8 @@ func _ready():
 	$Container/Label3.text = str(PlayerStats.PlayerPoints)
 	match PlayerStats.level:
 		2:
-			$Container/Two.modulate = "ffffff"
+			$Container/Two.modulate = Color(1,1,1)
 		3:
-			$Container/Three.modulate = "ffffff"
+			$Container/Three.modulate = Color(1,1,1)
 		4:
-			$Container/Four.modulate = "ffffff"
+			$Container/Four.modulate = Color(1,1,1)

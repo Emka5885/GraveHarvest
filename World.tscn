@@ -1823,7 +1823,7 @@ tile_data = PoolIntArray( -2162697, 0, 4, -2162696, 0, 196609, -2162695, 0, 1966
 position = Vector2( 64, 128 )
 
 [node name="GhostNPC" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 344, -104 )
+position = Vector2( 357, -78 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -272, -192 )
@@ -1896,7 +1896,7 @@ position = Vector2( -160, 448 )
 position = Vector2( 408, 432 )
 
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 222, -158 )
+position = Vector2( 15, -223 )
 
 [node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 335, 31 )
@@ -2374,7 +2374,6 @@ position = Vector2( -450, 267.143 )
 position = Vector2( 344, -168 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
-visible = false
 show_behind_parent = true
 position = Vector2( -80, 816 )
 color = Color( 0, 0, 0, 1 )
