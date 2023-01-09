@@ -5,7 +5,7 @@ var mainGameScene = load("res://World.tscn")
 
 var isPaused = false
 var isJoystick = false
-
+var mute = false
 onready var select = $AudioStreamPlayer
 
 func _ready():
@@ -51,3 +51,8 @@ func _on_Resume_Button_button_up():
 	isPaused = !isPaused
 	set_visible(isPaused)
 	pause(isPaused)
+
+
+func _on_Music_Button_pressed():
+	mute = !mute
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), mute)
