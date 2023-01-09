@@ -5,7 +5,7 @@
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=3]
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Light/LightDifuse.png" type="Texture" id=5]
-[ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=6]
+[ext_resource path="res://UI/PumpkinBar.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=8]
 size = 6
@@ -135,7 +135,6 @@ script = ExtResource( 2 )
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 10 )
 scale = Vector2( 0.8125, 0.7 )
-texture = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -182,3 +181,9 @@ texture = ExtResource( 5 )
 texture_scale = 0.02
 color = Color( 1, 0.745098, 0.619608, 1 )
 mode = 2
+
+[node name="PumpkinBar" parent="." instance=ExtResource( 6 )]
+margin_left = -36.0
+margin_top = -26.0
+margin_right = 38.0
+margin_bottom = -22.0

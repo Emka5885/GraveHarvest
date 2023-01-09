@@ -7,6 +7,7 @@ onready var pumpkinAnimation = $PumpkinAnimation
 onready var labelAnimation = $LabelAnimation
 onready var label = $Label
 onready var interactionArea = $InteractionArea
+onready var bar = $PumpkinBar
 
 signal add_time
 
@@ -50,8 +51,10 @@ func _input(event):
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
 				get_tree().get_nodes_in_group("camera")[0].shake(5, 0.1*int(PlayerStats.fertilizer))
-				self.size += int(PlayerStats.fertilizer)			
-				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)	
+				self.size += int(PlayerStats.fertilizer)
+				bar.add(int(PlayerStats.fertilizer))
+				
+				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
 				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
 	elif active && Input.is_action_just_pressed("select"):
 		if PlayerStats.fertilizer >= 1:
@@ -60,6 +63,7 @@ func _input(event):
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
 				self.size += int(PlayerStats.fertilizer)
+				bar.add(int(PlayerStats.fertilizer))
 				
 				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
 				
