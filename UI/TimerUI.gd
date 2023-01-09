@@ -23,8 +23,6 @@ func get_minutes_and_seconds():
 
 func _on_Timer_timeout():
 	PlayerStats.result.append(PlayerStats.PlayerPoints)
-	PlayerStats.PlayerPoints = 0 
-	PlayerStats.sortingPlayerStats()
 	
 	get_tree().change_scene("res://WinScene.tscn")
 
