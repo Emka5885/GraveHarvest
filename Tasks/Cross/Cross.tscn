@@ -33,8 +33,8 @@ animations = [ {
 radius = 9.0
 height = 32.0
 
-[sub_resource type="CircleShape2D" id=122]
-radius = 59.0339
+[sub_resource type="CapsuleShape2D" id=122]
+radius = 31.0
 
 [node name="Cross" type="StaticBody2D"]
 input_pickable = true
@@ -55,7 +55,6 @@ position = Vector2( 1, 9 )
 shape = SubResource( 121 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 1, 11 )

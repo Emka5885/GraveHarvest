@@ -26,7 +26,6 @@ func _on_Timer_timeout():
 	PlayerStats.PlayerPoints = 0 
 	PlayerStats.sortingPlayerStats()
 	
-	
 	get_tree().change_scene("res://WinScene.tscn")
 
 func _on_Pumpkin_add_time():

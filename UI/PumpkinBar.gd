@@ -10,6 +10,7 @@ func add(new_value):
 	value += new_value
 	if value >= 10:
 		level += 1
+		PlayerStats.level = level
 		level_up()
 
 func level_up():
