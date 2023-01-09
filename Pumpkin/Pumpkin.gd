@@ -85,6 +85,8 @@ func increase_size(new_size):
 		change_pumpkin("res://Pumpkin/Grzes3.png")
 	if size >= 30:
 		change_pumpkin("res://Pumpkin/Grzegorz.png")
+		yield(get_tree().create_timer(2), "timeout")
+		get_tree().change_scene("res://WinScene.tscn")
 
 func change_pumpkin(path):
 	sprite.texture = load(path)

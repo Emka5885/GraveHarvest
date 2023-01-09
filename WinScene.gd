@@ -13,11 +13,15 @@ func _on_Quitt_Button_button_up():
 	get_tree().quit()
 
 func _ready():
+	print(PlayerStats.level)
 	$Container/Label3.text = str(PlayerStats.PlayerPoints)
 	match PlayerStats.level:
 		2:
 			$Container/Two.modulate = Color(1,1,1)
 		3:
+			$Container/Two.modulate = Color(1,1,1)
 			$Container/Three.modulate = Color(1,1,1)
 		4:
+			$Container/Two.modulate = Color(1,1,1)
+			$Container/Three.modulate = Color(1,1,1)
 			$Container/Four.modulate = Color(1,1,1)
