@@ -21,6 +21,7 @@ func _physics_process(_delta):
 			set_visible(isPaused)
 			pause(isPaused)
 			$NewGame4.visible = true
+			$Music4.visible = false
 			
 	var joysticks = Input.get_connected_joypads()
 	if joysticks.size() != 0:
@@ -47,7 +48,6 @@ func _physics_process(_delta):
 				$MainMenu4.visible = false
 				_on_MainMenu_Button_button_up()
 			elif $Music4.visible == true:
-				$Music4.visible = false
 				_on_Music_Button_pressed()
 			elif $Resume1.visible == true:
 				$Resume1.visible = false
@@ -66,6 +66,10 @@ func _on_MainMenu_Button_button_up():
 	isPaused = false
 	set_visible(isPaused)
 	pause(isPaused)
+	if mute:
+		mute = !mute
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), mute)
+		$MusicOff.visible = false
 	get_tree().change_scene(mainMenuScene.resource_path)
 
 func _on_NewGame_Button_button_up():
@@ -86,5 +90,9 @@ func _on_Resume_Button_button_up():
 
 
 func _on_Music_Button_pressed():
+	if mute:
+		$MusicOff.visible = false
+	else:
+		$MusicOff.visible = true
 	mute = !mute
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), mute)
