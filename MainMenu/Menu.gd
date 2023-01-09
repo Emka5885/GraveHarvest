@@ -13,6 +13,9 @@ func _ready():
 func _physics_process(_delta):
 	var joysticks = Input.get_connected_joypads()
 	if joysticks.size() != 0:
+		if !$Start2.visible and !$Help2.visible and !$Stats2.visible and !$MadeBy2.visible and !$Quitt2.visible:
+			$Start2.visible = true
+		
 		if Input.is_action_just_pressed("change_selection"):
 			if $Start2.visible == true:
 				$Start2.visible = false

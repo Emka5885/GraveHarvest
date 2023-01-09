@@ -20,7 +20,13 @@ func _physics_process(_delta):
 			isPaused = !isPaused
 			set_visible(isPaused)
 			pause(isPaused)
-			$NewGame4.visible = true
+			var joysticks = Input.get_connected_joypads()
+			if joysticks.size() != 0:
+				$NewGame4.visible = true
+			else:
+				$NewGame4.visible = false
+			$Resume1.visible = false
+			$MainMenu4.visible = false
 			$Music4.visible = false
 			
 	var joysticks = Input.get_connected_joypads()
@@ -52,6 +58,11 @@ func _physics_process(_delta):
 			elif $Resume1.visible == true:
 				$Resume1.visible = false
 				_on_Resume_Button_button_up()
+	else:
+		$Resume1.visible = false
+		$Music4.visible = false
+		$MainMenu4.visible = false
+		$NewGame4.visible = false
 	
 func pause(value):
 	if value:
