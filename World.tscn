@@ -2370,7 +2370,6 @@ position = Vector2( 585.714, -180 )
 
 [node name="FlowerV3" parent="YSort/Flowers" instance=ExtResource( 68 )]
 position = Vector2( 402.857, -182.857 )
-scale = Vector2( 1, 1 )
 
 [node name="FlowersH" parent="YSort/Flowers" instance=ExtResource( 67 )]
 position = Vector2( 38.5714, 507.143 )
