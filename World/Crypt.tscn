@@ -89,6 +89,7 @@ rotation = -1.57254
 shape = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_left = -44.0
 margin_top = 9.0
 margin_right = 44.0
