@@ -1,4 +1,4 @@
-[gd_scene load_steps=239 format=2]
+[gd_scene load_steps=242 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -65,6 +65,9 @@
 [ext_resource path="res://World/Nagrobki/Nagrobek Archerywike zapalony 1.png" type="Texture" id=63]
 [ext_resource path="res://World/Nagrobki/Nagrobek Seviaru zapalony 1.png" type="Texture" id=64]
 [ext_resource path="res://World/Tablet.tscn" type="PackedScene" id=65]
+[ext_resource path="res://World/FlowersH.tscn" type="PackedScene" id=67]
+[ext_resource path="res://World/FlowerV.tscn" type="PackedScene" id=68]
+[ext_resource path="res://World/Flower.tscn" type="PackedScene" id=69]
 
 [sub_resource type="StyleBoxFlat" id=99]
 bg_color = Color( 0.490196, 0.490196, 0.490196, 0.188235 )
@@ -1889,7 +1892,7 @@ position = Vector2( -152, 208 )
 position = Vector2( -309, 32 )
 
 [node name="Bush24" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( -41, 35 )
+position = Vector2( -85, 23 )
 
 [node name="Bush25" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 80, -32 )
@@ -1907,13 +1910,14 @@ position = Vector2( -160, 448 )
 position = Vector2( 408, 432 )
 
 [node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 245, 281 )
+visible = false
+position = Vector2( 210, 279 )
 
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 214, -194 )
 
 [node name="Bush21" parent="YSort/Bushes" instance=ExtResource( 1 )]
-position = Vector2( 384, 24 )
+position = Vector2( 335, 31 )
 
 [node name="Bush22" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 165, -20 )
@@ -1961,9 +1965,11 @@ height = 2
 [node name="Trees" type="YSort" parent="YSort"]
 
 [node name="Tree3" parent="YSort/Trees" instance=ExtResource( 9 )]
+visible = false
 position = Vector2( 408, -128 )
 
 [node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
+visible = false
 position = Vector2( 280, -128 )
 
 [node name="Tree5" parent="YSort/Trees" instance=ExtResource( 9 )]
@@ -1988,7 +1994,7 @@ position = Vector2( 328, 368 )
 position = Vector2( 168, 388 )
 
 [node name="Tree15" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( 207, 510 )
+position = Vector2( 211, 509 )
 
 [node name="Tree9" parent="YSort/Trees" instance=ExtResource( 9 )]
 position = Vector2( -64, 384 )
@@ -1997,13 +2003,15 @@ position = Vector2( -64, 384 )
 position = Vector2( 257, 231 )
 
 [node name="Tree11" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( -168, 32 )
+position = Vector2( -191, 25 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Tree12" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( 280, -192 )
+position = Vector2( 274, -192 )
+scale = Vector2( 1.5, 1.5 )
 
 [node name="Tree8" parent="YSort/Trees" instance=ExtResource( 9 )]
-position = Vector2( 408, 0 )
+position = Vector2( 404, 16 )
 
 [node name="Ghosts" type="YSort" parent="YSort"]
 
@@ -2123,6 +2131,7 @@ position = Vector2( 362, 263 )
 
 [node name="Cross6" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -115, 484 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="AnimatedSprite" parent="YSort/Crosses/Cross6" index="1"]
 material = SubResource( 175 )
@@ -2341,6 +2350,34 @@ show_behind_parent = true
 position = Vector2( -80, 816 )
 color = Color( 0, 0, 0, 1 )
 
+[node name="Flowers" type="YSort" parent="YSort"]
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Flower2" parent="YSort/Flowers" instance=ExtResource( 69 )]
+position = Vector2( -211.429, 217.143 )
+
+[node name="FlowerH" parent="YSort/Flowers" instance=ExtResource( 67 )]
+position = Vector2( -350, 505.714 )
+
+[node name="FlowerV" parent="YSort/Flowers" instance=ExtResource( 68 )]
+position = Vector2( 588.571, 717.143 )
+
+[node name="Flower" parent="YSort/Flowers" instance=ExtResource( 69 )]
+position = Vector2( 355.714, 398.571 )
+
+[node name="FlowerV2" parent="YSort/Flowers" instance=ExtResource( 68 )]
+position = Vector2( 585.714, -180 )
+
+[node name="FlowerV3" parent="YSort/Flowers" instance=ExtResource( 68 )]
+position = Vector2( 402.857, -182.857 )
+scale = Vector2( 1, 1 )
+
+[node name="FlowersH" parent="YSort/Flowers" instance=ExtResource( 67 )]
+position = Vector2( 38.5714, 507.143 )
+
+[node name="Flower3" parent="YSort/Flowers" instance=ExtResource( 69 )]
+position = Vector2( -450, 267.143 )
+
 [node name="Tablet" parent="." instance=ExtResource( 65 )]
 position = Vector2( -272, -248 )
 
@@ -2376,7 +2413,7 @@ shape = SubResource( 51 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -40.0
+volume_db = -80.0
 script = ExtResource( 8 )
 
 [connection signal="timeout" from="CanvasLayer/Panel/Timer" to="CanvasLayer/Panel" method="_on_Timer_timeout"]

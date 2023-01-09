@@ -13,14 +13,19 @@ func _ready():
 	if joysticks.size() != 0:
 		isJoystick = true
 		$NewGame3.visible = true
+		$MainMenu3.visible = false
+		$Resume1.visible = false
+		$Music3.visible = false
 
 func _physics_process(_delta):
-	if isJoystick:
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() != 0:
 		if Input.is_action_just_pressed("back_to_menu"):
 			$NewGame3.visible = true
 			isPaused = !isPaused
 			set_visible(isPaused)
 			pause(isPaused)
+		
 		
 		if isPaused:
 			if Input.is_action_just_pressed("change_selection"):
@@ -29,9 +34,6 @@ func _physics_process(_delta):
 					$MainMenu3.visible = true
 				elif $MainMenu3.visible == true:
 					$MainMenu3.visible = false
-					$Music3.visible = true
-				elif $Music3.visible == true:
-					$Music3.visible = false
 					$Resume1.visible = true
 				elif $Resume1.visible == true:
 					$Resume1.visible = false
@@ -44,9 +46,6 @@ func _physics_process(_delta):
 				elif $MainMenu3.visible == true:
 					$MainMenu3.visible = false
 					MainMenu_Button_button_up()
-				elif $Music3.visible == true:
-					#$Music3.visible = false
-					pass
 				elif $Resume1.visible == true:
 					$Resume1.visible = false
 					Resume_Button_button_up()
