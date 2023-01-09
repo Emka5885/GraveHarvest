@@ -109,6 +109,7 @@ func _on_Hurtbox_area_entered(area):
 		animationPlayer.play("Dead")
 		hurtbox.queue_free()
 		$Hitbox.queue_free()
+		PlayerStats.PlayerPoints += 1
 	else:
 		hurtbox.create_hit_effect()
 		hurtbox.start_invincibility(0.4)
