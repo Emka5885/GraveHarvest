@@ -619,20 +619,20 @@ parameters/Idle/blend_position = Vector2( 0, 1 )
 parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
-position = Vector2( 0, -13 )
+position = Vector2( 2, -15 )
 rotation = 4.71239
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
 
 [node name="SwordHitbox" parent="HitboxPivot" instance=ExtResource( 3 )]
-visible = false
 position = Vector2( 15, 0 )
 collision_mask = 8
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
-position = Vector2( 4, -4.76837e-07 )
+visible = false
+position = Vector2( 2, -2.38419e-07 )
 shape = SubResource( 46 )
 
 [node name="Hurtbox" parent="." instance=ExtResource( 5 )]
