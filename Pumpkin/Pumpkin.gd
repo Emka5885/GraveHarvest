@@ -22,22 +22,31 @@ func _physics_process(_delta):
 				player_in = false
 	else:
 		player_in = false
-	if player_in:
-		# Get the Physics2DDirectSpaceState object
-		var space = get_world_2d().direct_space_state
-		# Check if there is a collision at the mouse position
-		var collision = space.intersect_point(get_global_mouse_position(), 5)
-		if collision:
-			for c in collision:
-				if c.collider == self:
-					sprite.material.set_shader_param("on", true)
-					break;
-				else:
-					sprite.material.set_shader_param("on", false)
+		
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() == 0:
+		if player_in:
+			# Get the Physics2DDirectSpaceState object
+			var space = get_world_2d().direct_space_state
+			# Check if there is a collision at the mouse position
+			var collision = space.intersect_point(get_global_mouse_position(), 5)
+			if collision:
+				for c in collision:
+					if c.collider == self:
+						sprite.material.set_shader_param("on", true)
+						break;
+					else:
+						sprite.material.set_shader_param("on", false)
+			else:
+				sprite.material.set_shader_param("on", false)
 		else:
 			sprite.material.set_shader_param("on", false)
+			
 	else:
-		sprite.material.set_shader_param("on", false)
+		if player_in:
+			sprite.material.set_shader_param("on", true)
+		else:
+			sprite.material.set_shader_param("on", false)
 
 func _input(event):
 	var active = sprite.material.get_shader_param("on")
