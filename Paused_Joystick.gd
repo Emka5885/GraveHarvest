@@ -12,6 +12,7 @@ func _ready():
 	var joysticks = Input.get_connected_joypads()
 	if joysticks.size() != 0:
 		isJoystick = true
+		$NewGame3.visible = true
 
 func _physics_process(_delta):
 	if isJoystick:

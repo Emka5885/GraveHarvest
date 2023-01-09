@@ -1,20 +1,29 @@
 extends Node2D
 
 var madeByScene = load("res://MainMenu/MadeBy.tscn")
-var stJoystick = load("res://MainMenu/SpecialThanks_Joystick.tscn")
+var st = load("res://MainMenu/SpecialThanks.tscn")
 
 onready var select = $AudioStreamPlayer
 var isJoystick = false
 
+func _ready():
+	var joysticks = Input.get_connected_joypads()
+	if joysticks.size() != 0:
+		isJoystick = true
+
 func _physics_process(_delta):
-	if !isJoystick:
+	if isJoystick:
 		var joysticks = Input.get_connected_joypads()
 		if joysticks.size() != 0:
 			isJoystick = true
-	else:
-		get_tree().change_scene(stJoystick.resource_path)
+		
+		if Input.is_action_just_pressed("select"):
+			Back_button_up()
 
-func _on_Button_button_up():
+	else:
+		get_tree().change_scene(st.resource_path)
+
+func Back_button_up():
 	select.play()
 	yield(select, "finished")
 	get_tree().change_scene(madeByScene.resource_path)
