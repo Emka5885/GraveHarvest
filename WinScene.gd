@@ -3,9 +3,6 @@ extends Control
 var statsScene = load("res://MainMenu/Stats.tscn")
 var cutscene = load("res://MainMenu/Cutscene.tscn")
 
-func _ready():
-	
-
 func _on_Start_Button_button_up():
 	get_tree().change_scene(cutscene.resource_path)
 

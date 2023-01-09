@@ -31,12 +31,19 @@ func _physics_process(_delta):
 	else:
 		player_in = false
 	if player_in:
-		var space = get_world_2d().direct_space_state
-		var collision = space.intersect_point(get_global_mouse_position(), 1);
-		if collision && collision[0].collider == self:
-			sprite.material.set_shader_param("on", true)
+		var joysticks = Input.get_connected_joypads()
+		if joysticks.size() == 0:
+			var space = get_world_2d().direct_space_state
+			var collision = space.intersect_point(get_global_mouse_position(), 1);
+			if collision && collision[0].collider == self:
+				sprite.material.set_shader_param("on", true)
+			else:
+				sprite.material.set_shader_param("on", false)
 		else:
-			sprite.material.set_shader_param("on", false)
+			if player_in:
+				sprite.material.set_shader_param("on", true)
+			else:
+				sprite.material.set_shader_param("on", false)
 	else:
 		sprite.material.set_shader_param("on", false)
 
@@ -49,8 +56,16 @@ func _input(event):
 			$Timer.start()
 			done = true
 			change_light(true)
+	elif !done && active && Input.is_action_just_pressed("select"):
+		sprite.play("done")
+		PlayerStats.fertilizer += 1
+		$Timer.start()
+		done = true
+		change_light(true)
 
 func change_light(is_on):
 	var light = get_node_or_null("Light2D")
 	if light:
 		light.enabled = is_on
+
+

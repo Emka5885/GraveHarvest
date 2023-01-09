@@ -22,14 +22,21 @@ func _physics_process(_delta):
 	else:
 		player_in = false
 	if player_in:
-		# Get the Physics2DDirectSpaceState object
-		var space = get_world_2d().direct_space_state
-		# Check if there is a collision at the mouse position
-		var collision = space.intersect_point(get_global_mouse_position(), 1)
-		if collision && collision[0].collider == self:
-			sprite.material.set_shader_param("on", true)
+		var joysticks = Input.get_connected_joypads()
+		if joysticks.size() == 0:
+			# Get the Physics2DDirectSpaceState object
+			var space = get_world_2d().direct_space_state
+			# Check if there is a collision at the mouse position
+			var collision = space.intersect_point(get_global_mouse_position(), 1)
+			if collision && collision[0].collider == self:
+				sprite.material.set_shader_param("on", true)
+			else:
+				sprite.material.set_shader_param("on", false)
 		else:
-			sprite.material.set_shader_param("on", false)
+			if player_in:
+				sprite.material.set_shader_param("on", true)
+			else:
+				sprite.material.set_shader_param("on", false)
 	else:
 		sprite.material.set_shader_param("on", false)
 
@@ -38,6 +45,17 @@ func _input(event):
 	if active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			if PlayerStats.fertilizer >= 1:
+				emit_signal("add_time")
+				label.text = "+"+str(int(PlayerStats.fertilizer))
+				labelAnimation.play("TextAnim")
+				pumpkinAnimation.play("Bounce")
+				self.size += int(PlayerStats.fertilizer)
+				
+				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
+				
+				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
+	elif active && Input.is_action_just_pressed("select"):
+		if PlayerStats.fertilizer >= 1:
 				emit_signal("add_time")
 				label.text = "+"+str(int(PlayerStats.fertilizer))
 				labelAnimation.play("TextAnim")
