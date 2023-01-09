@@ -578,8 +578,8 @@ collision_mask = 257
 script = ExtResource( 2 )
 
 [node name="ShadowSprite" type="Sprite" parent="."]
-position = Vector2( -7.15256e-07, 1 )
-scale = Vector2( 1.5, 1.4 )
+position = Vector2( 2.5411e-21, -1 )
+scale = Vector2( 1.53125, 1.45 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]

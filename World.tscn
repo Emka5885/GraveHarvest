@@ -1087,6 +1087,7 @@ position = Vector2( 276, -71 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -214, -145 )
+scale = Vector2( 0.999208, 1.00341 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1095,6 +1096,7 @@ __meta__ = {
 remote_path = NodePath("../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" groups=["camera"]]
+scale = Vector2( 1, 1 )
 current = true
 limit_left = -288
 limit_top = -224
@@ -1440,10 +1442,13 @@ position = Vector2( 260, 60 )
 [node name="CollisionShape2D" parent="YSort/Lamps/Lamp2" index="0"]
 position = Vector2( -62, 15 )
 
-[node name="Sprite" parent="YSort/Lamps/Lamp2" index="1"]
+[node name="Shadow" parent="YSort/Lamps/Lamp2" index="1"]
+position = Vector2( -62, 16 )
+
+[node name="Sprite" parent="YSort/Lamps/Lamp2" index="2"]
 flip_h = true
 
-[node name="Light2D" parent="YSort/Lamps/Lamp2" index="2"]
+[node name="Light2D" parent="YSort/Lamps/Lamp2" index="3"]
 position = Vector2( -83, -13 )
 
 [node name="Lamp3" parent="YSort/Lamps" instance=ExtResource( 26 )]
