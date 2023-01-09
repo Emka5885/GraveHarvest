@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Pumpkin/pumpkin.png" type="Texture" id=1]
 [ext_resource path="res://Pumpkin/Pumpkin.gd" type="Script" id=2]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=3]
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Light/LightDifuse.png" type="Texture" id=5]
+[ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=8]
 size = 6
@@ -131,6 +132,11 @@ collision_mask = 2
 input_pickable = true
 script = ExtResource( 2 )
 
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( 0, 10 )
+scale = Vector2( 0.8125, 0.7 )
+texture = ExtResource( 6 )
+
 [node name="Label" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 19.0
@@ -150,6 +156,9 @@ shape = SubResource( 5 )
 [node name="InteractionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource( 4 )
 
 [node name="PumpkinAnimation" type="AnimationPlayer" parent="."]
