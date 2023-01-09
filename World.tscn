@@ -1820,9 +1820,6 @@ tile_data = PoolIntArray( -2162697, 0, 4, -2162696, 0, 196609, -2162695, 0, 1966
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="Tablet" parent="YSort" instance=ExtResource( 65 )]
-position = Vector2( -272, -232 )
-
 [node name="Pumpkin" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( 64, 128 )
 
@@ -2326,6 +2323,9 @@ visible = false
 show_behind_parent = true
 position = Vector2( -80, 816 )
 color = Color( 0, 0, 0, 1 )
+
+[node name="Tablet" parent="." instance=ExtResource( 65 )]
+position = Vector2( -272, -248 )
 
 [node name="BorderMap" type="StaticBody2D" parent="."]
 visible = false
