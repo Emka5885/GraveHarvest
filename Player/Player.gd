@@ -107,7 +107,7 @@ func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
 func set_fertilizer(value):
-	var slowdown = value*7
+	var slowdown = value*4
 	MAX_SPEED = SPEED_no_baggage - slowdown
 
 func _on_PathChecker_body_entered(_body):
