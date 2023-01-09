@@ -8,5 +8,5 @@ func _on_Area2D_body_entered(body):
 func _on_Out_Animation_finished():
 	$Panel.visible = false
 
-func _on_Area2D_body_exited(body):
+func _on_Area2D_body_exited(_body):
 	$AnimationPlayer.play("out")
