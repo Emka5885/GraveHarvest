@@ -60,6 +60,7 @@ func _input(event):
 	if joysticks.size() == 0:
 		if !done && active && event is InputEventMouseButton:
 			if event.button_index == BUTTON_LEFT and event.pressed:
+				$AudioStreamPlayer.play()
 				sprite.play("done")
 				PlayerStats.fertilizer += 1
 				PlayerStats.add_points(1)

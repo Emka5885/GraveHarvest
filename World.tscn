@@ -1,4 +1,4 @@
-[gd_scene load_steps=241 format=2]
+[gd_scene load_steps=236 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -31,9 +31,7 @@
 [ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=29]
 [ext_resource path="res://World/Ground tileset.png" type="Texture" id=31]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=32]
-[ext_resource path="res://Tasks/GraveName/GraveName.gd" type="Script" id=33]
 [ext_resource path="res://World/Nagrobki/Nagrobek Iskra zapalony 2.png" type="Texture" id=34]
-[ext_resource path="res://Light/LightDifuse.png" type="Texture" id=35]
 [ext_resource path="res://World/Nagrobki/Nagrobek Iskra.png" type="Texture" id=36]
 [ext_resource path="res://World/Nagrobki/Nagrobek Nartyna zapalony 2.png" type="Texture" id=37]
 [ext_resource path="res://World/Nagrobki/Nagrobek Nartyna.png" type="Texture" id=38]
@@ -1568,12 +1566,12 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
-[sub_resource type="SpriteFrames" id=158]
+[sub_resource type="SpriteFrames" id=176]
 animations = [ {
 "frames": [ ExtResource( 59 ), ExtResource( 34 ) ],
 "loop": true,
 "name": "done",
-"speed": 2.0
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 36 ) ],
 "loop": true,
@@ -1581,17 +1579,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=152]
-resource_local_to_scene = true
-shader = ExtResource( 32 )
-shader_param/color = Color( 1, 1, 1, 1 )
-shader_param/width = 1.0
-shader_param/pattern = 0
-shader_param/inside = false
-shader_param/add_margins = true
-shader_param/on = false
-
-[sub_resource type="SpriteFrames" id=156]
+[sub_resource type="SpriteFrames" id=158]
 animations = [ {
 "frames": [ ExtResource( 55 ), ExtResource( 37 ) ],
 "loop": true,
@@ -1603,13 +1591,6 @@ animations = [ {
 "name": "not done",
 "speed": 5.0
 } ]
-
-[sub_resource type="RectangleShape2D" id=154]
-extents = Vector2( 10, 16 )
-
-[sub_resource type="CapsuleShape2D" id=155]
-radius = 27.0
-height = 30.0
 
 [sub_resource type="ShaderMaterial" id=163]
 resource_local_to_scene = true
@@ -2199,40 +2180,15 @@ dialog_number = 1
 
 [node name="AnimatedSprite" parent="YSort/GravesNames/GraveName3" index="0"]
 material = SubResource( 157 )
-frames = SubResource( 158 )
+frames = SubResource( 176 )
 
-[node name="GraveName4" type="StaticBody2D" parent="YSort/GravesNames"]
-position = Vector2( -192, 434 )
-script = ExtResource( 33 )
+[node name="GraveName4" parent="YSort/GravesNames" instance=ExtResource( 20 )]
+position = Vector2( -193, 434 )
 dialog_number = 8
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="YSort/GravesNames/GraveName4"]
-material = SubResource( 152 )
-frames = SubResource( 156 )
-animation = "not done"
-playing = true
-
-[node name="Light2D" type="Light2D" parent="YSort/GravesNames/GraveName4"]
-position = Vector2( 0, 14 )
-enabled = false
-texture = ExtResource( 35 )
-texture_scale = 0.02
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesNames/GraveName4"]
-visible = false
-position = Vector2( 0, 12 )
-shape = SubResource( 154 )
-
-[node name="InteractionArea" type="Area2D" parent="YSort/GravesNames/GraveName4"]
-visible = false
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/GravesNames/GraveName4/InteractionArea"]
-position = Vector2( 0, 4 )
-shape = SubResource( 155 )
-
-[node name="Timer" type="Timer" parent="YSort/GravesNames/GraveName4"]
-wait_time = 5.0
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName4" index="0"]
+material = SubResource( 157 )
+frames = SubResource( 158 )
 
 [node name="GraveName5" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( -32, 435 )
@@ -2412,7 +2368,6 @@ script = ExtResource( 8 )
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName2" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName3" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName4" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
-[connection signal="timeout" from="YSort/GravesNames/GraveName4/Timer" to="YSort/GravesNames/GraveName4" method="_on_Timer_timeout"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName5" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName6" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName7" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
@@ -2426,6 +2381,7 @@ script = ExtResource( 8 )
 [editable path="YSort/GravesNames/GraveName"]
 [editable path="YSort/GravesNames/GraveName2"]
 [editable path="YSort/GravesNames/GraveName3"]
+[editable path="YSort/GravesNames/GraveName4"]
 [editable path="YSort/GravesNames/GraveName5"]
 [editable path="YSort/GravesNames/GraveName6"]
 [editable path="YSort/GravesNames/GraveName7"]
