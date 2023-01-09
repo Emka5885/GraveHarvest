@@ -49,6 +49,7 @@ func _input(event):
 				label.text = "+"+str(int(PlayerStats.fertilizer))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
+				get_tree().get_nodes_in_group("camera")[0].shake(5, 0.1*int(PlayerStats.fertilizer))
 				self.size += int(PlayerStats.fertilizer)
 				
 				PlayerStats.PlayerPoints += int(PlayerStats.fertilizer)
@@ -71,11 +72,13 @@ func increase_size(new_size):
 	scale = scale + Vector2(0.1*fertilizer, 0.1*fertilizer)
 	size = new_size
 	if size >= 10:
-		sprite.texture = load("res://Pumpkin/Grzes2.png")
-		scale = Vector2(1,1)
+		change_pumpkin("res://Pumpkin/Grzes2.png")
 	if size >= 20:
-		sprite.texture = load("res://Pumpkin/Grzes3.png")
-		scale = Vector2(1,1)
+		change_pumpkin("res://Pumpkin/Grzes3.png")
 	if size >= 30:
-		sprite.texture = load("res://Pumpkin/Grzegorz.png")
-		scale = Vector2(1,1)
+		change_pumpkin("res://Pumpkin/Grzegorz.png")
+
+func change_pumpkin(path):
+	sprite.texture = load(path)
+	scale = Vector2(1,1)
+	get_tree().get_nodes_in_group("camera")[0].shake()
