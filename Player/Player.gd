@@ -4,7 +4,7 @@ class_name Player
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
 export var ACCELERATION = 500
-export var MAX_SPEED = 80
+export var MAX_SPEED = 75
 var SPEED_no_baggage  # speed without baggage
 var fertilizer = 0
 var speed_on_path = 20
@@ -107,7 +107,7 @@ func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
 
 func set_fertilizer(value):
-	var slowdown = value*15
+	var slowdown = value*7
 	MAX_SPEED = SPEED_no_baggage - slowdown
 
 func _on_PathChecker_body_entered(_body):
