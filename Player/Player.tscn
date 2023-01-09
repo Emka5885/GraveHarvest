@@ -95,7 +95,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -20.0, -20.0 ]
+"values": [ -5.0, -5.0 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -175,7 +175,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -20.0, -20.0 ]
+"values": [ -5.0, -5.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -255,7 +255,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -20.0, -20.0 ]
+"values": [ -5.0, -5.0 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -335,7 +335,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -20.0, -20.0 ]
+"values": [ -5.0, -5.0 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -692,6 +692,7 @@ shape = SubResource( 47 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -20.0
 script = ExtResource( 8 )
 
 [node name="BlinkAnimationPlayer" type="AnimationPlayer" parent="."]
