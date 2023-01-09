@@ -53,7 +53,7 @@ func _input(event):
 	if active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			if PlayerStats.fertilizer >= 1:
-				emit_signal("add_time")
+				emit_signal("add_time", PlayerStats.fertilizer)
 				label.text = "+"+str(int(PlayerStats.fertilizer))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
@@ -65,7 +65,7 @@ func _input(event):
 				PlayerStats.fertilizer = PlayerStats.fertilizer - int(PlayerStats.fertilizer)
 	elif active && Input.is_action_just_pressed("select"):
 		if PlayerStats.fertilizer >= 1:
-				emit_signal("add_time")
+				emit_signal("add_time", PlayerStats.fertilizer)
 				label.text = "+"+str(int(PlayerStats.fertilizer))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")

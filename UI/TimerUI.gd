@@ -23,15 +23,13 @@ func get_minutes_and_seconds():
 
 func _on_Timer_timeout():
 	PlayerStats.result.append(PlayerStats.PlayerPoints)
-	PlayerStats.PlayerPoints = 0 
-	PlayerStats.sortingPlayerStats()
 	
 	get_tree().change_scene("res://WinScene.tscn")
 
-func _on_Pumpkin_add_time():
+func _on_Pumpkin_add_time(fertilizer):
 	var bonus_time := 0
 	var actual_time = round($Timer.get_time_left())
-	bonus_time = actual_time + 5
+	bonus_time = actual_time + (5 * fertilizer)
 	if (bonus_time >= 240):
 		bonus_time = 240
 	$Timer.set_wait_time(bonus_time)

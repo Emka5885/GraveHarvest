@@ -14,7 +14,6 @@ signal max_fertilizer_changed(value)
 signal points_changed(value)
 
 func sortingPlayerStats():
-	
 	PlayerPoints = 0
 	fertilizer = 0
 	
@@ -27,7 +26,6 @@ func sortingPlayerStats():
 
 func _ready():
 	PlayerPoints = 0
-
 
 func set_max_fertilizer(value):
 	max_fertilizer = value
