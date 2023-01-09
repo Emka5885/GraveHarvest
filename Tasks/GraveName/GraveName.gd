@@ -62,7 +62,7 @@ func _input(event):
 			if event.button_index == BUTTON_LEFT and event.pressed:
 				sprite.play("done")
 				PlayerStats.fertilizer += 1
-				PlayerStats.PlayerPoints += 1
+				PlayerStats.add_points(1)
 				
 				emit_signal("show_dialog", dialogs[dialog_number])
 				

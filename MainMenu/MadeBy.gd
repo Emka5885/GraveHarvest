@@ -9,19 +9,11 @@ func _ready():
 	var joysticks = Input.get_connected_joypads()
 	if joysticks.size() != 0:
 		$Back2.visible = true
-		$Back1.visible = true
-		$ST1.visible = true
 		$ST2.visible = false
-		$Button.visible = false
-		$SpecialThanks_Button.visible = false
 
 func _physics_process(_delta):
 	var joysticks = Input.get_connected_joypads()
 	if joysticks.size() != 0:
-		$Back1.visible = true
-		$ST1.visible = true
-		$Button.visible = false
-		$SpecialThanks_Button.visible = false
 		
 		if Input.is_action_just_pressed("change_selection"):
 			if $Back2.visible:
@@ -39,10 +31,6 @@ func _physics_process(_delta):
 	else:
 		$Back2.visible = false
 		$Back1.visible = false
-		$ST1.visible = false
-		$ST2.visible = false
-		$Button.visible = true
-		$SpecialThanks_Button.visible = true
 
 func _on_Button_button_up():
 	select.play()
