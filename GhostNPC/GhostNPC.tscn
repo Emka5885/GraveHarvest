@@ -132,7 +132,7 @@ autowrap = true
 modulate = Color( 0.521569, 1, 0.666667, 1 )
 position = Vector2( 0, 8 )
 frames = SubResource( 17 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -152,6 +152,7 @@ shape = SubResource( 10 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -15.0
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 0, 8 )

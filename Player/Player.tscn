@@ -85,6 +85,18 @@ tracks/4/keys = {
 } ],
 "times": PoolRealArray( 0.1 )
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -20.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "AttackLeft"
@@ -152,6 +164,18 @@ tracks/4/keys = {
 "stream": ExtResource( 7 )
 } ],
 "times": PoolRealArray( 0.1 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -20.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -221,6 +245,18 @@ tracks/4/keys = {
 } ],
 "times": PoolRealArray( 0.1 )
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -20.0 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "AttackUp"
@@ -288,6 +324,18 @@ tracks/4/keys = {
 "stream": ExtResource( 7 )
 } ],
 "times": PoolRealArray( 0.1 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -20.0, -20.0 ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -620,7 +668,7 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 2, -15 )
-rotation = 1.5708
+rotation = 4.71239
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
