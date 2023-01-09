@@ -344,6 +344,7 @@ expand_icon = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = 15.0
 
 [connection signal="button_up" from="ResumeCon/Resume_Button" to="." method="_on_Resume_Button_button_up"]
 [connection signal="pressed" from="MusicCon/Music_Button" to="." method="_on_Music_Button_pressed"]
