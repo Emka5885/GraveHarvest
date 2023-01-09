@@ -27,6 +27,8 @@ func _on_Button_button_up():
 	
 	
 func _ready():
+	PlayerStats.PlayerPoints = 0 
+	PlayerStats.sortingPlayerStats()
 	var x = 1
 	for points in PlayerStats.result:
 		updateStats(points, x)
