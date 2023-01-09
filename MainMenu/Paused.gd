@@ -30,7 +30,7 @@ func _physics_process(_delta):
 			$Music4.visible = false
 			
 	var joysticks = Input.get_connected_joypads()
-	if joysticks.size() != 0:
+	if joysticks.size() != 0 and isPaused:
 		
 		if Input.is_action_just_pressed("change_selection"):
 			if $NewGame4.visible == true:
