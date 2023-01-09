@@ -1,4 +1,4 @@
-[gd_scene load_steps=180 format=2]
+[gd_scene load_steps=183 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=29]
 [ext_resource path="res://MainMenu/Paused_Joystick.tscn" type="PackedScene" id=30]
 [ext_resource path="res://World/Ground tileset.png" type="Texture" id=31]
+[ext_resource path="res://OutlineShader.gdshader" type="Shader" id=32]
 
 [sub_resource type="StyleBoxFlat" id=99]
 bg_color = Color( 0.490196, 0.490196, 0.490196, 0.188235 )
@@ -1446,6 +1447,26 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+[sub_resource type="ShaderMaterial" id=150]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="ShaderMaterial" id=151]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 416, 16 )
 
@@ -1810,6 +1831,10 @@ position = Vector2( 144, -200 )
 [node name="Cross" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -240, 80 )
 
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross" index="1"]
+material = SubResource( 150 )
+flip_h = true
+
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -304, 80 )
 
@@ -1818,6 +1843,10 @@ position = Vector2( -304, 144 )
 
 [node name="Cross4" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -240, 144 )
+
+[node name="AnimatedSprite" parent="YSort/Crosses/Cross4" index="1"]
+material = SubResource( 151 )
+flip_h = true
 
 [node name="Bats" type="YSort" parent="YSort"]
 
@@ -1895,9 +1924,6 @@ position = Vector2( -304, -16 )
 [node name="Lamp2" parent="YSort/Lamps" instance=ExtResource( 26 )]
 position = Vector2( -152, -144 )
 
-[node name="Lamp3" parent="YSort/Lamps" instance=ExtResource( 26 )]
-position = Vector2( 256, 72 )
-
 [node name="Lamp4" parent="YSort/Lamps" instance=ExtResource( 26 )]
 position = Vector2( -160, 304 )
 
@@ -1906,11 +1932,45 @@ position = Vector2( -112, -40 )
 
 [node name="Lamp6" parent="YSort/Lamps" instance=ExtResource( 26 )]
 position = Vector2( -72, 448 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" parent="YSort/Lamps/Lamp6" index="2"]
+position = Vector2( -12, -21 )
+flip_h = true
+
+[node name="Light2D" parent="YSort/Lamps/Lamp6" index="3"]
+position = Vector2( -22, -27 )
 
 [node name="Lamp7" parent="YSort/Lamps" instance=ExtResource( 26 )]
-position = Vector2( 256, -72 )
+position = Vector2( 256, -64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" parent="YSort/Lamps/Lamp7" index="2"]
+position = Vector2( -12, -21 )
+flip_h = true
+
+[node name="Light2D" parent="YSort/Lamps/Lamp7" index="3"]
+position = Vector2( -22, -27 )
+
+[node name="Lamp8" parent="YSort/Lamps" instance=ExtResource( 26 )]
+position = Vector2( 256, 80 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" parent="YSort/Lamps/Lamp8" index="2"]
+position = Vector2( -12, -21 )
+flip_h = true
+
+[node name="Light2D" parent="YSort/Lamps/Lamp8" index="3"]
+position = Vector2( -22, -27 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="YSort"]
+visible = false
 show_behind_parent = true
 position = Vector2( -80, 816 )
 color = Color( 0, 0, 0, 1 )
@@ -1959,3 +2019,9 @@ script = ExtResource( 8 )
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName8" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName9" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
 [connection signal="show_dialog" from="YSort/GravesNames/GraveName10" to="CanvasLayer/Panel" method="_on_GraveName_show_dialog"]
+
+[editable path="YSort/Crosses/Cross"]
+[editable path="YSort/Crosses/Cross4"]
+[editable path="YSort/Lamps/Lamp6"]
+[editable path="YSort/Lamps/Lamp7"]
+[editable path="YSort/Lamps/Lamp8"]
