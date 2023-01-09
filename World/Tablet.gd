@@ -1,8 +1,17 @@
 extends StaticBody2D
 
-signal stop_timer
-signal start_timer
-
 func _on_Area2D_body_entered(body):
 	if body == Player:
-		emit_signal("stop_timer")
+		$AnimationPlayer.play("in")
+		$Panel.visible = true
+		$Timer.start()
+
+func _process(delta):
+	if Input.is_action_just_pressed("ui_select"):
+		$AnimationPlayer.play("out")
+
+func _on_Out_Animation_finished():
+	$Panel.visible = false
+
+func _on_Timer_timeout():
+	$AnimationPlayer.play("out")
