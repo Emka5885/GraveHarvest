@@ -65,7 +65,7 @@
 [ext_resource path="res://World/Nagrobki/Nagrobek Archerywike zapalony 1.png" type="Texture" id=63]
 [ext_resource path="res://World/Nagrobki/Nagrobek Seviaru zapalony 1.png" type="Texture" id=64]
 [ext_resource path="res://World/Tablet.tscn" type="PackedScene" id=65]
-[ext_resource path="res://World/FlowersH.tscn" type="PackedScene" id=67]
+[ext_resource path="res://World/FlowerH.tscn" type="PackedScene" id=67]
 [ext_resource path="res://World/FlowerV.tscn" type="PackedScene" id=68]
 [ext_resource path="res://World/Flower.tscn" type="PackedScene" id=69]
 
@@ -1909,10 +1909,6 @@ position = Vector2( -160, 448 )
 [node name="Bush12" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 408, 432 )
 
-[node name="Bush14" parent="YSort/Bushes" instance=ExtResource( 1 )]
-visible = false
-position = Vector2( 210, 279 )
-
 [node name="Bush7" parent="YSort/Bushes" instance=ExtResource( 1 )]
 position = Vector2( 214, -194 )
 
@@ -1963,14 +1959,6 @@ width = 10
 height = 2
 
 [node name="Trees" type="YSort" parent="YSort"]
-
-[node name="Tree3" parent="YSort/Trees" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 408, -128 )
-
-[node name="Tree4" parent="YSort/Trees" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 280, -128 )
 
 [node name="Tree5" parent="YSort/Trees" instance=ExtResource( 9 )]
 position = Vector2( -147, 104 )
@@ -2057,7 +2045,7 @@ position = Vector2( -312, 453 )
 position = Vector2( 96, -184 )
 
 [node name="Ghost3" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
-position = Vector2( -200, 104 )
+position = Vector2( -265, 121 )
 
 [node name="Ghost4" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
 position = Vector2( -304, 280 )
@@ -2073,6 +2061,12 @@ position = Vector2( 368, 304 )
 
 [node name="Ghost8" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
 position = Vector2( -64, -184 )
+
+[node name="Ghost9" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
+position = Vector2( 48, 446 )
+
+[node name="Ghost10" parent="YSort/Ghosts/RespawnGhost" instance=ExtResource( 7 )]
+position = Vector2( -250, 288 )
 
 [node name="GravesFlowers" type="YSort" parent="YSort"]
 
@@ -2141,7 +2135,7 @@ position = Vector2( 2, 25 )
 rotation = 1.5708
 
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
-position = Vector2( -315, -148 )
+position = Vector2( -318, -104 )
 
 [node name="Cross3" parent="YSort/Crosses" instance=ExtResource( 6 )]
 position = Vector2( -317, 80 )
@@ -2370,9 +2364,8 @@ position = Vector2( 585.714, -180 )
 
 [node name="FlowerV3" parent="YSort/Flowers" instance=ExtResource( 68 )]
 position = Vector2( 402.857, -182.857 )
-scale = Vector2( 1, 1 )
 
-[node name="FlowersH" parent="YSort/Flowers" instance=ExtResource( 67 )]
+[node name="FlowerH2" parent="YSort/Flowers" instance=ExtResource( 67 )]
 position = Vector2( 38.5714, 507.143 )
 
 [node name="Flower3" parent="YSort/Flowers" instance=ExtResource( 69 )]
