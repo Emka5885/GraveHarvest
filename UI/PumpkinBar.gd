@@ -5,7 +5,6 @@ var level = 1
 onready var left = $Left
 onready var right = $Right
 
-
 func add(new_value):
 	value += new_value
 	if value >= 10:
