@@ -31,7 +31,7 @@ func _on_Timer_timeout():
 func _on_Pumpkin_add_time(fertilizer):
 	var bonus_time := 0
 	var actual_time = round($Timer.get_time_left())
-	bonus_time = actual_time + (10 * fertilizer)
+	bonus_time = actual_time + (5 * fertilizer)
 	if (bonus_time >= 240):
 		bonus_time = 240
 	$Timer.set_wait_time(bonus_time)

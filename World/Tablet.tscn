@@ -6,10 +6,10 @@
 [ext_resource path="res://MainMenu/OpenSans-VariableFont_wdth,wght.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2, 5.5 )
+extents = Vector2( 13, 27.5 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 64.195
+radius = 54.0093
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.6, 0.6, 0.6, 0.254902 )
@@ -67,6 +67,7 @@ tracks/1/keys = {
 }
 
 [node name="Tablet" type="StaticBody2D"]
+collision_mask = 3
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -81,12 +82,10 @@ texture = ExtResource( 3 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -1, 6.5 )
+position = Vector2( 0, 12.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
@@ -107,8 +106,7 @@ custom_fonts/font = SubResource( 4 )
 text = "Do tasks and grow the largest pumpkin possible to win the contest! You can mow the grass, water the flowers on the graves and light the candles. Watch out for ghosts!
 Movement -> WSAD
 Tasks -> mouse click
-Mow the grass and attack the ghosts -> SPACE
-Press SPACE to close this"
+Mow the grass and attack the ghosts -> SPACE"
 valign = 1
 autowrap = true
 
@@ -116,8 +114,5 @@ autowrap = true
 anims/in = SubResource( 5 )
 anims/out = SubResource( 6 )
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
