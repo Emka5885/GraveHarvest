@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=132 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Camera.gd" type="Script" id=27]
 [ext_resource path="res://World/CliffFillTileset.png" type="Texture" id=28]
 [ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=29]
+[ext_resource path="res://MainMenu/Paused_Joystick.tscn" type="PackedScene" id=30]
 
 [sub_resource type="StyleBoxFlat" id=99]
 bg_color = Color( 0.490196, 0.490196, 0.490196, 0.188235 )
@@ -1021,6 +1022,8 @@ margin_bottom = -161.0
 [node name="Paused" parent="CanvasLayer" instance=ExtResource( 14 )]
 pause_mode = 2
 visible = false
+
+[node name="Paused_Joystick" parent="CanvasLayer" instance=ExtResource( 30 )]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 visible = false
