@@ -25,3 +25,4 @@ func _ready():
 			$Container/Two.modulate = Color(1,1,1)
 			$Container/Three.modulate = Color(1,1,1)
 			$Container/Four.modulate = Color(1,1,1)
+			$Label.text = "You win"
