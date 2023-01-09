@@ -2128,8 +2128,7 @@ position = Vector2( -115, 484 )
 material = SubResource( 175 )
 
 [node name="CollisionShape2D" parent="YSort/Crosses/Cross6" index="2"]
-visible = true
-position = Vector2( 2, 23 )
+position = Vector2( 2, 25 )
 rotation = 1.5708
 
 [node name="Cross2" parent="YSort/Crosses" instance=ExtResource( 6 )]
