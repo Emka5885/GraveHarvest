@@ -211,7 +211,7 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 4 )
 
 [node name="Four" type="Sprite" parent="Container"]
-self_modulate = Color( 0, 0, 0.0588235, 0.509804 )
+modulate = Color( 0, 0, 0, 0.509804 )
 position = Vector2( 93, 54 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )

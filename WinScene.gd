@@ -31,6 +31,7 @@ func _ready():
 			$Container/Two.modulate = Color(1,1,1)
 			$Container/Three.modulate = Color(1,1,1)
 		4:
+			print("aaaaaaaaaaaa")
 			$Container/Two.modulate = Color(1,1,1)
 			$Container/Three.modulate = Color(1,1,1)
 			$Container/Four.modulate = Color(1,1,1)
