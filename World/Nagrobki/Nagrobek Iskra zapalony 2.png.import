@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Iskra zapalony 2.png-64edf8960cc617698e3cd3fd51ca301c.stex"
+path="res://.import/Nagrobek Iskra zapalony 2.png-ee18f6cc9c0ef344dd5a0861e5f5b7d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Iskra zapalony 2.png"
-dest_files=[ "res://.import/Nagrobek Iskra zapalony 2.png-64edf8960cc617698e3cd3fd51ca301c.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Iskra zapalony 2.png"
+dest_files=[ "res://.import/Nagrobek Iskra zapalony 2.png-ee18f6cc9c0ef344dd5a0861e5f5b7d7.stex" ]
 
 [params]
 

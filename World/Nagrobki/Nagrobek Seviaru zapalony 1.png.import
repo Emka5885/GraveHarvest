@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Seviaru zapalony 1.png-61525e524a7167d0b09acfc373b78e3a.stex"
+path="res://.import/Nagrobek Seviaru zapalony 1.png-ee9170867008e5e78909824f9a649902.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Seviaru zapalony 1.png"
-dest_files=[ "res://.import/Nagrobek Seviaru zapalony 1.png-61525e524a7167d0b09acfc373b78e3a.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Seviaru zapalony 1.png"
+dest_files=[ "res://.import/Nagrobek Seviaru zapalony 1.png-ee9170867008e5e78909824f9a649902.stex" ]
 
 [params]
 

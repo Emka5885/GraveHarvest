@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Arvi.png-3b9e18a33a85b5642459d8c9fbe69bef.stex"
+path="res://.import/Nagrobek Arvi.png-a53fad233f3a7803d48c3568dbc73f00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Arvi.png"
-dest_files=[ "res://.import/Nagrobek Arvi.png-3b9e18a33a85b5642459d8c9fbe69bef.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Arvi.png"
+dest_files=[ "res://.import/Nagrobek Arvi.png-a53fad233f3a7803d48c3568dbc73f00.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=2]
+[gd_scene load_steps=227 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -38,6 +38,22 @@
 [ext_resource path="res://World/Nagrobek Nartyna.png" type="Texture" id=36]
 [ext_resource path="res://World/Nagrobek Nartyna zapalony 2.png" type="Texture" id=37]
 [ext_resource path="res://World/Nagrobek Iskra.png" type="Texture" id=38]
+[ext_resource path="res://World/Nagrobki/Nagrobek r00gal.png" type="Texture" id=39]
+[ext_resource path="res://World/Nagrobki/Nagrobek Archerywike.png" type="Texture" id=40]
+[ext_resource path="res://World/Nagrobki/Nagrobek alicjaswiers.png" type="Texture" id=41]
+[ext_resource path="res://World/Nagrobki/Nagrobek r00gal zapalony 2.png" type="Texture" id=42]
+[ext_resource path="res://World/Nagrobki/Nagrobek Laura zapalony 2.png" type="Texture" id=43]
+[ext_resource path="res://World/Nagrobki/Nagrobek alicjaswiers zapalony 2.png" type="Texture" id=44]
+[ext_resource path="res://World/Nagrobki/Nagrobek Archerywike zapalony 2.png" type="Texture" id=45]
+[ext_resource path="res://World/Nagrobki/Nagrobek Seviaru.png" type="Texture" id=46]
+[ext_resource path="res://World/Nagrobki/Nagrobek Seviaru zapalony 2.png" type="Texture" id=47]
+[ext_resource path="res://World/Nagrobki/Nagrobek Laura.png" type="Texture" id=48]
+[ext_resource path="res://World/Nagrobki/Nagrobek Nath.png" type="Texture" id=49]
+[ext_resource path="res://World/Nagrobki/Nagrobek Arvi.png" type="Texture" id=50]
+[ext_resource path="res://World/Nagrobki/Nagrobek Arvi zapalony 2.png" type="Texture" id=51]
+[ext_resource path="res://World/Nagrobki/Nagrobek Nath zapalony 2.png" type="Texture" id=52]
+[ext_resource path="res://World/Nagrobki/Nagrobek Daddy zapalony 2.png" type="Texture" id=53]
+[ext_resource path="res://World/Nagrobki/Nagrobek Daddy.png" type="Texture" id=54]
 
 [sub_resource type="StyleBoxFlat" id=99]
 bg_color = Color( 0.490196, 0.490196, 0.490196, 0.188235 )
@@ -1473,6 +1489,52 @@ shader_param/inside = false
 shader_param/add_margins = true
 shader_param/on = false
 
+[sub_resource type="ShaderMaterial" id=159]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=160]
+animations = [ {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=161]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=162]
+animations = [ {
+"frames": [ ExtResource( 45 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
 [sub_resource type="ShaderMaterial" id=157]
 resource_local_to_scene = true
 shader = ExtResource( 32 )
@@ -1525,6 +1587,144 @@ extents = Vector2( 10, 16 )
 [sub_resource type="CapsuleShape2D" id=155]
 radius = 27.0
 height = 30.0
+
+[sub_resource type="ShaderMaterial" id=163]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=164]
+animations = [ {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=165]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=166]
+animations = [ {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=167]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=168]
+animations = [ {
+"frames": [ ExtResource( 43 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=169]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=170]
+animations = [ {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=171]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=172]
+animations = [ {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=173]
+resource_local_to_scene = true
+shader = ExtResource( 32 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/width = 1.0
+shader_param/pattern = 0
+shader_param/inside = false
+shader_param/add_margins = true
+shader_param/on = false
+
+[sub_resource type="SpriteFrames" id=174]
+animations = [ {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "done",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ) ],
+"loop": true,
+"name": "not done",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=51]
 extents = Vector2( 416, 16 )
@@ -1943,9 +2143,17 @@ WANDER_TARGET_RANGE = 1
 position = Vector2( -312, 440 )
 dialog_number = 5
 
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName" index="0"]
+material = SubResource( 159 )
+frames = SubResource( 160 )
+
 [node name="GraveName2" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( -272, 440 )
 dialog_number = 2
+
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName2" index="0"]
+material = SubResource( 161 )
+frames = SubResource( 162 )
 
 [node name="GraveName3" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( -232, 440 )
@@ -1991,24 +2199,48 @@ wait_time = 5.0
 position = Vector2( -32, 440 )
 dialog_number = 6
 
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName5" index="0"]
+material = SubResource( 163 )
+frames = SubResource( 164 )
+
 [node name="GraveName6" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( 8, 440 )
+
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName6" index="0"]
+material = SubResource( 165 )
+frames = SubResource( 166 )
 
 [node name="GraveName7" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( 48, 440 )
 dialog_number = 7
 
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName7" index="0"]
+material = SubResource( 167 )
+frames = SubResource( 168 )
+
 [node name="GraveName8" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( 88, 440 )
 dialog_number = 3
+
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName8" index="0"]
+material = SubResource( 169 )
+frames = SubResource( 170 )
 
 [node name="GraveName9" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( 128, 440 )
 dialog_number = 9
 
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName9" index="0"]
+material = SubResource( 171 )
+frames = SubResource( 172 )
+
 [node name="GraveName10" parent="YSort/GravesNames" instance=ExtResource( 20 )]
 position = Vector2( 304, 440 )
 dialog_number = 4
+
+[node name="AnimatedSprite" parent="YSort/GravesNames/GraveName10" index="0"]
+material = SubResource( 173 )
+frames = SubResource( 174 )
 
 [node name="Crypt" parent="YSort" instance=ExtResource( 16 )]
 position = Vector2( 344, -168 )
@@ -2120,7 +2352,15 @@ script = ExtResource( 8 )
 
 [editable path="YSort/Crosses/Cross"]
 [editable path="YSort/Crosses/Cross4"]
+[editable path="YSort/GravesNames/GraveName"]
+[editable path="YSort/GravesNames/GraveName2"]
 [editable path="YSort/GravesNames/GraveName3"]
+[editable path="YSort/GravesNames/GraveName5"]
+[editable path="YSort/GravesNames/GraveName6"]
+[editable path="YSort/GravesNames/GraveName7"]
+[editable path="YSort/GravesNames/GraveName8"]
+[editable path="YSort/GravesNames/GraveName9"]
+[editable path="YSort/GravesNames/GraveName10"]
 [editable path="YSort/Lamps/Lamp6"]
 [editable path="YSort/Lamps/Lamp7"]
 [editable path="YSort/Lamps/Lamp8"]

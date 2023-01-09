@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Daddy.png-f8bdeb7e1c7f0958844e47457438aab7.stex"
+path="res://.import/Nagrobek Daddy.png-b9f52dedb5f66eecf148a8d86bfd3a6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Daddy.png"
-dest_files=[ "res://.import/Nagrobek Daddy.png-f8bdeb7e1c7f0958844e47457438aab7.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Daddy.png"
+dest_files=[ "res://.import/Nagrobek Daddy.png-b9f52dedb5f66eecf148a8d86bfd3a6c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Nartyna zapalony 2.png-e937d176d24e726f9ed1b779ef710d26.stex"
+path="res://.import/Nagrobek Nartyna zapalony 2.png-d086eedd4965bb0934c97c2e706adef0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Nartyna zapalony 2.png"
-dest_files=[ "res://.import/Nagrobek Nartyna zapalony 2.png-e937d176d24e726f9ed1b779ef710d26.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Nartyna zapalony 2.png"
+dest_files=[ "res://.import/Nagrobek Nartyna zapalony 2.png-d086eedd4965bb0934c97c2e706adef0.stex" ]
 
 [params]
 

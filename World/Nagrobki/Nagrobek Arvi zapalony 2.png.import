@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Arvi zapalony 2.png-5cef90898810bac8f129b23d7dd7bcbd.stex"
+path="res://.import/Nagrobek Arvi zapalony 2.png-a9b347cc6996f3062236e7f590ffdff9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Arvi zapalony 2.png"
-dest_files=[ "res://.import/Nagrobek Arvi zapalony 2.png-5cef90898810bac8f129b23d7dd7bcbd.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Arvi zapalony 2.png"
+dest_files=[ "res://.import/Nagrobek Arvi zapalony 2.png-a9b347cc6996f3062236e7f590ffdff9.stex" ]
 
 [params]
 

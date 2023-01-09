@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Laura zapalony 2.png-f6fccb80395dad7863eb034c14e68991.stex"
+path="res://.import/Nagrobek Laura zapalony 2.png-f2fabe803495bd6ba8906e828390fa20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Laura zapalony 2.png"
-dest_files=[ "res://.import/Nagrobek Laura zapalony 2.png-f6fccb80395dad7863eb034c14e68991.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Laura zapalony 2.png"
+dest_files=[ "res://.import/Nagrobek Laura zapalony 2.png-f2fabe803495bd6ba8906e828390fa20.stex" ]
 
 [params]
 

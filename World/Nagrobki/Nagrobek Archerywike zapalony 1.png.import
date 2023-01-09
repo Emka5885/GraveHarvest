@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Archerywike zapalony 1.png-9bbcf618e271496b61ad88d15e4d9541.stex"
+path="res://.import/Nagrobek Archerywike zapalony 1.png-1a5ca547890f6992d502f0c1d82d6859.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Archerywike zapalony 1.png"
-dest_files=[ "res://.import/Nagrobek Archerywike zapalony 1.png-9bbcf618e271496b61ad88d15e4d9541.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Archerywike zapalony 1.png"
+dest_files=[ "res://.import/Nagrobek Archerywike zapalony 1.png-1a5ca547890f6992d502f0c1d82d6859.stex" ]
 
 [params]
 

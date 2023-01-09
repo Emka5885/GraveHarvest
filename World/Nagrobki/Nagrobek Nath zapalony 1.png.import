@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Nath zapalony 1.png-255ae64a8648aa71378b8ea1dbcdb6bb.stex"
+path="res://.import/Nagrobek Nath zapalony 1.png-a7dac584fd2afd2596ac65d47c44e036.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Nath zapalony 1.png"
-dest_files=[ "res://.import/Nagrobek Nath zapalony 1.png-255ae64a8648aa71378b8ea1dbcdb6bb.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Nath zapalony 1.png"
+dest_files=[ "res://.import/Nagrobek Nath zapalony 1.png-a7dac584fd2afd2596ac65d47c44e036.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Archerywike.png-ec5e779b32bed0f985ee96e008831882.stex"
+path="res://.import/Nagrobek Archerywike.png-d05d9d925e6f6c07f408b876ad8c13c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Archerywike.png"
-dest_files=[ "res://.import/Nagrobek Archerywike.png-ec5e779b32bed0f985ee96e008831882.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Archerywike.png"
+dest_files=[ "res://.import/Nagrobek Archerywike.png-d05d9d925e6f6c07f408b876ad8c13c3.stex" ]
 
 [params]
 

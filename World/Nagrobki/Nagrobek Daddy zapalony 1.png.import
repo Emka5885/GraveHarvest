@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek Daddy zapalony 1.png-02b147120cab3e1dc6f351d359dc04d8.stex"
+path="res://.import/Nagrobek Daddy zapalony 1.png-5461d53afeaf71093c5781cf25a89f51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek Daddy zapalony 1.png"
-dest_files=[ "res://.import/Nagrobek Daddy zapalony 1.png-02b147120cab3e1dc6f351d359dc04d8.stex" ]
+source_file="res://World/Nagrobki/Nagrobek Daddy zapalony 1.png"
+dest_files=[ "res://.import/Nagrobek Daddy zapalony 1.png-5461d53afeaf71093c5781cf25a89f51.stex" ]
 
 [params]
 

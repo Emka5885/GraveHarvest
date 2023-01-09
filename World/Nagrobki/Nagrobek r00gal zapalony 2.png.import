@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nagrobek r00gal zapalony 2.png-2b46df0c5d185f5a3495ed3d926342a5.stex"
+path="res://.import/Nagrobek r00gal zapalony 2.png-f0547413a170c61843ca9779be54acfd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Nagrobek r00gal zapalony 2.png"
-dest_files=[ "res://.import/Nagrobek r00gal zapalony 2.png-2b46df0c5d185f5a3495ed3d926342a5.stex" ]
+source_file="res://World/Nagrobki/Nagrobek r00gal zapalony 2.png"
+dest_files=[ "res://.import/Nagrobek r00gal zapalony 2.png-f0547413a170c61843ca9779be54acfd.stex" ]
 
 [params]
 
