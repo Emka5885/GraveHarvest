@@ -578,7 +578,8 @@ graph_offset = Vector2( -74, -45 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=45]
 
 [sub_resource type="CapsuleShape2D" id=46]
-height = 12.0
+radius = 6.99999
+height = 20.0
 
 [sub_resource type="CapsuleShape2D" id=47]
 radius = 7.0
@@ -668,7 +669,6 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 2, -15 )
-rotation = 4.71239
 __meta__ = {
 "_gizmo_extents_": 8.0
 }
