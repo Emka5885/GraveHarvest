@@ -33,11 +33,11 @@
 [ext_resource path="res://World/Ground tileset.png" type="Texture" id=31]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=32]
 [ext_resource path="res://Tasks/GraveName/GraveName.gd" type="Script" id=33]
-[ext_resource path="res://World/Nagrobek Iskra zapalony 2.png" type="Texture" id=34]
+[ext_resource path="res://World/Nagrobki/Nagrobek Iskra zapalony 2.png" type="Texture" id=34]
 [ext_resource path="res://Light/LightDifuse.png" type="Texture" id=35]
-[ext_resource path="res://World/Nagrobek Nartyna.png" type="Texture" id=36]
-[ext_resource path="res://World/Nagrobek Nartyna zapalony 2.png" type="Texture" id=37]
-[ext_resource path="res://World/Nagrobek Iskra.png" type="Texture" id=38]
+[ext_resource path="res://World/Nagrobki/Nagrobek Iskra.png" type="Texture" id=36]
+[ext_resource path="res://World/Nagrobki/Nagrobek Nartyna zapalony 2.png" type="Texture" id=37]
+[ext_resource path="res://World/Nagrobki/Nagrobek Nartyna.png" type="Texture" id=38]
 [ext_resource path="res://World/Nagrobki/Nagrobek r00gal.png" type="Texture" id=39]
 [ext_resource path="res://World/Nagrobki/Nagrobek Archerywike.png" type="Texture" id=40]
 [ext_resource path="res://World/Nagrobki/Nagrobek alicjaswiers.png" type="Texture" id=41]
@@ -1552,7 +1552,7 @@ animations = [ {
 "name": "done",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 38 ) ],
+"frames": [ ExtResource( 36 ) ],
 "loop": true,
 "name": "not done",
 "speed": 5.0
@@ -1575,7 +1575,7 @@ animations = [ {
 "name": "done",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 36 ) ],
+"frames": [ ExtResource( 38 ) ],
 "loop": true,
 "name": "not done",
 "speed": 5.0
