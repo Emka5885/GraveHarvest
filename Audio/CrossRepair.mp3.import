@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CrossRepair.mp3-7d4397211573429843d0bb36a1f2b3d3.mp3str"
+
+[deps]
+
+source_file="res://Audio/CrossRepair.mp3"
+dest_files=[ "res://.import/CrossRepair.mp3-7d4397211573429843d0bb36a1f2b3d3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

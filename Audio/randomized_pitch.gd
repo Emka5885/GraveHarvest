@@ -6,6 +6,7 @@ export var bottom_range = 0.4
 export var top_range = 1.0
 
 func play(from_position=0.0):
+	
 	randomize()
 	
 	pitch_scale = rand_range(bottom_range, top_range)
