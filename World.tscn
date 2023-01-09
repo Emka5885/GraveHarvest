@@ -1,4 +1,4 @@
-[gd_scene load_steps=242 format=2]
+[gd_scene load_steps=241 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -29,7 +29,6 @@
 [ext_resource path="res://Camera.gd" type="Script" id=27]
 [ext_resource path="res://World/CliffFillTileset.png" type="Texture" id=28]
 [ext_resource path="res://Tasks/GraveFlowers/Grave.tscn" type="PackedScene" id=29]
-[ext_resource path="res://MainMenu/Paused_Joystick.tscn" type="PackedScene" id=30]
 [ext_resource path="res://World/Ground tileset.png" type="Texture" id=31]
 [ext_resource path="res://OutlineShader.gdshader" type="Shader" id=32]
 [ext_resource path="res://Tasks/GraveName/GraveName.gd" type="Script" id=33]
@@ -1773,9 +1772,6 @@ margin_bottom = -161.0
 
 [node name="Paused" parent="CanvasLayer" instance=ExtResource( 14 )]
 pause_mode = 2
-visible = false
-
-[node name="Paused_Joystick" parent="CanvasLayer" instance=ExtResource( 30 )]
 visible = false
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
