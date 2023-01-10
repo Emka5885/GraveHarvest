@@ -56,33 +56,30 @@ func _physics_process(_delta):
 
 func _input(event):
 	var active = sprite.material.get_shader_param("on")
-	var joysticks = Input.get_connected_joypads()
-	if joysticks.size() == 0:
-		if !done && active && event is InputEventMouseButton:
-			if event.button_index == BUTTON_LEFT and event.pressed:
-				$AudioStreamPlayer.play()
-				sprite.play("done")
-				PlayerStats.fertilizer += 1
-				PlayerStats.add_points(1)
-				
-				emit_signal("show_dialog", dialogs[dialog_number])
-				
-				done = true
-				change_light(true)
-		elif done && active && event is InputEventMouseButton:
-			if event.button_index == BUTTON_LEFT and event.pressed:
-				emit_signal("show_dialog", dialogs[dialog_number])
-	else:
-		if !done && active && Input.is_action_just_pressed("select"):
+	if !done && active && Input.is_action_just_pressed("select"):
+		$AudioStreamPlayer.play()
+		sprite.play("done")
+		PlayerStats.fertilizer += 1
+		
+		emit_signal("show_dialog", dialogs[dialog_number])
+		
+		done = true
+		change_light(true)
+	elif done && active && Input.is_action_just_pressed("select"):
+		emit_signal("show_dialog", dialogs[dialog_number])
+	if !done && active && event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
 			$AudioStreamPlayer.play()
 			sprite.play("done")
 			PlayerStats.fertilizer += 1
+			PlayerStats.add_points(1)
 			
 			emit_signal("show_dialog", dialogs[dialog_number])
 			
 			done = true
 			change_light(true)
-		elif done && active && Input.is_action_just_pressed("select"):
+	elif done && active && event is InputEventMouseButton:
+		if event.button_index == BUTTON_LEFT and event.pressed:
 			emit_signal("show_dialog", dialogs[dialog_number])
 
 func change_light(is_on):
