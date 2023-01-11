@@ -39,5 +39,5 @@ func level_up():
 			right.rect_scale = Vector2(0.08, 0.08)
 			value = 0
 		3:
-			value = 0
+			value = 10
 			right.visible = false
