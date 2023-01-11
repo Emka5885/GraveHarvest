@@ -11,6 +11,11 @@ onready var bar = $PumpkinBar
 
 signal add_time
 
+func _ready():
+	bar.reset()
+	PlayerStats.level = 1
+	PlayerStats.PlayerPoints = 0
+
 func _physics_process(_delta):
 	var overlap = interactionArea.get_overlapping_bodies()
 	if overlap:
@@ -79,14 +84,19 @@ func increase_size(new_size):
 	var fertilizer = new_size - size
 	scale = scale + Vector2(0.1*fertilizer, 0.1*fertilizer)
 	size = new_size
-	if size >= 10:
-		change_pumpkin("res://Pumpkin/Grzes2.png")
-	if size >= 20:
-		change_pumpkin("res://Pumpkin/Grzes3.png")
-	if size >= 30:
-		change_pumpkin("res://Pumpkin/Grzegorz.png")
+	if size >= 40:
+		PlayerStats.result.append(PlayerStats.PlayerPoints)
 		yield(get_tree().create_timer(2), "timeout")
 		get_tree().change_scene("res://WinScene.tscn")
+	elif size >= 30:
+		PlayerStats.level = 4
+		change_pumpkin("res://Pumpkin/Grzegorz.png")
+	elif size >= 20:
+		PlayerStats.level = 3
+		change_pumpkin("res://Pumpkin/Grzes3.png")
+	elif size >= 10:
+		PlayerStats.level = 2
+		change_pumpkin("res://Pumpkin/Grzes2.png")
 
 func change_pumpkin(path):
 	sprite.texture = load(path)

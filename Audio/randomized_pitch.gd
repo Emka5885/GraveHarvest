@@ -18,3 +18,4 @@ func play(from_position=0.0):
 	last_pitch = pitch_scale
 	
 	.play(from_position)
+
