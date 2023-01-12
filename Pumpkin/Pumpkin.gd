@@ -84,13 +84,16 @@ func increase_size(new_size):
 	var fertilizer = new_size - size
 	scale = scale + Vector2(0.1*fertilizer, 0.1*fertilizer)
 	size = new_size
-	if size >= 40:
+	#if size >= 40:
+		#PlayerStats.result.append(PlayerStats.PlayerPoints)
+		#yield(get_tree().create_timer(2), "timeout")
+		#get_tree().change_scene("res://WinScene.tscn")
+	if size >= 30:
+		PlayerStats.level = 4
+		change_pumpkin("res://Pumpkin/Grzegorz.png")
 		PlayerStats.result.append(PlayerStats.PlayerPoints)
 		yield(get_tree().create_timer(2), "timeout")
 		get_tree().change_scene("res://WinScene.tscn")
-	elif size >= 30:
-		PlayerStats.level = 4
-		change_pumpkin("res://Pumpkin/Grzegorz.png")
 	elif size >= 20:
 		PlayerStats.level = 3
 		change_pumpkin("res://Pumpkin/Grzes3.png")
