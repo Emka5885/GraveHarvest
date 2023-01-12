@@ -59,26 +59,26 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and event.pressed:
 			if PlayerStats.fertilizer >= 1:
 				emit_signal("add_time", PlayerStats.fertilizer)
-				label.text = "+"+str(int(round(PlayerStats.fertilizer)))
+				label.text = "+"+str(int(floor(PlayerStats.fertilizer)))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
-				get_tree().get_nodes_in_group("camera")[0].shake(5, 0.1*int(round(PlayerStats.fertilizer)))
-				self.size += int(round(PlayerStats.fertilizer))
-				bar.add(int(round(PlayerStats.fertilizer)))
-				PlayerStats.add_points(int(round(PlayerStats.fertilizer)))
-				PlayerStats.fertilizer = PlayerStats.fertilizer - int(round(PlayerStats.fertilizer))
+				get_tree().get_nodes_in_group("camera")[0].shake(5, 0.1*(floor(PlayerStats.fertilizer)))
+				self.size += (floor(PlayerStats.fertilizer))
+				bar.add((floor(PlayerStats.fertilizer)))
+				PlayerStats.add_points((floor(PlayerStats.fertilizer)))
+				PlayerStats.fertilizer = PlayerStats.fertilizer - (floor(PlayerStats.fertilizer))
 	elif active && Input.is_action_just_pressed("select"):
 		if PlayerStats.fertilizer >= 1:
 				emit_signal("add_time", PlayerStats.fertilizer)
-				label.text = "+"+str(int(round(PlayerStats.fertilizer)))
+				label.text = "+"+str((floor(PlayerStats.fertilizer)))
 				labelAnimation.play("TextAnim")
 				pumpkinAnimation.play("Bounce")
-				self.size += int(round(PlayerStats.fertilizer))
-				bar.add(int(round(PlayerStats.fertilizer)))
+				self.size += (floor(PlayerStats.fertilizer))
+				bar.add((floor(PlayerStats.fertilizer)))
 				
-				PlayerStats.add_points(int(round(PlayerStats.fertilizer)))
+				PlayerStats.add_points((floor(PlayerStats.fertilizer)))
 				
-				PlayerStats.fertilizer = PlayerStats.fertilizer - int(round(PlayerStats.fertilizer))
+				PlayerStats.fertilizer = PlayerStats.fertilizer - (floor(PlayerStats.fertilizer))
 
 func increase_size(new_size):
 	var fertilizer = new_size - size
