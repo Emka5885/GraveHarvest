@@ -82,6 +82,7 @@ func _on_MainMenu_Button_button_up():
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), mute)
 		$MusicOff.visible = false
 	get_tree().change_scene(mainMenuScene.resource_path)
+	get_tree().change_scene(mainMenuScene.resource_path)
 
 func _on_NewGame_Button_button_up():
 	select.play()

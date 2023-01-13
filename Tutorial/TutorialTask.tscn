@@ -1,0 +1,152 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Tutorial/TutorialTask.gd" type="Script" id=1]
+[ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=204]
+bg_color = Color( 0, 0, 0, 0.352941 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=205]
+size = 4
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=209]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=210]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_hide_panel"
+} ]
+}
+
+[sub_resource type="StyleBoxFlat" id=211]
+bg_color = Color( 0, 0, 0, 0.352941 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=212]
+size = 5
+font_data = ExtResource( 2 )
+
+[node name="TutorialTask" type="Panel"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 128.0
+margin_top = 8.0
+margin_right = 315.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 204 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 173.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 205 )
+text = "Collect fertilizer from all types of tasks and bring fertilizers to the pumpkin"
+align = 1
+valign = 1
+
+[node name="TextAnimation" type="AnimationPlayer" parent="."]
+anims/FadeIn = SubResource( 209 )
+anims/FadeOut = SubResource( 210 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 83.0
+margin_top = 18.0
+margin_right = 187.0
+margin_bottom = 70.0
+custom_styles/panel = SubResource( 211 )
+
+[node name="Mow" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 112.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 212 )
+text = "mow the grass"
+
+[node name="Light" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 112.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 212 )
+text = "light the candle"
+
+[node name="Water" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 24.0
+margin_right = 112.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 212 )
+text = "water the flowers"
+
+[node name="Cross" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 112.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 212 )
+text = "fix the cross"
+
+[node name="Fertilizer" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 112.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 212 )
+text = "bring fertilizers to the pumpkin"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

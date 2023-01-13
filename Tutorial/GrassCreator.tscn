@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+func set_timer():
+	var random_time = rand_range(0.1, 6)
+	$Timer.wait_time = random_time
+	$Timer.one_shot = true
+	$Timer.start()
+	
+func _ready():
+	pass
+#	set_timer()
+
+func _on_Timer_timeout():
+	var grass_scene = load(\"res://Tutorial/Grass.tscn\")
+	add_child(grass_scene.instance())
+	$Timer.stop()
+"
+
+[node name="GrassSpawner" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

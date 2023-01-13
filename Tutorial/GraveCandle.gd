@@ -5,6 +5,8 @@ onready var interactionArea = $InteractionArea
 
 var done = false
 var player_in = false
+signal candle
+var first_time = true
 
 func _ready():
 	$Timer.set_wait_time(50)
@@ -48,6 +50,9 @@ func _input(event):
 	var active = sprite.material.get_shader_param("on")
 	if !done && active && event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and event.pressed:
+			if first_time:
+				emit_signal("candle")
+				first_time = false
 			$AudioStreamPlayer.play()
 			sprite.play("done")
 			PlayerStats.fertilizer +=  0.5
@@ -55,6 +60,9 @@ func _input(event):
 			done = true
 			change_light(true)
 	elif !done && active && Input.is_action_just_pressed("select"):
+		if first_time:
+				emit_signal("candle")
+				first_time = false
 		$AudioStreamPlayer.play()
 		sprite.play("done")
 		PlayerStats.fertilizer += 0.5
@@ -66,5 +74,3 @@ func change_light(is_on):
 	var light = get_node_or_null("Light2D")
 	if light:
 		light.enabled = is_on
-
-

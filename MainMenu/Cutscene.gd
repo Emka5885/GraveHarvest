@@ -1,6 +1,6 @@
 extends Node2D
 
-var mainGameScene = load("res://World.tscn")
+var mainGameScene = load("res://MainMenu/TutorialQuestion.tscn")
 onready var videoPlayer = $VideoPlayer
 onready var timer = $Timer
 

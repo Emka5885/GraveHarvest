@@ -6,7 +6,6 @@ var max_fertilizer = 3 setget set_max_fertilizer
 onready var fertilizerFull = $FertilizerFull
 onready var fertilizerEmpty = $FertilizerEmpty
 
-
 func set_fertilizer(value):
 	fertilizer = clamp(value, 0, max_fertilizer)
 	if fertilizerFull != null:
