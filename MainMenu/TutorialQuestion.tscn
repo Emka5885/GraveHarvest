@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://MainMenu/bionicle-training-card-font-2-4.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://MainMenu/questionmark.png" type="Texture" id=2]
@@ -7,11 +7,14 @@
 [ext_resource path="res://MainMenu/TutorialQuestion.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 10
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 0.392157 )
 
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
@@ -44,6 +47,14 @@ margin_right = 274.0
 margin_bottom = 63.0
 texture = ExtResource( 2 )
 
+[node name="Yes" type="Label" parent="Panel"]
+visible = false
+margin_left = 55.0
+margin_top = 100.0
+margin_right = 115.0
+margin_bottom = 140.0
+custom_styles/normal = SubResource( 4 )
+
 [node name="yes" type="LinkButton" parent="Panel"]
 margin_left = 72.0
 margin_top = 112.0
@@ -53,12 +64,19 @@ custom_fonts/font = SubResource( 3 )
 text = "YES"
 underline = 1
 
+[node name="No" type="Label" parent="Panel"]
+visible = false
+margin_left = 202.0
+margin_top = 100.0
+margin_right = 262.0
+margin_bottom = 140.0
+custom_styles/normal = SubResource( 4 )
+
 [node name="no" type="LinkButton" parent="Panel"]
 margin_left = 224.0
 margin_top = 112.0
 margin_right = 244.0
 margin_bottom = 128.0
-focus_mode = 2
 custom_fonts/font = SubResource( 3 )
 text = "NO"
 underline = 1
