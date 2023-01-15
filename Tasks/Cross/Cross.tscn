@@ -33,7 +33,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=121]
 radius = 9.0
-height = 32.0
+height = 14.0
 
 [sub_resource type="CapsuleShape2D" id=122]
 radius = 31.0
@@ -52,11 +52,12 @@ frames = SubResource( 120 )
 animation = "not done"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 1, 9 )
+position = Vector2( 2, 26 )
+rotation = 1.5708
 shape = SubResource( 121 )
 
 [node name="InteractionArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2( 1, 11 )
