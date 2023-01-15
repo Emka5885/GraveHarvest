@@ -15,6 +15,7 @@ func _ready():
 	bar.reset()
 	PlayerStats.level = 1
 	PlayerStats.PlayerPoints = 0
+	PlayerStats.fertilizer = 0
 
 func _physics_process(_delta):
 	var overlap = interactionArea.get_overlapping_bodies()
