@@ -25,7 +25,7 @@ Joystick:
 - `X` - change selection in menu
 
 <h2></h2>
-<h3>Trailer :clapper:</h3>
+<h3>Tutorial :clapper:</h3>
 
 
 
