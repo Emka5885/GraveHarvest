@@ -25,11 +25,21 @@ Joystick:
 - `X` - change selection in menu
 
 <h2></h2>
-<h3>Tutorial :clapper:</h3>
+<h3>Trailer :clapper:</h3>
 
 
 
-[![Tutorial](https://user-images.githubusercontent.com/57597187/217324989-6bee74d8-800b-45b2-be1a-6d2d9c6adbf3.png)](https://www.youtube.com/watch?v=r6JUGg5VgmU&ab_channel=AlicjaJaneczko)
+[![Trailer](https://user-images.githubusercontent.com/57597187/217324989-6bee74d8-800b-45b2-be1a-6d2d9c6adbf3.png)](https://www.youtube.com/watch?v=WgBiFLxqjyU&ab_channel=WiktoriaSzczepa%C5%84ska)
+
+
+
+
+<h2></h2>
+<h3>Tutorial :movie_camera:</h3>
+
+
+
+[![Tutorial](https://user-images.githubusercontent.com/90275335/217327297-b37ddf73-9d11-4197-a536-aadf5572b27e.png)](https://www.youtube.com/watch?v=r6JUGg5VgmU&ab_channel=AlicjaJaneczko)
 
 
 <h2></h2>
