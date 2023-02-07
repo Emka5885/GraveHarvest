@@ -29,7 +29,7 @@ Joystick:
 
 
 
-[![Tutorial](obraz)](https://www.youtube.com/watch?v=r6JUGg5VgmU&ab_channel=AlicjaJaneczko)
+[![Tutorial](GraveHarvest.jpg)](https://www.youtube.com/watch?v=r6JUGg5VgmU&ab_channel=AlicjaJaneczko)
 
 
 
